@@ -1,0 +1,3163 @@
+{
+  "meta": {
+    "name": "IELTS Band 8+ Curated",
+    "targetBand": "8+",
+    "entryCount": 200,
+    "categories": {
+      "academic": 100,
+      "general": 35,
+      "connector": 25,
+      "speaking": 15,
+      "phrasal": 10,
+      "opinion": 15
+    },
+    "enrichment": "full (phonetic, definition, collocations, IELTS examples)",
+    "note": "Client-side dictionary cache optional for extra senses."
+  },
+  "entries": [
+    {
+      "id": "w001",
+      "word": "Ubiquitous",
+      "phonetic": "/juːˈbɪk.wɪ.təs/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Present, appearing, or found everywhere.",
+      "collocations": [
+        "ubiquitous technology",
+        "ubiquitous presence",
+        "become ubiquitous"
+      ],
+      "example": "Mobile phones have become ubiquitous in modern society.",
+      "ieltsExample": "The report argues that social media is now ubiquitous across all age groups."
+    },
+    {
+      "id": "w002",
+      "word": "Mitigate",
+      "phonetic": "/ˈmɪt.ɪ.ɡeɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To make something less severe, serious, or painful.",
+      "collocations": [
+        "mitigate the effects",
+        "mitigate climate change",
+        "mitigate the risk"
+      ],
+      "example": "Governments must act now to mitigate the effects of climate change.",
+      "ieltsExample": "Stricter regulations could help mitigate the environmental impact of industrial waste."
+    },
+    {
+      "id": "w003",
+      "word": "Proliferate",
+      "phonetic": "/prəˈlɪf.ər.eɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To increase rapidly in number; to spread widely.",
+      "collocations": [
+        "proliferate rapidly",
+        "proliferate across",
+        "continue to proliferate"
+      ],
+      "example": "Social media platforms have proliferated over the past decade.",
+      "ieltsExample": "As online businesses proliferate, traditional retail faces increasing pressure."
+    },
+    {
+      "id": "w004",
+      "word": "Cohesive",
+      "phonetic": "/kəʊˈhiː.sɪv/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "B2",
+      "def": "Forming a united whole; well-integrated and consistent.",
+      "collocations": [
+        "cohesive argument",
+        "cohesive society",
+        "cohesive approach"
+      ],
+      "example": "A cohesive argument is essential for a high band score in writing.",
+      "ieltsExample": "The government aims to build a more cohesive multicultural society."
+    },
+    {
+      "id": "w005",
+      "word": "Detrimental",
+      "phonetic": "/ˌdet.rɪˈmen.təl/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "B2",
+      "def": "Causing harm or damage.",
+      "collocations": [
+        "detrimental effect",
+        "detrimental impact",
+        "detrimental to health"
+      ],
+      "example": "Excessive screen time can be detrimental to children's development.",
+      "ieltsExample": "The study revealed that air pollution has a detrimental effect on cognitive function."
+    },
+    {
+      "id": "w006",
+      "word": "Exacerbate",
+      "phonetic": "/ɪɡˈzæs.ə.beɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To make a problem, bad situation, or negative feeling worse.",
+      "collocations": [
+        "exacerbate the problem",
+        "exacerbate inequality",
+        "exacerbate tensions"
+      ],
+      "example": "The drought has exacerbated the food crisis in the region.",
+      "ieltsExample": "Poor urban planning often exacerbates traffic congestion in major cities."
+    },
+    {
+      "id": "w007",
+      "word": "Predominantly",
+      "phonetic": "/prɪˈdɒm.ɪ.nənt.li/",
+      "type": "adverb",
+      "category": "academic",
+      "cefr": "B2",
+      "def": "Mainly; for the most part.",
+      "collocations": [
+        "predominantly urban",
+        "predominantly male",
+        "predominantly used"
+      ],
+      "example": "The population in this city is predominantly young.",
+      "ieltsExample": "The workforce in this sector is predominantly composed of university graduates."
+    },
+    {
+      "id": "w008",
+      "word": "Inevitable",
+      "phonetic": "/ɪˈnev.ɪ.tə.bəl/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "B2",
+      "def": "Certain to happen and impossible to avoid.",
+      "collocations": [
+        "inevitable consequence",
+        "inevitable outcome",
+        "seem inevitable"
+      ],
+      "example": "Some argue that globalisation is inevitable in the modern world.",
+      "ieltsExample": "Technological unemployment may be an inevitable consequence of automation."
+    },
+    {
+      "id": "w009",
+      "word": "Discrepancy",
+      "phonetic": "/dɪˈskrep.ən.si/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "A difference between two things that should be the same.",
+      "collocations": [
+        "significant discrepancy",
+        "discrepancy between",
+        "discrepancy in data"
+      ],
+      "example": "There is a significant discrepancy between the two sets of data.",
+      "ieltsExample": "The discrepancy between rich and poor nations continues to widen."
+    },
+    {
+      "id": "w010",
+      "word": "Substantiate",
+      "phonetic": "/səbˈstæn.ʃi.eɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To provide evidence to support or prove the truth of something.",
+      "collocations": [
+        "substantiate a claim",
+        "substantiate the argument",
+        "substantiate with evidence"
+      ],
+      "example": "You must substantiate your claims with specific examples.",
+      "ieltsExample": "The researcher failed to substantiate her hypothesis with sufficient data."
+    },
+    {
+      "id": "w011",
+      "word": "Ambiguous",
+      "phonetic": "/æmˈbɪɡ.ju.əs/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "B2",
+      "def": "Open to more than one interpretation; unclear.",
+      "collocations": [
+        "ambiguous language",
+        "ambiguous result",
+        "deliberately ambiguous"
+      ],
+      "example": "The question was ambiguous, leading to many different answers.",
+      "ieltsExample": "The policy statement was criticised for its ambiguous wording."
+    },
+    {
+      "id": "w012",
+      "word": "Paradigm",
+      "phonetic": "/ˈpær.ə.daɪm/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "A typical example or pattern; a worldview underlying theories of a field.",
+      "collocations": [
+        "paradigm shift",
+        "dominant paradigm",
+        "new paradigm"
+      ],
+      "example": "The internet created a paradigm shift in how we communicate.",
+      "ieltsExample": "Electric vehicles represent a paradigm shift in the automotive industry."
+    },
+    {
+      "id": "w013",
+      "word": "Unprecedented",
+      "phonetic": "/ʌnˈpres.ɪ.den.tɪd/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Never having happened or existed before.",
+      "collocations": [
+        "unprecedented growth",
+        "unprecedented scale",
+        "at an unprecedented rate"
+      ],
+      "example": "The pandemic caused unprecedented disruption to global supply chains.",
+      "ieltsExample": "The speed of technological change is unprecedented in human history."
+    },
+    {
+      "id": "w014",
+      "word": "Facilitate",
+      "phonetic": "/fəˈsɪl.ɪ.teɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "B2",
+      "def": "To make an action or process easier.",
+      "collocations": [
+        "facilitate communication",
+        "facilitate learning",
+        "facilitate access"
+      ],
+      "example": "Technology facilitates communication across long distances.",
+      "ieltsExample": "Online platforms facilitate collaboration between researchers worldwide."
+    },
+    {
+      "id": "w015",
+      "word": "Catalyst",
+      "phonetic": "/ˈkæt.ə.lɪst/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "A person or thing that causes an important change or event.",
+      "collocations": [
+        "act as a catalyst",
+        "catalyst for change",
+        "serve as a catalyst"
+      ],
+      "example": "The financial crisis acted as a catalyst for economic reform.",
+      "ieltsExample": "Education is often the catalyst for social mobility in developing countries."
+    },
+    {
+      "id": "w016",
+      "word": "Volatile",
+      "phonetic": "/ˈvɒl.ə.taɪl/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Liable to change rapidly and unpredictably.",
+      "collocations": [
+        "volatile market",
+        "volatile situation",
+        "highly volatile"
+      ],
+      "example": "Oil prices are highly volatile and hard to predict.",
+      "ieltsExample": "Political instability has created a volatile economic climate."
+    },
+    {
+      "id": "w017",
+      "word": "Alleviate",
+      "phonetic": "/əˈliː.vi.eɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To make something less severe.",
+      "collocations": [
+        "alleviate poverty",
+        "alleviate suffering",
+        "alleviate pressure"
+      ],
+      "example": "Aid organisations work to alleviate suffering in conflict zones.",
+      "ieltsExample": "Investment in public transport can alleviate traffic congestion significantly."
+    },
+    {
+      "id": "w018",
+      "word": "Disparity",
+      "phonetic": "/dɪˈspær.ɪ.ti/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "A great difference or inequality between things.",
+      "collocations": [
+        "income disparity",
+        "wealth disparity",
+        "growing disparity"
+      ],
+      "example": "There is a growing disparity between rural and urban incomes.",
+      "ieltsExample": "The report highlights the health disparity between high and low-income groups."
+    },
+    {
+      "id": "w019",
+      "word": "Empirical",
+      "phonetic": "/ɪmˈpɪr.ɪ.kəl/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Based on observation or experiment rather than theory.",
+      "collocations": [
+        "empirical evidence",
+        "empirical research",
+        "empirical data"
+      ],
+      "example": "We need empirical evidence before drawing any conclusions.",
+      "ieltsExample": "The claim lacks empirical support and remains largely theoretical."
+    },
+    {
+      "id": "w020",
+      "word": "Pragmatic",
+      "phonetic": "/præɡˈmæt.ɪk/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Dealing with things sensibly and realistically.",
+      "collocations": [
+        "pragmatic approach",
+        "pragmatic solution",
+        "pragmatic decision"
+      ],
+      "example": "A pragmatic approach to policy-making is often more effective than idealism.",
+      "ieltsExample": "Businesses must adopt a pragmatic strategy to survive in competitive markets."
+    },
+    {
+      "id": "w021",
+      "word": "Viable",
+      "phonetic": "/ˈvaɪ.ə.bəl/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "B2",
+      "def": "Capable of working successfully; feasible.",
+      "collocations": [
+        "viable option",
+        "economically viable",
+        "viable alternative"
+      ],
+      "example": "Solar energy is now a viable alternative to fossil fuels.",
+      "ieltsExample": "Public transport is only viable when it is affordable and efficient."
+    },
+    {
+      "id": "w022",
+      "word": "Deteriorate",
+      "phonetic": "/dɪˈtɪə.ri.ə.reɪt/",
+      "type": "verb",
+      "category": "general",
+      "cefr": "B2",
+      "def": "To become progressively worse.",
+      "collocations": [
+        "deteriorate rapidly",
+        "deteriorating conditions",
+        "continue to deteriorate"
+      ],
+      "example": "Air quality in the city has deteriorated significantly over the past decade.",
+      "ieltsExample": "Without investment, public infrastructure will continue to deteriorate."
+    },
+    {
+      "id": "w023",
+      "word": "Substantial",
+      "phonetic": "/səbˈstæn.ʃəl/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "B2",
+      "def": "Of considerable importance, size, or worth.",
+      "collocations": [
+        "substantial evidence",
+        "substantial investment",
+        "substantial growth"
+      ],
+      "example": "The project requires a substantial amount of funding.",
+      "ieltsExample": "There is substantial evidence that diet affects long-term health outcomes."
+    },
+    {
+      "id": "w024",
+      "word": "Advocate",
+      "phonetic": "/ˈæd.və.keɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "B2",
+      "def": "To publicly recommend or support.",
+      "collocations": [
+        "advocate for change",
+        "strongly advocate",
+        "advocate reform"
+      ],
+      "example": "Many scientists advocate for urgent action on climate change.",
+      "ieltsExample": "The report advocates a complete ban on single-use plastics."
+    },
+    {
+      "id": "w025",
+      "word": "Sustainability",
+      "phonetic": "/səˌsteɪ.nəˈbɪl.ɪ.ti/",
+      "type": "noun",
+      "category": "general",
+      "cefr": "B2",
+      "def": "The ability to be maintained without depleting natural resources.",
+      "collocations": [
+        "environmental sustainability",
+        "promote sustainability",
+        "long-term sustainability"
+      ],
+      "example": "Businesses must balance profit with long-term sustainability.",
+      "ieltsExample": "The concept of sustainability has moved to the centre of corporate strategy."
+    },
+    {
+      "id": "w026",
+      "word": "Marginalise",
+      "phonetic": "/ˈmɑː.dʒɪ.nə.laɪz/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To treat a person or group as insignificant or peripheral.",
+      "collocations": [
+        "marginalise communities",
+        "feel marginalised",
+        "marginalised groups"
+      ],
+      "example": "Economic inequality can marginalise whole communities.",
+      "ieltsExample": "Social media algorithms may marginalise minority viewpoints."
+    },
+    {
+      "id": "w027",
+      "word": "Implement",
+      "phonetic": "/ˈɪm.plɪ.ment/",
+      "type": "verb",
+      "category": "general",
+      "cefr": "B2",
+      "def": "To put a decision, plan, or agreement into effect.",
+      "collocations": [
+        "implement a policy",
+        "implement changes",
+        "implement measures"
+      ],
+      "example": "The school plans to implement a new curriculum next year.",
+      "ieltsExample": "Many countries struggle to implement environmental legislation effectively."
+    },
+    {
+      "id": "w028",
+      "word": "Incentive",
+      "phonetic": "/ɪnˈsen.tɪv/",
+      "type": "noun",
+      "category": "general",
+      "cefr": "B2",
+      "def": "A thing that motivates or encourages someone to do something.",
+      "collocations": [
+        "financial incentive",
+        "provide incentives",
+        "tax incentive"
+      ],
+      "example": "Tax incentives encourage businesses to invest in renewable energy.",
+      "ieltsExample": "Without economic incentives, it is difficult to persuade companies to reduce emissions."
+    },
+    {
+      "id": "w029",
+      "word": "Transparent",
+      "phonetic": "/trænsˈpær.ənt/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "B2",
+      "def": "Open, frank, and honest; easy to see through or detect.",
+      "collocations": [
+        "transparent process",
+        "transparent government",
+        "fully transparent"
+      ],
+      "example": "The company committed to being more transparent about its operations.",
+      "ieltsExample": "Citizens demand that their governments be more transparent in decision-making."
+    },
+    {
+      "id": "w030",
+      "word": "Innovation",
+      "phonetic": "/ˌɪn.əˈveɪ.ʃən/",
+      "type": "noun",
+      "category": "general",
+      "cefr": "B2",
+      "def": "The action or process of innovating; a new method or idea.",
+      "collocations": [
+        "technological innovation",
+        "drive innovation",
+        "culture of innovation"
+      ],
+      "example": "Innovation in medicine has extended human life expectancy significantly.",
+      "ieltsExample": "Governments should invest in education to foster a culture of innovation."
+    },
+    {
+      "id": "w031",
+      "word": "Resilient",
+      "phonetic": "/rɪˈzɪl.i.ənt/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "B2",
+      "def": "Able to withstand or recover quickly from difficult conditions.",
+      "collocations": [
+        "resilient economy",
+        "prove resilient",
+        "resilient community"
+      ],
+      "example": "A resilient economy can absorb shocks without long-term damage.",
+      "ieltsExample": "Cities must become more resilient to the effects of climate change."
+    },
+    {
+      "id": "w032",
+      "word": "Consensus",
+      "phonetic": "/kənˈsen.səs/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "General agreement among a group of people.",
+      "collocations": [
+        "reach a consensus",
+        "scientific consensus",
+        "broad consensus"
+      ],
+      "example": "There is a scientific consensus that human activity is causing climate change.",
+      "ieltsExample": "Policymakers must build consensus before implementing major reforms."
+    },
+    {
+      "id": "w033",
+      "word": "Scrutinise",
+      "phonetic": "/ˈskruː.tɪ.naɪz/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To examine or inspect closely and thoroughly.",
+      "collocations": [
+        "closely scrutinise",
+        "scrutinise the data",
+        "scrutinise decisions"
+      ],
+      "example": "Investors scrutinise company accounts before making decisions.",
+      "ieltsExample": "Government spending should be regularly scrutinised by independent bodies."
+    },
+    {
+      "id": "w034",
+      "word": "Compelling",
+      "phonetic": "/kəmˈpel.ɪŋ/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Evoking interest or admiration in a powerfully irresistible way.",
+      "collocations": [
+        "compelling argument",
+        "compelling evidence",
+        "make a compelling case"
+      ],
+      "example": "She made a compelling argument for reform.",
+      "ieltsExample": "The report presents compelling evidence that diet is linked to mental wellbeing."
+    },
+    {
+      "id": "w035",
+      "word": "Undermine",
+      "phonetic": "/ˌʌn.dəˈmaɪn/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To weaken or damage gradually.",
+      "collocations": [
+        "undermine confidence",
+        "undermine democracy",
+        "undermine stability"
+      ],
+      "example": "Corruption undermines public trust in government institutions.",
+      "ieltsExample": "Fake news can undermine the credibility of legitimate scientific research."
+    },
+    {
+      "id": "w036",
+      "word": "Eradicate",
+      "phonetic": "/ɪˈræd.ɪ.keɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To destroy or remove completely.",
+      "collocations": [
+        "eradicate poverty",
+        "eradicate disease",
+        "completely eradicate"
+      ],
+      "example": "The WHO aims to eradicate polio from every country in the world.",
+      "ieltsExample": "Without international cooperation, it is impossible to eradicate climate change."
+    },
+    {
+      "id": "w037",
+      "word": "Tangible",
+      "phonetic": "/ˈtæn.dʒɪ.bəl/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Clear and definite; able to be touched or felt.",
+      "collocations": [
+        "tangible benefit",
+        "tangible evidence",
+        "tangible results"
+      ],
+      "example": "The new policy has produced tangible improvements in air quality.",
+      "ieltsExample": "Governments must deliver tangible results, not just empty promises."
+    },
+    {
+      "id": "w038",
+      "word": "Perpetuate",
+      "phonetic": "/pəˈpet.ju.eɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To make something continue indefinitely.",
+      "collocations": [
+        "perpetuate inequality",
+        "perpetuate stereotypes",
+        "perpetuate the cycle"
+      ],
+      "example": "Biased media can perpetuate harmful stereotypes.",
+      "ieltsExample": "A lack of quality education perpetuates cycles of poverty across generations."
+    },
+    {
+      "id": "w039",
+      "word": "Rhetoric",
+      "phonetic": "/ˈret.ər.ɪk/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Language designed to persuade; often insincere or empty speech.",
+      "collocations": [
+        "political rhetoric",
+        "empty rhetoric",
+        "inflammatory rhetoric"
+      ],
+      "example": "The politician's speech was full of rhetoric but short on detail.",
+      "ieltsExample": "Leaders must move beyond rhetoric and take concrete action on climate change."
+    },
+    {
+      "id": "w040",
+      "word": "Feasible",
+      "phonetic": "/ˈfiː.zɪ.bəl/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Possible to do easily or conveniently.",
+      "collocations": [
+        "technically feasible",
+        "economically feasible",
+        "feasible solution"
+      ],
+      "example": "Renewable energy is now a technically and economically feasible alternative.",
+      "ieltsExample": "A zero-carbon economy is feasible within the next thirty years if governments act decisively."
+    },
+    {
+      "id": "w041",
+      "word": "Furthermore",
+      "phonetic": "/ˌfɜː.ðəˈmɔːr/",
+      "type": "adverb",
+      "category": "connector",
+      "cefr": "B2",
+      "def": "In addition; besides — used to introduce a further point.",
+      "collocations": [
+        "furthermore, it can be argued",
+        "furthermore, this demonstrates"
+      ],
+      "example": "The plan is costly. Furthermore, it has little public support.",
+      "ieltsExample": "The policy reduces emissions. Furthermore, it creates thousands of jobs."
+    },
+    {
+      "id": "w042",
+      "word": "Nevertheless",
+      "phonetic": "/ˌnev.ə.ðəˈles/",
+      "type": "adverb",
+      "category": "connector",
+      "cefr": "B2",
+      "def": "In spite of that; notwithstanding; all the same.",
+      "collocations": [
+        "nevertheless, it is important",
+        "nevertheless, there is evidence"
+      ],
+      "example": "The task was difficult. Nevertheless, they completed it on time.",
+      "ieltsExample": "The cost is high. Nevertheless, the long-term benefits justify the investment."
+    },
+    {
+      "id": "w043",
+      "word": "Consequently",
+      "phonetic": "/ˈkɒn.sɪ.kwənt.li/",
+      "type": "adverb",
+      "category": "connector",
+      "cefr": "B2",
+      "def": "As a result; therefore.",
+      "collocations": [
+        "consequently, the situation",
+        "consequently resulting in"
+      ],
+      "example": "The harvest failed; consequently, food prices rose sharply.",
+      "ieltsExample": "Investment fell. Consequently, unemployment rose to a record high."
+    },
+    {
+      "id": "w044",
+      "word": "In contrast",
+      "phonetic": "/ɪn ˈkɒn.trɑːst/",
+      "type": "phrase",
+      "category": "connector",
+      "cefr": "B2",
+      "def": "When compared with something else, showing a difference.",
+      "collocations": [
+        "in contrast to",
+        "in stark contrast",
+        "in contrast, some argue"
+      ],
+      "example": "In contrast to urban areas, rural regions saw little growth.",
+      "ieltsExample": "In contrast to previous decades, modern workers value flexibility over job security."
+    },
+    {
+      "id": "w045",
+      "word": "Notwithstanding",
+      "phonetic": "/ˌnɒt.wɪðˈstæn.dɪŋ/",
+      "type": "preposition",
+      "category": "connector",
+      "cefr": "C1",
+      "def": "In spite of; despite.",
+      "collocations": [
+        "notwithstanding the challenges",
+        "notwithstanding these concerns"
+      ],
+      "example": "Notwithstanding the difficulties, the project was a success.",
+      "ieltsExample": "Notwithstanding the economic downturn, some sectors continued to grow."
+    },
+    {
+      "id": "w046",
+      "word": "In my view",
+      "phonetic": "/ɪn maɪ vjuː/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "B2",
+      "def": "Used to introduce a personal opinion.",
+      "collocations": [
+        "in my view, the most important",
+        "in my view, this is because"
+      ],
+      "example": "In my view, education should be free for all.",
+      "ieltsExample": "In my view, governments bear the greatest responsibility for tackling climate change."
+    },
+    {
+      "id": "w047",
+      "word": "To a certain extent",
+      "phonetic": "/tuː ə ˈsɜː.tɪn ɪkˈstent/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "C1",
+      "def": "Partly; in some degree, but not completely.",
+      "collocations": [
+        "to a certain extent, yes",
+        "to a large extent",
+        "to some extent"
+      ],
+      "example": "To a certain extent, the results were predictable.",
+      "ieltsExample": "To a certain extent, social media has improved global communication."
+    },
+    {
+      "id": "w048",
+      "word": "It goes without saying",
+      "phonetic": "/ɪt ɡəʊz wɪðˈaʊt ˈseɪɪŋ/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "C1",
+      "def": "It is obvious; it does not need to be stated.",
+      "collocations": [
+        "it goes without saying that",
+        "it almost goes without saying"
+      ],
+      "example": "It goes without saying that honesty is the best policy.",
+      "ieltsExample": "It goes without saying that access to clean water is a fundamental human right."
+    },
+    {
+      "id": "w049",
+      "word": "On the one hand",
+      "phonetic": "/ɒn ðə wʌn hænd/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "B2",
+      "def": "Used to present two contrasting aspects of an argument.",
+      "collocations": [
+        "on the one hand... on the other",
+        "on the one hand... but"
+      ],
+      "example": "On the one hand, technology creates jobs; on the other, it destroys them.",
+      "ieltsExample": "On the one hand, nuclear energy is clean; on the other, waste disposal is problematic."
+    },
+    {
+      "id": "w050",
+      "word": "As far as I'm concerned",
+      "phonetic": "/æz fɑːr æz aɪm kənˈsɜːnd/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "B2",
+      "def": "In my opinion; from my perspective.",
+      "collocations": [
+        "as far as I'm concerned, the key issue"
+      ],
+      "example": "As far as I'm concerned, kindness is the most important quality a person can have.",
+      "ieltsExample": "As far as I'm concerned, the benefits of technology far outweigh the drawbacks."
+    },
+    {
+      "id": "w051",
+      "word": "Account for",
+      "phonetic": "/əˈkaʊnt fɔːr/",
+      "type": "phrasal verb",
+      "category": "phrasal",
+      "cefr": "B2",
+      "def": "To be the reason for; to constitute a proportion of something.",
+      "collocations": [
+        "account for a large proportion",
+        "account for most",
+        "account for the difference"
+      ],
+      "example": "Technology accounts for a large proportion of GDP in developed countries.",
+      "ieltsExample": "Carbon dioxide accounts for the majority of greenhouse gas emissions."
+    },
+    {
+      "id": "w052",
+      "word": "Give rise to",
+      "phonetic": "/ɡɪv raɪz tuː/",
+      "type": "phrasal verb",
+      "category": "phrasal",
+      "cefr": "C1",
+      "def": "To cause or produce something.",
+      "collocations": [
+        "give rise to concerns",
+        "give rise to problems",
+        "give rise to opportunities"
+      ],
+      "example": "Rapid urbanisation gives rise to increased demand for housing.",
+      "ieltsExample": "The growth of social media has given rise to new forms of communication and misinformation."
+    },
+    {
+      "id": "w053",
+      "word": "Draw on",
+      "phonetic": "/drɔː ɒn/",
+      "type": "phrasal verb",
+      "category": "phrasal",
+      "cefr": "C1",
+      "def": "To use as a source; to rely on.",
+      "collocations": [
+        "draw on experience",
+        "draw on resources",
+        "draw on evidence"
+      ],
+      "example": "Good writers draw on a wide range of vocabulary.",
+      "ieltsExample": "The report draws on data from over 50 countries to support its conclusions."
+    },
+    {
+      "id": "w054",
+      "word": "Build on",
+      "phonetic": "/bɪld ɒn/",
+      "type": "phrasal verb",
+      "category": "phrasal",
+      "cefr": "B2",
+      "def": "To use as a foundation for further development.",
+      "collocations": [
+        "build on success",
+        "build on existing",
+        "build on the foundations"
+      ],
+      "example": "The new strategy builds on the success of last year's initiative.",
+      "ieltsExample": "Developing countries must build on their existing economic strengths."
+    },
+    {
+      "id": "w055",
+      "word": "Carry out",
+      "phonetic": "/ˈkær.i aʊt/",
+      "type": "phrasal verb",
+      "category": "phrasal",
+      "cefr": "B1",
+      "def": "To perform or conduct a task or action.",
+      "collocations": [
+        "carry out research",
+        "carry out a study",
+        "carry out instructions"
+      ],
+      "example": "The scientists carried out extensive research before publishing their findings.",
+      "ieltsExample": "Government agencies must carry out regular inspections of food production facilities."
+    },
+    {
+      "id": "w056",
+      "word": "Corroborate",
+      "phonetic": "/kəˈrɒb.ə.reɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To confirm or support with evidence.",
+      "collocations": [
+        "corroborate the findings",
+        "corroborate a claim",
+        "corroborate testimony"
+      ],
+      "example": "Witnesses corroborated his account of the events.",
+      "ieltsExample": "Independent studies corroborate the link between sleep deprivation and poor academic performance."
+    },
+    {
+      "id": "w057",
+      "word": "Delineate",
+      "phonetic": "/dɪˈlɪn.i.eɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To describe or portray precisely.",
+      "collocations": [
+        "delineate the scope",
+        "clearly delineate",
+        "delineate boundaries"
+      ],
+      "example": "The contract delineates each party's responsibilities.",
+      "ieltsExample": "The introduction should delineate the main issues the essay will address."
+    },
+    {
+      "id": "w058",
+      "word": "Elucidate",
+      "phonetic": "/ɪˈluː.sɪ.deɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To make something clear; to explain.",
+      "collocations": [
+        "elucidate the concept",
+        "elucidate further",
+        "elucidate a theory"
+      ],
+      "example": "The professor elucidated the theory with simple examples.",
+      "ieltsExample": "The conclusion elucidates why the proposed policy is preferable."
+    },
+    {
+      "id": "w059",
+      "word": "Salient",
+      "phonetic": "/ˈseɪ.li.ənt/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Most noticeable or important.",
+      "collocations": [
+        "salient feature",
+        "salient point",
+        "salient characteristics"
+      ],
+      "example": "Cost remains the most salient concern for consumers.",
+      "ieltsExample": "The most salient difference between the two approaches is long-term sustainability."
+    },
+    {
+      "id": "w060",
+      "word": "Ramification",
+      "phonetic": "/ˌræm.ɪ.fɪˈkeɪ.ʃən/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "A complex consequence of an action.",
+      "collocations": [
+        "far-reaching ramifications",
+        "political ramifications",
+        "economic ramifications"
+      ],
+      "example": "The decision had serious ramifications for the whole industry.",
+      "ieltsExample": "Governments must consider the social ramifications of automation."
+    },
+    {
+      "id": "w061",
+      "word": "Pervasive",
+      "phonetic": "/pəˈveɪ.sɪv/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Spreading widely throughout an area or group.",
+      "collocations": [
+        "pervasive influence",
+        "pervasive problem",
+        "increasingly pervasive"
+      ],
+      "example": "Social media has a pervasive influence on young people.",
+      "ieltsExample": "Plastic pollution is now pervasive in marine ecosystems worldwide."
+    },
+    {
+      "id": "w062",
+      "word": "Precarious",
+      "phonetic": "/prɪˈkeə.ri.əs/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Not securely held or in position; dangerously uncertain.",
+      "collocations": [
+        "precarious situation",
+        "precarious employment",
+        "precarious balance"
+      ],
+      "example": "Many workers face precarious employment conditions.",
+      "ieltsExample": "Climate change puts coastal communities in a precarious position."
+    },
+    {
+      "id": "w063",
+      "word": "Prevalent",
+      "phonetic": "/ˈprev.əl.ənt/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Widespread in a particular area or at a particular time.",
+      "collocations": [
+        "highly prevalent",
+        "increasingly prevalent",
+        "prevalent among"
+      ],
+      "example": "Obesity is increasingly prevalent among adolescents.",
+      "ieltsExample": "Remote working has become prevalent since the pandemic."
+    },
+    {
+      "id": "w064",
+      "word": "Inherent",
+      "phonetic": "/ɪnˈher.ənt/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Existing as a permanent or essential attribute.",
+      "collocations": [
+        "inherent risk",
+        "inherent limitation",
+        "inherent bias"
+      ],
+      "example": "There are inherent risks in any surgical procedure.",
+      "ieltsExample": "Tourism carries inherent environmental costs that must be managed."
+    },
+    {
+      "id": "w065",
+      "word": "Intrinsic",
+      "phonetic": "/ɪnˈtrɪn.sɪk/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Belonging naturally; essential.",
+      "collocations": [
+        "intrinsic value",
+        "intrinsic motivation",
+        "intrinsic quality"
+      ],
+      "example": "Some argue that art has intrinsic value beyond profit.",
+      "ieltsExample": "Learning a language offers intrinsic rewards beyond career prospects."
+    },
+    {
+      "id": "w066",
+      "word": "Conducive",
+      "phonetic": "/kənˈdjuː.sɪv/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Making a situation or outcome likely or possible.",
+      "collocations": [
+        "conducive to learning",
+        "conducive environment",
+        "conducive atmosphere"
+      ],
+      "example": "Quiet spaces are conducive to concentration.",
+      "ieltsExample": "Flexible hours are conducive to better work–life balance."
+    },
+    {
+      "id": "w067",
+      "word": "Contentious",
+      "phonetic": "/kənˈten.ʃəs/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Causing or likely to cause disagreement.",
+      "collocations": [
+        "contentious issue",
+        "highly contentious",
+        "contentious debate"
+      ],
+      "example": "Immigration remains a contentious political topic.",
+      "ieltsExample": "Nuclear energy is a contentious subject in environmental debates."
+    },
+    {
+      "id": "w068",
+      "word": "Formidable",
+      "phonetic": "/ˈfɔː.mɪ.də.bəl/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Inspiring fear or respect through being impressively capable.",
+      "collocations": [
+        "formidable challenge",
+        "formidable opponent",
+        "formidable reputation"
+      ],
+      "example": "She is a formidable competitor in international markets.",
+      "ieltsExample": "Reducing carbon emissions is a formidable task for any government."
+    },
+    {
+      "id": "w069",
+      "word": "Imminent",
+      "phonetic": "/ˈɪm.ɪ.nənt/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "About to happen.",
+      "collocations": [
+        "imminent danger",
+        "imminent threat",
+        "imminent collapse"
+      ],
+      "example": "They prepared for the imminent storm.",
+      "ieltsExample": "Experts warn of imminent water shortages in several regions."
+    },
+    {
+      "id": "w070",
+      "word": "Imperative",
+      "phonetic": "/ɪmˈper.ə.tɪv/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Of vital importance; crucial.",
+      "collocations": [
+        "imperative that",
+        "moral imperative",
+        "economic imperative"
+      ],
+      "example": "It is imperative that we reduce waste.",
+      "ieltsExample": "Investing in renewable energy is an economic imperative."
+    },
+    {
+      "id": "w071",
+      "word": "Plausible",
+      "phonetic": "/ˈplɔː.zɪ.bəl/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Seeming reasonable or probable.",
+      "collocations": [
+        "plausible explanation",
+        "plausible argument",
+        "plausible scenario"
+      ],
+      "example": "Her explanation sounded plausible at first.",
+      "ieltsExample": "The report offers a plausible account of rising inequality."
+    },
+    {
+      "id": "w072",
+      "word": "Robust",
+      "phonetic": "/rəʊˈbʌst/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Strong and healthy; vigorous.",
+      "collocations": [
+        "robust economy",
+        "robust evidence",
+        "robust framework"
+      ],
+      "example": "The company reported robust quarterly earnings.",
+      "ieltsExample": "A robust public health system can withstand future crises."
+    },
+    {
+      "id": "w073",
+      "word": "Stagnant",
+      "phonetic": "/ˈstæɡ.nənt/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Showing no activity; dull and sluggish.",
+      "collocations": [
+        "stagnant wages",
+        "stagnant economy",
+        "stagnant growth"
+      ],
+      "example": "Wages have remained stagnant for years.",
+      "ieltsExample": "Without reform, productivity growth may remain stagnant."
+    },
+    {
+      "id": "w074",
+      "word": "Susceptible",
+      "phonetic": "/səˈsep.tɪ.bəl/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Likely or vulnerable to be influenced or harmed.",
+      "collocations": [
+        "susceptible to disease",
+        "highly susceptible",
+        "susceptible population"
+      ],
+      "example": "Children are more susceptible to infections.",
+      "ieltsExample": "Coastal areas are especially susceptible to flooding."
+    },
+    {
+      "id": "w075",
+      "word": "Tenacious",
+      "phonetic": "/təˈneɪ.ʃəs/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Persistent; not readily letting go.",
+      "collocations": [
+        "tenacious pursuit",
+        "tenacious defender",
+        "tenacious effort"
+      ],
+      "example": "She is tenacious in pursuing her goals.",
+      "ieltsExample": "Tenacious advocacy helped secure stronger environmental laws."
+    },
+    {
+      "id": "w076",
+      "word": "Versatile",
+      "phonetic": "/ˈvɜː.sə.taɪl/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Able to adapt to many functions or activities.",
+      "collocations": [
+        "versatile tool",
+        "versatile skills",
+        "highly versatile"
+      ],
+      "example": "The software is versatile enough for many industries.",
+      "ieltsExample": "A versatile education prepares graduates for changing labour markets."
+    },
+    {
+      "id": "w077",
+      "word": "Bolster",
+      "phonetic": "/ˈbəʊl.stər/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To support or strengthen.",
+      "collocations": [
+        "bolster confidence",
+        "bolster the economy",
+        "bolster defences"
+      ],
+      "example": "The news bolstered investor confidence.",
+      "ieltsExample": "Subsidies can bolster innovation in clean technology."
+    },
+    {
+      "id": "w078",
+      "word": "Culminate",
+      "phonetic": "/ˈkʌl.mɪ.neɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To reach a climax or point of highest development.",
+      "collocations": [
+        "culminate in",
+        "culminate with",
+        "years culminate"
+      ],
+      "example": "Years of research culminated in a breakthrough.",
+      "ieltsExample": "The project culminated in a landmark international agreement."
+    },
+    {
+      "id": "w079",
+      "word": "Entail",
+      "phonetic": "/ɪnˈteɪl/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To involve as a necessary part or consequence.",
+      "collocations": [
+        "entail significant costs",
+        "entail risks",
+        "entail changes"
+      ],
+      "example": "The role entails frequent travel abroad.",
+      "ieltsExample": "Banning cars from city centres would entail major infrastructure changes."
+    },
+    {
+      "id": "w080",
+      "word": "Entrench",
+      "phonetic": "/ɪnˈtrentʃ/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To establish firmly so that change is difficult.",
+      "collocations": [
+        "entrench inequality",
+        "deeply entrenched",
+        "entrench power"
+      ],
+      "example": "Old habits are deeply entrenched in the organisation.",
+      "ieltsExample": "Poor funding can entrench educational inequality across regions."
+    },
+    {
+      "id": "w081",
+      "word": "Exemplify",
+      "phonetic": "/ɪɡˈzem.plɪ.faɪ/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To be a typical example of.",
+      "collocations": [
+        "exemplify the trend",
+        "clearly exemplify",
+        "exemplify best practice"
+      ],
+      "example": "The case exemplifies broader problems in the sector.",
+      "ieltsExample": "Nordic welfare models exemplify successful social investment."
+    },
+    {
+      "id": "w082",
+      "word": "Refute",
+      "phonetic": "/rɪˈfjuːt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To prove a statement or theory wrong.",
+      "collocations": [
+        "refute the claim",
+        "refute an argument",
+        "difficult to refute"
+      ],
+      "example": "New data refuted the earlier hypothesis.",
+      "ieltsExample": "Critics attempted to refute the study's methodology."
+    },
+    {
+      "id": "w083",
+      "word": "Reiterate",
+      "phonetic": "/riˈɪt.ə.reɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To say something again for emphasis.",
+      "collocations": [
+        "reiterate the importance",
+        "reiterate a commitment",
+        "reiterate that"
+      ],
+      "example": "The minister reiterated the government's commitment.",
+      "ieltsExample": "The essay should reiterate the thesis without introducing new ideas."
+    },
+    {
+      "id": "w084",
+      "word": "Stipulate",
+      "phonetic": "/ˈstɪp.jə.leɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To demand or specify as part of an agreement.",
+      "collocations": [
+        "stipulate conditions",
+        "contract stipulates",
+        "clearly stipulate"
+      ],
+      "example": "The contract stipulates a thirty-day notice period.",
+      "ieltsExample": "Regulations stipulate minimum safety standards for all vehicles."
+    },
+    {
+      "id": "w085",
+      "word": "Surge",
+      "phonetic": "/sɜːdʒ/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To increase suddenly and powerfully.",
+      "collocations": [
+        "surge in demand",
+        "prices surge",
+        "surge ahead"
+      ],
+      "example": "Demand for electric vehicles has surged.",
+      "ieltsExample": "Energy prices surged following the supply disruption."
+    },
+    {
+      "id": "w086",
+      "word": "Ascribe",
+      "phonetic": "/əˈskraɪb/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To attribute something to a stated cause.",
+      "collocations": [
+        "ascribe to",
+        "widely ascribed",
+        "ascribe importance"
+      ],
+      "example": "He ascribed his success to hard work.",
+      "ieltsExample": "Many failures are ascribed to poor planning rather than bad luck."
+    },
+    {
+      "id": "w087",
+      "word": "Conjecture",
+      "phonetic": "/kənˈdʒek.tʃər/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "An opinion formed without sufficient evidence.",
+      "collocations": [
+        "mere conjecture",
+        "informed conjecture",
+        "speculation and conjecture"
+      ],
+      "example": "Their claims were based on conjecture, not data.",
+      "ieltsExample": "Until further research is done, any figure remains conjecture."
+    },
+    {
+      "id": "w088",
+      "word": "Discourse",
+      "phonetic": "/ˈdɪs.kɔːs/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Written or spoken communication on a subject.",
+      "collocations": [
+        "public discourse",
+        "political discourse",
+        "academic discourse"
+      ],
+      "example": "Climate change dominates public discourse today.",
+      "ieltsExample": "Media discourse shapes how societies view immigration."
+    },
+    {
+      "id": "w089",
+      "word": "Hypothesis",
+      "phonetic": "/haɪˈpɒθ.ə.sɪs/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "A proposed explanation made on limited evidence.",
+      "collocations": [
+        "test a hypothesis",
+        "working hypothesis",
+        "null hypothesis"
+      ],
+      "example": "Scientists tested the hypothesis in controlled trials.",
+      "ieltsExample": "The hypothesis that homework improves outcomes remains contested."
+    },
+    {
+      "id": "w090",
+      "word": "Predicament",
+      "phonetic": "/prɪˈdɪk.ə.mənt/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "A difficult or unpleasant situation.",
+      "collocations": [
+        "economic predicament",
+        "financial predicament",
+        "awkward predicament"
+      ],
+      "example": "The company found itself in a financial predicament.",
+      "ieltsExample": "Developing nations face a predicament between growth and emissions."
+    },
+    {
+      "id": "w091",
+      "word": "Proximity",
+      "phonetic": "/prɒkˈsɪm.ɪ.ti/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Nearness in space, time, or relationship.",
+      "collocations": [
+        "in close proximity",
+        "proximity to",
+        "geographical proximity"
+      ],
+      "example": "Housing costs rise in proximity to the city centre.",
+      "ieltsExample": "Proximity to universities attracts technology firms."
+    },
+    {
+      "id": "w092",
+      "word": "Scrutiny",
+      "phonetic": "/ˈskruː.tɪ.ni/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Critical observation or examination.",
+      "collocations": [
+        "under scrutiny",
+        "close scrutiny",
+        "public scrutiny"
+      ],
+      "example": "The policy came under intense public scrutiny.",
+      "ieltsExample": "Corporate tax arrangements deserve greater parliamentary scrutiny."
+    },
+    {
+      "id": "w093",
+      "word": "Surplus",
+      "phonetic": "/ˈsɜː.pləs/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "An amount left over when requirements have been met.",
+      "collocations": [
+        "budget surplus",
+        "trade surplus",
+        "food surplus"
+      ],
+      "example": "The nation reported a trade surplus last year.",
+      "ieltsExample": "Agricultural surpluses can depress prices for farmers."
+    },
+    {
+      "id": "w094",
+      "word": "Trajectory",
+      "phonetic": "/trəˈdʒek.tər.i/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "The path followed by something; course of development.",
+      "collocations": [
+        "career trajectory",
+        "growth trajectory",
+        "upward trajectory"
+      ],
+      "example": "The startup is on an upward trajectory.",
+      "ieltsExample": "Current policies put emissions on a dangerous trajectory."
+    },
+    {
+      "id": "w095",
+      "word": "Hindrance",
+      "phonetic": "/ˈhɪn.drəns/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "A thing that provides resistance or delay.",
+      "collocations": [
+        "major hindrance",
+        "without hindrance",
+        "potential hindrance"
+      ],
+      "example": "Lack of funding was a major hindrance to progress.",
+      "ieltsExample": "Bureaucracy can be a hindrance to small business growth."
+    },
+    {
+      "id": "w096",
+      "word": "Detriment",
+      "phonetic": "/ˈdet.rɪ.mənt/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Harm or damage.",
+      "collocations": [
+        "to the detriment of",
+        "detriment to health",
+        "serious detriment"
+      ],
+      "example": "Long hours work to the detriment of family life.",
+      "ieltsExample": "Over-tourism can be to the detriment of local culture."
+    },
+    {
+      "id": "w097",
+      "word": "Manifest",
+      "phonetic": "/ˈmæn.ɪ.fest/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To display or show clearly.",
+      "collocations": [
+        "manifest itself",
+        "symptoms manifest",
+        "manifest as"
+      ],
+      "example": "Stress can manifest as physical illness.",
+      "ieltsExample": "Inequality manifests in unequal access to healthcare."
+    },
+    {
+      "id": "w098",
+      "word": "Render",
+      "phonetic": "/ˈren.dər/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To cause to become; to provide or give.",
+      "collocations": [
+        "render obsolete",
+        "render assistance",
+        "render ineffective"
+      ],
+      "example": "Automation may render some jobs obsolete.",
+      "ieltsExample": "Poor maintenance can render public transport unreliable."
+    },
+    {
+      "id": "w099",
+      "word": "Warrant",
+      "phonetic": "/ˈwɒr.ənt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To justify or necessitate.",
+      "collocations": [
+        "warrant further investigation",
+        "warrant attention",
+        "warrant concern"
+      ],
+      "example": "The results warrant further research.",
+      "ieltsExample": "Rising crime rates warrant a review of policing strategy."
+    },
+    {
+      "id": "w100",
+      "word": "Ephemeral",
+      "phonetic": "/ɪˈfem.ər.əl/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Lasting for a very short time.",
+      "collocations": [
+        "ephemeral nature",
+        "ephemeral trends",
+        "ephemeral success"
+      ],
+      "example": "Fame on social media can be ephemeral.",
+      "ieltsExample": "Many digital trends prove ephemeral within months."
+    },
+    {
+      "id": "w101",
+      "word": "Opaque",
+      "phonetic": "/əʊˈpeɪk/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Not able to be seen through; unclear.",
+      "collocations": [
+        "opaque process",
+        "remain opaque",
+        "opaque language"
+      ],
+      "example": "The decision-making process remained opaque.",
+      "ieltsExample": "Opaque pricing makes it hard for consumers to compare services."
+    },
+    {
+      "id": "w102",
+      "word": "Obsolete",
+      "phonetic": "/ˈɒb.sə.liːt/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "No longer produced or used; out of date.",
+      "collocations": [
+        "become obsolete",
+        "largely obsolete",
+        "render obsolete"
+      ],
+      "example": "Floppy disks are now obsolete technology.",
+      "ieltsExample": "Traditional retail models risk becoming obsolete."
+    },
+    {
+      "id": "w103",
+      "word": "Parochial",
+      "phonetic": "/pəˈrəʊ.ki.əl/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Having a limited outlook; narrow-minded.",
+      "collocations": [
+        "parochial attitudes",
+        "parochial interests",
+        "parochial view"
+      ],
+      "example": "We must avoid parochial thinking in global policy.",
+      "ieltsExample": "Parochial education policies ignore international best practice."
+    },
+    {
+      "id": "w104",
+      "word": "Skeptical",
+      "phonetic": "/ˈskep.tɪ.kəl/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Not easily convinced; having doubts.",
+      "collocations": [
+        "skeptical about",
+        "remain skeptical",
+        "deeply skeptical"
+      ],
+      "example": "Investors remain skeptical about the merger.",
+      "ieltsExample": "Many citizens are skeptical of politicians' climate promises."
+    },
+    {
+      "id": "w105",
+      "word": "Intermittent",
+      "phonetic": "/ˌɪn.təˈmɪt.ənt/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Occurring at irregular intervals.",
+      "collocations": [
+        "intermittent rain",
+        "intermittent fasting",
+        "intermittent supply"
+      ],
+      "example": "The region suffers intermittent power cuts.",
+      "ieltsExample": "Intermittent lockdowns disrupted education worldwide."
+    },
+    {
+      "id": "w106",
+      "word": "Integral",
+      "phonetic": "/ˈɪn.tɪ.ɡrəl/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Necessary to make a whole complete; essential.",
+      "collocations": [
+        "integral part",
+        "integral component",
+        "integral role"
+      ],
+      "example": "Trust is integral to any partnership.",
+      "ieltsExample": "Technology is now integral to modern classroom teaching."
+    },
+    {
+      "id": "w107",
+      "word": "Lucrative",
+      "phonetic": "/ˈluː.krə.tɪv/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Producing a great deal of profit.",
+      "collocations": [
+        "lucrative market",
+        "lucrative career",
+        "highly lucrative"
+      ],
+      "example": "Tech offers lucrative career paths for graduates.",
+      "ieltsExample": "Tourism can be lucrative but environmentally costly."
+    },
+    {
+      "id": "w108",
+      "word": "Notorious",
+      "phonetic": "/nəʊˈtɔː.ri.əs/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Famous for something bad.",
+      "collocations": [
+        "notorious for",
+        "notorious criminal",
+        "notorious difficulty"
+      ],
+      "example": "The road is notorious for accidents.",
+      "ieltsExample": "The city is notorious for traffic congestion."
+    },
+    {
+      "id": "w109",
+      "word": "Remedy",
+      "phonetic": "/ˈrem.ə.di/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "A means of counteracting or eliminating something undesirable.",
+      "collocations": [
+        "remedy the situation",
+        "seek a remedy",
+        "effective remedy"
+      ],
+      "example": "Education is often seen as a remedy for poverty.",
+      "ieltsExample": "There is no simple remedy for urban overcrowding."
+    },
+    {
+      "id": "w110",
+      "word": "Spawn",
+      "phonetic": "/spɔːn/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To produce or generate in large numbers.",
+      "collocations": [
+        "spawn debate",
+        "spawn innovation",
+        "spawn a generation"
+      ],
+      "example": "The scandal spawned numerous investigations.",
+      "ieltsExample": "The internet has spawned new forms of entrepreneurship."
+    },
+    {
+      "id": "w111",
+      "word": "Suppress",
+      "phonetic": "/səˈpres/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To forcibly put an end to; to prevent development.",
+      "collocations": [
+        "suppress dissent",
+        "suppress information",
+        "suppress growth"
+      ],
+      "example": "The regime tried to suppress free speech.",
+      "ieltsExample": "High taxes may suppress small business growth."
+    },
+    {
+      "id": "w112",
+      "word": "Uniform",
+      "phonetic": "/ˈjuː.nɪ.fɔːm/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Not varying; the same in all cases.",
+      "collocations": [
+        "uniform standards",
+        "uniform approach",
+        "uniform distribution"
+      ],
+      "example": "Schools adopted uniform dress codes.",
+      "ieltsExample": "A uniform curriculum may not suit diverse learners."
+    },
+    {
+      "id": "w113",
+      "word": "Vindicate",
+      "phonetic": "/ˈvɪn.dɪ.keɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To clear of blame or suspicion; to justify.",
+      "collocations": [
+        "vindicate the decision",
+        "fully vindicated",
+        "vindicate claims"
+      ],
+      "example": "The results vindicated years of research.",
+      "ieltsExample": "Later evidence vindicated early warnings about the crisis."
+    },
+    {
+      "id": "w114",
+      "word": "Demographic",
+      "phonetic": "/ˌdem.əˈɡræf.ɪk/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "A particular sector of a population.",
+      "collocations": [
+        "age demographic",
+        "key demographic",
+        "demographic shift"
+      ],
+      "example": "Advertisers target specific demographics.",
+      "ieltsExample": "An ageing demographic poses challenges for healthcare systems."
+    },
+    {
+      "id": "w115",
+      "word": "Inadvertent",
+      "phonetic": "/ˌɪn.ədˈvɜː.tənt/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Not resulting from or achieved through deliberate planning.",
+      "collocations": [
+        "inadvertent error",
+        "inadvertent consequence",
+        "inadvertent bias"
+      ],
+      "example": "The breach was caused by inadvertent human error.",
+      "ieltsExample": "Inadvertent policy gaps can widen inequality."
+    },
+    {
+      "id": "w116",
+      "word": "Optimal",
+      "phonetic": "/ˈɒp.tɪ.məl/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Best or most favourable.",
+      "collocations": [
+        "optimal conditions",
+        "optimal solution",
+        "optimal level"
+      ],
+      "example": "Plants grow best under optimal conditions.",
+      "ieltsExample": "Governments seek the optimal balance between growth and protection."
+    },
+    {
+      "id": "w117",
+      "word": "Proclivity",
+      "phonetic": "/prəˈklɪv.ə.ti/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "A tendency to choose or do something regularly.",
+      "collocations": [
+        "natural proclivity",
+        "proclivity for",
+        "proclivity towards"
+      ],
+      "example": "He has a proclivity for risk-taking.",
+      "ieltsExample": "Humans have a proclivity to favour short-term rewards."
+    },
+    {
+      "id": "w118",
+      "word": "Subordinate",
+      "phonetic": "/səˈbɔː.dɪ.nət/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Lower in rank or position.",
+      "collocations": [
+        "subordinate role",
+        "subordinate clause",
+        "subordinate status"
+      ],
+      "example": "Women were often given subordinate roles historically.",
+      "ieltsExample": "Economic concerns should not be subordinate to environmental protection—or vice versa without debate."
+    },
+    {
+      "id": "w119",
+      "word": "Tenuous",
+      "phonetic": "/ˈten.ju.əs/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Very weak or slight.",
+      "collocations": [
+        "tenuous link",
+        "tenuous connection",
+        "tenuous argument"
+      ],
+      "example": "The link between the events is tenuous.",
+      "ieltsExample": "The argument rests on tenuous statistical evidence."
+    },
+    {
+      "id": "w120",
+      "word": "Unfettered",
+      "phonetic": "/ʌnˈfet.əd/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Not confined or restricted.",
+      "collocations": [
+        "unfettered access",
+        "unfettered capitalism",
+        "unfettered growth"
+      ],
+      "example": "They demanded unfettered access to information.",
+      "ieltsExample": "Unfettered development can damage fragile ecosystems."
+    },
+    {
+      "id": "w121",
+      "word": "Vacillate",
+      "phonetic": "/ˈvæs.ɪ.leɪt/",
+      "type": "verb",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "To waver between different opinions or actions.",
+      "collocations": [
+        "vacillate between",
+        "continue to vacillate",
+        "vacillate on policy"
+      ],
+      "example": "The committee vacillated for months before deciding.",
+      "ieltsExample": "Governments that vacillate on climate policy lose public trust."
+    },
+    {
+      "id": "w122",
+      "word": "Exacerbation",
+      "phonetic": "/ɪɡˌzæs.əˈbeɪ.ʃən/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "The act of making something worse.",
+      "collocations": [
+        "exacerbation of symptoms",
+        "further exacerbation",
+        "risk of exacerbation"
+      ],
+      "example": "Stress led to an exacerbation of her condition.",
+      "ieltsExample": "War caused an exacerbation of the refugee crisis."
+    },
+    {
+      "id": "w123",
+      "word": "Juxtaposition",
+      "phonetic": "/ˌdʒʌk.stə.pəˈzɪʃ.ən/",
+      "type": "noun",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "The fact of placing things close together for contrast.",
+      "collocations": [
+        "striking juxtaposition",
+        "juxtaposition of",
+        "in juxtaposition"
+      ],
+      "example": "The film uses juxtaposition of rich and poor districts.",
+      "ieltsExample": "The juxtaposition of wealth and poverty is stark in many capitals."
+    },
+    {
+      "id": "w124",
+      "word": "Normative",
+      "phonetic": "/ˈnɔː.mə.tɪv/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Establishing a standard; prescriptive.",
+      "collocations": [
+        "normative assumptions",
+        "normative framework",
+        "normative influence"
+      ],
+      "example": "The study questions normative views of gender roles.",
+      "ieltsExample": "Normative claims about how people ought to live are debated in ethics."
+    },
+    {
+      "id": "w125",
+      "word": "Pertinent",
+      "phonetic": "/ˈpɜː.tɪ.nənt/",
+      "type": "adjective",
+      "category": "academic",
+      "cefr": "C1",
+      "def": "Relevant or applicable to a particular matter.",
+      "collocations": [
+        "pertinent question",
+        "pertinent information",
+        "particularly pertinent"
+      ],
+      "example": "Please keep your comments pertinent to the topic.",
+      "ieltsExample": "Only pertinent examples should appear in the body paragraphs."
+    },
+    {
+      "id": "w126",
+      "word": "Affluent",
+      "phonetic": "/ˈæf.lu.ənt/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Having a great deal of money; wealthy.",
+      "collocations": [
+        "affluent society",
+        "affluent neighbourhood",
+        "increasingly affluent"
+      ],
+      "example": "They live in an affluent suburb.",
+      "ieltsExample": "Affluent consumers drive demand for luxury goods."
+    },
+    {
+      "id": "w127",
+      "word": "Burgeoning",
+      "phonetic": "/ˈbɜː.dʒən.ɪŋ/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Growing or developing rapidly.",
+      "collocations": [
+        "burgeoning industry",
+        "burgeoning population",
+        "burgeoning market"
+      ],
+      "example": "The city has a burgeoning tech scene.",
+      "ieltsExample": "Burgeoning urban populations strain public services."
+    },
+    {
+      "id": "w128",
+      "word": "Conspicuous",
+      "phonetic": "/kənˈspɪk.ju.əs/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Standing out so as to be clearly visible.",
+      "collocations": [
+        "conspicuous consumption",
+        "conspicuous absence",
+        "highly conspicuous"
+      ],
+      "example": "His wealth was displayed in conspicuous consumption.",
+      "ieltsExample": "The conspicuous gap between rich and poor fuels resentment."
+    },
+    {
+      "id": "w129",
+      "word": "Daunting",
+      "phonetic": "/ˈdɔːn.tɪŋ/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Seeming difficult to deal with; intimidating.",
+      "collocations": [
+        "daunting task",
+        "daunting prospect",
+        "daunting challenge"
+      ],
+      "example": "Starting a business can be daunting.",
+      "ieltsExample": "Learning academic writing is daunting for many candidates."
+    },
+    {
+      "id": "w130",
+      "word": "Egregious",
+      "phonetic": "/ɪˈɡriː.dʒəs/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Outstandingly bad; shocking.",
+      "collocations": [
+        "egregious error",
+        "egregious violation",
+        "egregious misconduct"
+      ],
+      "example": "The report revealed egregious safety violations.",
+      "ieltsExample": "Egregious inequality undermines social cohesion."
+    },
+    {
+      "id": "w131",
+      "word": "Frugal",
+      "phonetic": "/ˈfruː.ɡəl/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "B2",
+      "def": "Sparing or economical with money or resources.",
+      "collocations": [
+        "frugal lifestyle",
+        "frugal habits",
+        "remain frugal"
+      ],
+      "example": "Her frugal habits helped her save quickly.",
+      "ieltsExample": "Frugal energy use benefits both households and the planet."
+    },
+    {
+      "id": "w132",
+      "word": "Gregarious",
+      "phonetic": "/ɡrɪˈɡeə.ri.əs/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Fond of company; sociable.",
+      "collocations": [
+        "gregarious personality",
+        "gregarious nature",
+        "less gregarious"
+      ],
+      "example": "She has a gregarious personality.",
+      "ieltsExample": "Gregarious students often thrive in discussion-based classes."
+    },
+    {
+      "id": "w133",
+      "word": "Haphazard",
+      "phonetic": "/hæpˈhæz.əd/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Lacking organisation or planning.",
+      "collocations": [
+        "haphazard approach",
+        "haphazard growth",
+        "haphazard arrangement"
+      ],
+      "example": "The files were stored in a haphazard way.",
+      "ieltsExample": "Haphazard urban planning creates long-term infrastructure problems."
+    },
+    {
+      "id": "w134",
+      "word": "Impartial",
+      "phonetic": "/ɪmˈpɑː.ʃəl/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Treating all rivals or disputants equally.",
+      "collocations": [
+        "impartial judge",
+        "impartial assessment",
+        "remain impartial"
+      ],
+      "example": "Judges must remain impartial.",
+      "ieltsExample": "Examiners are trained to give impartial feedback."
+    },
+    {
+      "id": "w135",
+      "word": "Meticulous",
+      "phonetic": "/məˈtɪk.jə.ləs/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Showing great attention to detail.",
+      "collocations": [
+        "meticulous planning",
+        "meticulous research",
+        "meticulous attention"
+      ],
+      "example": "She is meticulous about proofreading.",
+      "ieltsExample": "Meticulous Task 1 descriptions can lift band scores."
+    },
+    {
+      "id": "w136",
+      "word": "Nuance",
+      "phonetic": "/ˈnjuː.ɑːns/",
+      "type": "noun",
+      "category": "general",
+      "cefr": "C1",
+      "def": "A subtle difference in meaning or expression.",
+      "collocations": [
+        "cultural nuance",
+        "subtle nuance",
+        "capture the nuance"
+      ],
+      "example": "The translation missed important nuance.",
+      "ieltsExample": "Strong essays capture nuance rather than oversimplifying issues."
+    },
+    {
+      "id": "w137",
+      "word": "Onerous",
+      "phonetic": "/ˈəʊ.nər.əs/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Involving a great deal of effort or difficulty.",
+      "collocations": [
+        "onerous burden",
+        "onerous regulations",
+        "onerous task"
+      ],
+      "example": "The tax forms were onerous to complete.",
+      "ieltsExample": "Onerous visa requirements deter skilled migrants."
+    },
+    {
+      "id": "w138",
+      "word": "Prolific",
+      "phonetic": "/prəˈlɪf.ɪk/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Producing much; abundantly fruitful.",
+      "collocations": [
+        "prolific writer",
+        "prolific output",
+        "prolific career"
+      ],
+      "example": "She is a prolific author of research papers.",
+      "ieltsExample": "China has become a prolific producer of renewable technology."
+    },
+    {
+      "id": "w139",
+      "word": "Quintessential",
+      "phonetic": "/ˌkwɪn.tɪˈsen.ʃəl/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Representing the most perfect example.",
+      "collocations": [
+        "quintessential example",
+        "quintessential British",
+        "quintessential feature"
+      ],
+      "example": "Fish and chips is quintessential British cuisine.",
+      "ieltsExample": "Paris is often seen as the quintessential romantic city."
+    },
+    {
+      "id": "w140",
+      "word": "Redundant",
+      "phonetic": "/rɪˈdʌn.dənt/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "No longer needed or useful.",
+      "collocations": [
+        "made redundant",
+        "redundant equipment",
+        "feel redundant"
+      ],
+      "example": "Several staff were made redundant last year.",
+      "ieltsExample": "Automation may render some skills redundant."
+    },
+    {
+      "id": "w141",
+      "word": "Stark",
+      "phonetic": "/stɑːk/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Severe or bare in appearance; blunt.",
+      "collocations": [
+        "stark contrast",
+        "stark reality",
+        "stark choice"
+      ],
+      "example": "There is a stark contrast between rich and poor areas.",
+      "ieltsExample": "The data presents a stark picture of climate impact."
+    },
+    {
+      "id": "w142",
+      "word": "Incumbent",
+      "phonetic": "/ɪnˈkʌm.bənt/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Necessary as a duty or responsibility.",
+      "collocations": [
+        "it is incumbent on",
+        "incumbent upon governments"
+      ],
+      "example": "It is incumbent on leaders to act responsibly.",
+      "ieltsExample": "It is incumbent on policymakers to protect vulnerable groups."
+    },
+    {
+      "id": "w143",
+      "word": "Ubiquity",
+      "phonetic": "/juːˈbɪk.wɪ.ti/",
+      "type": "noun",
+      "category": "general",
+      "cefr": "C1",
+      "def": "The fact of appearing everywhere.",
+      "collocations": [
+        "ubiquity of smartphones",
+        "cultural ubiquity",
+        "increasing ubiquity"
+      ],
+      "example": "We discuss the ubiquity of digital advertising.",
+      "ieltsExample": "The ubiquity of English gives native speakers an advantage abroad."
+    },
+    {
+      "id": "w144",
+      "word": "Venerable",
+      "phonetic": "/ˈven.ər.ə.bəl/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Accorded great respect due to age or wisdom.",
+      "collocations": [
+        "venerable institution",
+        "venerable tradition",
+        "venerable professor"
+      ],
+      "example": "The university is a venerable institution.",
+      "ieltsExample": "Venerable customs may still hinder gender equality."
+    },
+    {
+      "id": "w145",
+      "word": "Wholesale",
+      "phonetic": "/ˈhəʊl.seɪl/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "On a large scale; complete.",
+      "collocations": [
+        "wholesale changes",
+        "wholesale reform",
+        "wholesale destruction"
+      ],
+      "example": "The company announced wholesale restructuring.",
+      "ieltsExample": "Wholesale adoption of electric buses could cut urban emissions."
+    },
+    {
+      "id": "w146",
+      "word": "Austere",
+      "phonetic": "/ɒˈstɪər/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Severe or strict in manner; having no comforts.",
+      "collocations": [
+        "austere conditions",
+        "austere measures",
+        "austere lifestyle"
+      ],
+      "example": "They lived under austere economic conditions.",
+      "ieltsExample": "Austerity programmes impose austere spending limits on welfare."
+    },
+    {
+      "id": "w147",
+      "word": "Copious",
+      "phonetic": "/ˈkəʊ.pi.əs/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Abundant in supply or quantity.",
+      "collocations": [
+        "copious notes",
+        "copious amounts",
+        "copious research"
+      ],
+      "example": "She took copious notes during the lecture.",
+      "ieltsExample": "Copious evidence supports the benefits of early childhood education."
+    },
+    {
+      "id": "w148",
+      "word": "Dubious",
+      "phonetic": "/ˈdjuː.bi.əs/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Hesitating or doubting; not to be relied upon.",
+      "collocations": [
+        "dubious claim",
+        "dubious distinction",
+        "remain dubious"
+      ],
+      "example": "I am dubious about their promises.",
+      "ieltsExample": "Many remain dubious of quick-fix solutions to climate change."
+    },
+    {
+      "id": "w149",
+      "word": "Fleeting",
+      "phonetic": "/ˈfliː.tɪŋ/",
+      "type": "adjective",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Lasting for a very short time.",
+      "collocations": [
+        "fleeting moment",
+        "fleeting glance",
+        "fleeting fame"
+      ],
+      "example": "Happiness can be a fleeting feeling.",
+      "ieltsExample": "Social media offers only fleeting satisfaction for some users."
+    },
+    {
+      "id": "w150",
+      "word": "Gravitas",
+      "phonetic": "/ˈɡræv.ɪ.tæs/",
+      "type": "noun",
+      "category": "general",
+      "cefr": "C1",
+      "def": "Dignity, seriousness, or solemnity of manner.",
+      "collocations": [
+        "political gravitas",
+        "lack gravitas",
+        "considerable gravitas"
+      ],
+      "example": "The leader spoke with real gravitas.",
+      "ieltsExample": "Academic writing benefits from gravitas without being pompous."
+    },
+    {
+      "id": "w151",
+      "word": "Moreover",
+      "phonetic": "/mɔːˈrəʊ.vər/",
+      "type": "adverb",
+      "category": "connector",
+      "cefr": "B2",
+      "def": "As a further matter; besides.",
+      "collocations": [
+        "moreover, it is clear",
+        "moreover, evidence suggests"
+      ],
+      "example": "The plan is expensive. Moreover, it may fail.",
+      "ieltsExample": "Renewable energy reduces emissions. Moreover, it creates jobs."
+    },
+    {
+      "id": "w152",
+      "word": "Hence",
+      "phonetic": "/hens/",
+      "type": "adverb",
+      "category": "connector",
+      "cefr": "B2",
+      "def": "As a consequence; for this reason.",
+      "collocations": [
+        "hence the need",
+        "hence, we conclude",
+        "hence the term"
+      ],
+      "example": "The data was incomplete; hence the delay.",
+      "ieltsExample": "Investment fell; hence unemployment rose sharply."
+    },
+    {
+      "id": "w153",
+      "word": "Thus",
+      "phonetic": "/ðʌs/",
+      "type": "adverb",
+      "category": "connector",
+      "cefr": "B2",
+      "def": "As a result or consequence; therefore.",
+      "collocations": [
+        "thus far",
+        "thus indicating",
+        "thus, the argument"
+      ],
+      "example": "He studied hard and thus passed easily.",
+      "ieltsExample": "Costs have risen; thus consumers seek cheaper alternatives."
+    },
+    {
+      "id": "w154",
+      "word": "Accordingly",
+      "phonetic": "/əˈkɔː.dɪŋ.li/",
+      "type": "adverb",
+      "category": "connector",
+      "cefr": "C1",
+      "def": "In a way that is appropriate to the circumstances.",
+      "collocations": [
+        "act accordingly",
+        "adjust accordingly",
+        "respond accordingly"
+      ],
+      "example": "Rules changed and staff acted accordingly.",
+      "ieltsExample": "Governments must legislate accordingly to meet climate targets."
+    },
+    {
+      "id": "w155",
+      "word": "Conversely",
+      "phonetic": "/ˈkɒn.vɜːs.li/",
+      "type": "adverb",
+      "category": "connector",
+      "cefr": "C1",
+      "def": "In an opposite or reversed way.",
+      "collocations": [
+        "conversely, some argue",
+        "conversely, evidence shows"
+      ],
+      "example": "Urban areas grew; conversely, rural populations shrank.",
+      "ieltsExample": "Wealth rose in cities; conversely, rural incomes stagnated."
+    },
+    {
+      "id": "w156",
+      "word": "Likewise",
+      "phonetic": "/ˈlaɪk.waɪz/",
+      "type": "adverb",
+      "category": "connector",
+      "cefr": "B2",
+      "def": "In the same way; also.",
+      "collocations": [
+        "likewise, many believe",
+        "and likewise"
+      ],
+      "example": "She excelled in maths; likewise in physics.",
+      "ieltsExample": "Japan invested in rail; likewise, France expanded its network."
+    },
+    {
+      "id": "w157",
+      "word": "Subsequently",
+      "phonetic": "/ˈsʌb.sɪ.kwənt.li/",
+      "type": "adverb",
+      "category": "connector",
+      "cefr": "B2",
+      "def": "After a particular thing has happened.",
+      "collocations": [
+        "subsequently discovered",
+        "subsequently led to"
+      ],
+      "example": "He resigned and subsequently moved abroad.",
+      "ieltsExample": "The law passed and subsequently reduced smoking rates."
+    },
+    {
+      "id": "w158",
+      "word": "Chiefly",
+      "phonetic": "/ˈtʃiːf.li/",
+      "type": "adverb",
+      "category": "connector",
+      "cefr": "C1",
+      "def": "Mainly; above all.",
+      "collocations": [
+        "chiefly because",
+        "chiefly concerned with",
+        "chiefly responsible"
+      ],
+      "example": "The delay was chiefly caused by weather.",
+      "ieltsExample": "The decline was chiefly due to falling investment."
+    },
+    {
+      "id": "w159",
+      "word": "Invariably",
+      "phonetic": "/ɪnˈveə.ri.ə.bli/",
+      "type": "adverb",
+      "category": "connector",
+      "cefr": "C1",
+      "def": "In every case or on every occasion.",
+      "collocations": [
+        "almost invariably",
+        "invariably leads to"
+      ],
+      "example": "The test invariably proves difficult.",
+      "ieltsExample": "Poor planning invariably leads to weaker essays."
+    },
+    {
+      "id": "w160",
+      "word": "Admittedly",
+      "phonetic": "/ədˈmɪt.ɪd.li/",
+      "type": "adverb",
+      "category": "connector",
+      "cefr": "C1",
+      "def": "Used to introduce a concession.",
+      "collocations": [
+        "admittedly, there are",
+        "admittedly difficult"
+      ],
+      "example": "Admittedly, the cost is high.",
+      "ieltsExample": "Admittedly, technology has drawbacks; nevertheless, benefits outweigh them."
+    },
+    {
+      "id": "w161",
+      "word": "Granted",
+      "phonetic": "/ˈɡrɑːn.tɪd/",
+      "type": "adverb",
+      "category": "connector",
+      "cefr": "C1",
+      "def": "Used to concede a point before making another.",
+      "collocations": [
+        "granted, this is true",
+        "granted that"
+      ],
+      "example": "Granted, the policy is costly, but it is necessary.",
+      "ieltsExample": "Granted, tourism creates jobs; however, it can harm the environment."
+    },
+    {
+      "id": "w162",
+      "word": "By contrast",
+      "phonetic": "/baɪ ˈkɒn.trɑːst/",
+      "type": "phrase",
+      "category": "connector",
+      "cefr": "B2",
+      "def": "Used to highlight a difference.",
+      "collocations": [
+        "by contrast, rural",
+        "by contrast, the data"
+      ],
+      "example": "Cities grew rapidly. By contrast, villages declined.",
+      "ieltsExample": "By contrast, renewable investment doubled in the same period."
+    },
+    {
+      "id": "w163",
+      "word": "On balance",
+      "phonetic": "/ɒn ˈbæl.əns/",
+      "type": "phrase",
+      "category": "connector",
+      "cefr": "C1",
+      "def": "Taking everything into consideration.",
+      "collocations": [
+        "on balance, the benefits",
+        "on balance, I believe"
+      ],
+      "example": "On balance, the project was worthwhile.",
+      "ieltsExample": "On balance, remote work benefits outweigh the drawbacks."
+    },
+    {
+      "id": "w164",
+      "word": "To that end",
+      "phonetic": "/tuː ðæt end/",
+      "type": "phrase",
+      "category": "connector",
+      "cefr": "C1",
+      "def": "For that purpose.",
+      "collocations": [
+        "to that end, governments",
+        "to that end, schools"
+      ],
+      "example": "To that end, they hired more teachers.",
+      "ieltsExample": "To that end, governments fund teacher training programmes."
+    },
+    {
+      "id": "w165",
+      "word": "In light of",
+      "phonetic": "/ɪn laɪt ɒv/",
+      "type": "phrase",
+      "category": "connector",
+      "cefr": "C1",
+      "def": "Because of new information or circumstances.",
+      "collocations": [
+        "in light of recent",
+        "in light of evidence"
+      ],
+      "example": "In light of new evidence, they reopened the case.",
+      "ieltsExample": "In light of climate data, stricter regulations are justified."
+    },
+    {
+      "id": "w166",
+      "word": "With respect to",
+      "phonetic": "/wɪð rɪˈspekt tuː/",
+      "type": "phrase",
+      "category": "connector",
+      "cefr": "C1",
+      "def": "Regarding; concerning.",
+      "collocations": [
+        "with respect to policy",
+        "with respect to costs"
+      ],
+      "example": "With respect to safety, changes are needed.",
+      "ieltsExample": "With respect to education, funding remains inadequate."
+    },
+    {
+      "id": "w167",
+      "word": "Insofar as",
+      "phonetic": "/ˌɪn.səʊˈfɑːr æz/",
+      "type": "phrase",
+      "category": "connector",
+      "cefr": "C1",
+      "def": "To the extent that.",
+      "collocations": [
+        "insofar as possible",
+        "insofar as we know"
+      ],
+      "example": "Help will be given insofar as funds allow.",
+      "ieltsExample": "Technology helps insofar as users develop digital literacy."
+    },
+    {
+      "id": "w168",
+      "word": "Not least",
+      "phonetic": "/nɒt liːst/",
+      "type": "phrase",
+      "category": "connector",
+      "cefr": "C1",
+      "def": "Especially; particularly important.",
+      "collocations": [
+        "not least because",
+        "not least among"
+      ],
+      "example": "The plan matters, not least for the poor.",
+      "ieltsExample": "Education reform matters, not least for rural communities."
+    },
+    {
+      "id": "w169",
+      "word": "That said",
+      "phonetic": "/ðæt sed/",
+      "type": "phrase",
+      "category": "connector",
+      "cefr": "B2",
+      "def": "Nevertheless; however (after a concession).",
+      "collocations": [
+        "that said, there are",
+        "that said, I agree"
+      ],
+      "example": "The film was long. That said, it was engaging.",
+      "ieltsExample": "Tourism boosts income. That said, it can damage heritage sites."
+    },
+    {
+      "id": "w170",
+      "word": "All things considered",
+      "phonetic": "/ɔːl θɪŋz kənˈsɪd.əd/",
+      "type": "phrase",
+      "category": "connector",
+      "cefr": "C1",
+      "def": "Taking all factors into account.",
+      "collocations": [
+        "all things considered",
+        "all things considered, the"
+      ],
+      "example": "All things considered, we made the right choice.",
+      "ieltsExample": "All things considered, nuclear power remains controversial."
+    },
+    {
+      "id": "w171",
+      "word": "It is arguable that",
+      "phonetic": "/ɪt ɪz ˈɑː.ɡju.ə.bəl ðæt/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "C1",
+      "def": "Used to present a debatable claim.",
+      "collocations": [
+        "it is arguable that governments",
+        "it is arguable that technology"
+      ],
+      "example": "It is arguable that the policy failed.",
+      "ieltsExample": "It is arguable that free university education benefits society overall."
+    },
+    {
+      "id": "w172",
+      "word": "I am inclined to believe",
+      "phonetic": "/aɪ æm ɪnˈklaɪnd tuː bɪˈliːv/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "C1",
+      "def": "Used to express a tentative personal view.",
+      "collocations": [
+        "I am inclined to believe that",
+        "inclined to believe"
+      ],
+      "example": "I am inclined to believe he is right.",
+      "ieltsExample": "I am inclined to believe that prevention is cheaper than cure."
+    },
+    {
+      "id": "w173",
+      "word": "It would be remiss to",
+      "phonetic": "/ɪt wʊd biː rɪˈmɪs tuː/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "C1",
+      "def": "Used to say something must be mentioned.",
+      "collocations": [
+        "it would be remiss to ignore",
+        "remiss not to"
+      ],
+      "example": "It would be remiss to ignore safety concerns.",
+      "ieltsExample": "It would be remiss to overlook the role of poverty in crime."
+    },
+    {
+      "id": "w174",
+      "word": "There is merit in",
+      "phonetic": "/ðeər ɪz ˈmer.ɪt ɪn/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "C1",
+      "def": "Used to acknowledge a valid point.",
+      "collocations": [
+        "there is merit in both",
+        "merit in the argument"
+      ],
+      "example": "There is merit in both proposals.",
+      "ieltsExample": "There is merit in restricting cars in city centres."
+    },
+    {
+      "id": "w175",
+      "word": "On balance, I contend",
+      "phonetic": "/ɒn ˈbæl.əns aɪ kənˈtend/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "C1",
+      "def": "Used to state a weighed final position.",
+      "collocations": [
+        "on balance, I contend that",
+        "I contend that"
+      ],
+      "example": "On balance, I contend that reform is necessary.",
+      "ieltsExample": "On balance, I contend that governments should regulate social media."
+    },
+    {
+      "id": "w176",
+      "word": "It is tempting to assume",
+      "phonetic": "/ɪt ɪz ˈtemp.tɪŋ tuː əˈsjuːm/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "C1",
+      "def": "Used to caution against oversimplification.",
+      "collocations": [
+        "tempting to assume that",
+        "it is tempting to assume"
+      ],
+      "example": "It is tempting to assume success was inevitable.",
+      "ieltsExample": "It is tempting to assume technology alone solves education gaps."
+    },
+    {
+      "id": "w177",
+      "word": "Few would dispute that",
+      "phonetic": "/fjuː wʊd dɪˈspjuːt ðæt/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "C1",
+      "def": "Used for widely accepted claims.",
+      "collocations": [
+        "few would dispute that",
+        "few would dispute"
+      ],
+      "example": "Few would dispute that health matters.",
+      "ieltsExample": "Few would dispute that climate change poses serious risks."
+    },
+    {
+      "id": "w178",
+      "word": "It is not unreasonable to",
+      "phonetic": "/ɪt ɪz nɒt ʌnˈriː.zən.ə.bəl tuː/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "C1",
+      "def": "Used to present a moderate claim.",
+      "collocations": [
+        "not unreasonable to suggest",
+        "not unreasonable to argue"
+      ],
+      "example": "It is not unreasonable to ask for proof.",
+      "ieltsExample": "It is not unreasonable to expect cleaner air in cities."
+    },
+    {
+      "id": "w179",
+      "word": "I would venture that",
+      "phonetic": "/aɪ wʊd ˈven.tʃər ðæt/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "C1",
+      "def": "Used to offer a careful opinion.",
+      "collocations": [
+        "I would venture that",
+        "venture that most"
+      ],
+      "example": "I would venture that costs will rise.",
+      "ieltsExample": "I would venture that cultural exchange fosters mutual understanding."
+    },
+    {
+      "id": "w180",
+      "word": "The crux of the matter",
+      "phonetic": "/ðə krʌks ɒv ðə ˈmæt.ər/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "C1",
+      "def": "The most important point.",
+      "collocations": [
+        "the crux of the matter is",
+        "crux of the matter"
+      ],
+      "example": "The crux of the matter is funding.",
+      "ieltsExample": "The crux of the matter is whether growth can be sustainable."
+    },
+    {
+      "id": "w181",
+      "word": "To my mind",
+      "phonetic": "/tuː maɪ maɪnd/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "B2",
+      "def": "In my opinion.",
+      "collocations": [
+        "to my mind, the key",
+        "to my mind, this"
+      ],
+      "example": "To my mind, the film was overrated.",
+      "ieltsExample": "To my mind, public transport deserves greater investment."
+    },
+    {
+      "id": "w182",
+      "word": "I take the view that",
+      "phonetic": "/aɪ teɪk ðə vjuː ðæt/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "C1",
+      "def": "Used to state a formal personal opinion.",
+      "collocations": [
+        "I take the view that",
+        "take the view that"
+      ],
+      "example": "I take the view that change is overdue.",
+      "ieltsExample": "I take the view that arts education should not be cut."
+    },
+    {
+      "id": "w183",
+      "word": "It is open to debate",
+      "phonetic": "/ɪt ɪz ˌəʊ.pən tuː dɪˈbeɪt/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "C1",
+      "def": "Used when no consensus exists.",
+      "collocations": [
+        "open to debate whether",
+        "remains open to debate"
+      ],
+      "example": "Whether it will work is open to debate.",
+      "ieltsExample": "Whether homework improves learning remains open to debate."
+    },
+    {
+      "id": "w184",
+      "word": "I am persuaded that",
+      "phonetic": "/aɪ æm pəˈsweɪ.dɪd ðæt/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "C1",
+      "def": "Used to express conviction after consideration.",
+      "collocations": [
+        "I am persuaded that",
+        "persuaded that the"
+      ],
+      "example": "I am persuaded that the evidence is sound.",
+      "ieltsExample": "I am persuaded that early intervention reduces crime long-term."
+    },
+    {
+      "id": "w185",
+      "word": "On the whole",
+      "phonetic": "/ɒn ðə həʊl/",
+      "type": "phrase",
+      "category": "opinion",
+      "cefr": "B2",
+      "def": "Generally; considering everything.",
+      "collocations": [
+        "on the whole, positive",
+        "on the whole, I think"
+      ],
+      "example": "On the whole, the trip was enjoyable.",
+      "ieltsExample": "On the whole, globalisation has lifted living standards."
+    },
+    {
+      "id": "w186",
+      "word": "Off the top of my head",
+      "phonetic": "/ɒf ðə tɒp ɒv maɪ hed/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "B2",
+      "def": "Without careful thought or preparation.",
+      "collocations": [
+        "off the top of my head, I'd say",
+        "off the top of my head"
+      ],
+      "example": "Off the top of my head, I'd say about fifty.",
+      "ieltsExample": "Off the top of my head, I'd guess tourism is the main industry there."
+    },
+    {
+      "id": "w187",
+      "word": "That rings a bell",
+      "phonetic": "/ðæt rɪŋz ə bel/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "B2",
+      "def": "Sounds familiar; I think I remember.",
+      "collocations": [
+        "that rings a bell",
+        "doesn't ring a bell"
+      ],
+      "example": "The name rings a bell but I can't place him.",
+      "ieltsExample": "Your description of the festival rings a bell — I read about it."
+    },
+    {
+      "id": "w188",
+      "word": "I'm on the fence",
+      "phonetic": "/aɪm ɒn ðə fens/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "B2",
+      "def": "Undecided between two options.",
+      "collocations": [
+        "I'm on the fence about",
+        "still on the fence"
+      ],
+      "example": "I'm on the fence about which job to take.",
+      "ieltsExample": "I'm on the fence about whether cities should ban cars entirely."
+    },
+    {
+      "id": "w189",
+      "word": "Come to think of it",
+      "phonetic": "/kʌm tuː θɪŋk ɒv ɪt/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "B2",
+      "def": "Used when something occurs to you.",
+      "collocations": [
+        "come to think of it",
+        "now that I come to think"
+      ],
+      "example": "Come to think of it, I did meet her once.",
+      "ieltsExample": "Come to think of it, my hometown has changed dramatically."
+    },
+    {
+      "id": "w190",
+      "word": "It slips my mind",
+      "phonetic": "/ɪt slɪps maɪ maɪnd/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "B2",
+      "def": "To forget something temporarily.",
+      "collocations": [
+        "it completely slips my mind",
+        "names slip my mind"
+      ],
+      "example": "Sorry, your number slips my mind.",
+      "ieltsExample": "Important details sometimes slip my mind under pressure."
+    },
+    {
+      "id": "w191",
+      "word": "Broadly speaking",
+      "phonetic": "/ˈbrɔːd.li ˈspiː.kɪŋ/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "B2",
+      "def": "In general terms; without detail.",
+      "collocations": [
+        "broadly speaking, yes",
+        "broadly speaking, the"
+      ],
+      "example": "Broadly speaking, the plan makes sense.",
+      "ieltsExample": "Broadly speaking, young people are more environmentally aware."
+    },
+    {
+      "id": "w192",
+      "word": "If memory serves",
+      "phonetic": "/ɪf ˈmem.ər.i sɜːvz/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "C1",
+      "def": "As far as I can remember.",
+      "collocations": [
+        "if memory serves, it was",
+        "if memory serves me"
+      ],
+      "example": "If memory serves, we met in 2019.",
+      "ieltsExample": "If memory serves, the course lasted six months."
+    },
+    {
+      "id": "w193",
+      "word": "I wouldn't go so far as to say",
+      "phonetic": "/aɪ ˈwʊd.ənt ɡəʊ səʊ fɑː æz tuː seɪ/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "C1",
+      "def": "Used to moderate a strong claim.",
+      "collocations": [
+        "wouldn't go so far as to",
+        "go so far as to say"
+      ],
+      "example": "I wouldn't go so far as to call it a disaster.",
+      "ieltsExample": "I wouldn't go so far as to say technology ruins relationships."
+    },
+    {
+      "id": "w194",
+      "word": "That's a moot point",
+      "phonetic": "/ðæts ə muːt pɔɪnt/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "C1",
+      "def": "A matter open to debate or no longer relevant.",
+      "collocations": [
+        "that's a moot point",
+        "somewhat moot"
+      ],
+      "example": "Whether he intended it is a moot point.",
+      "ieltsExample": "Whether the old stadium should reopen is a moot point now."
+    },
+    {
+      "id": "w195",
+      "word": "I'm inclined to say",
+      "phonetic": "/aɪm ɪnˈklaɪnd tuː seɪ/",
+      "type": "phrase",
+      "category": "speaking",
+      "cefr": "B2",
+      "def": "Used to give a tentative answer.",
+      "collocations": [
+        "I'm inclined to say yes",
+        "inclined to say that"
+      ],
+      "example": "I'm inclined to say she'll agree.",
+      "ieltsExample": "I'm inclined to say rural life is quieter but less convenient."
+    },
+    {
+      "id": "w196",
+      "word": "Boil down to",
+      "phonetic": "/bɔɪl daʊn tuː/",
+      "type": "phrasal verb",
+      "category": "phrasal",
+      "cefr": "C1",
+      "def": "To be reducible to the essential element.",
+      "collocations": [
+        "boil down to cost",
+        "boil down to two"
+      ],
+      "example": "The issue boils down to trust.",
+      "ieltsExample": "Most environmental debates boil down to economic priorities."
+    },
+    {
+      "id": "w197",
+      "word": "Brush up on",
+      "phonetic": "/brʌʃ ʌp ɒn/",
+      "type": "phrasal verb",
+      "category": "phrasal",
+      "cefr": "B2",
+      "def": "To improve knowledge by revising.",
+      "collocations": [
+        "brush up on grammar",
+        "brush up on skills"
+      ],
+      "example": "I need to brush up on my Spanish.",
+      "ieltsExample": "Candidates should brush up on Task 1 chart vocabulary."
+    },
+    {
+      "id": "w198",
+      "word": "Do away with",
+      "phonetic": "/duː əˈweɪ wɪð/",
+      "type": "phrasal verb",
+      "category": "phrasal",
+      "cefr": "C1",
+      "def": "To abolish or remove.",
+      "collocations": [
+        "do away with the rule",
+        "do away with exams"
+      ],
+      "example": "They want to do away with the old law.",
+      "ieltsExample": "Some argue we should do away with homework entirely."
+    },
+    {
+      "id": "w199",
+      "word": "Fall short of",
+      "phonetic": "/fɔːl ʃɔːt ɒv/",
+      "type": "phrasal verb",
+      "category": "phrasal",
+      "cefr": "C1",
+      "def": "To fail to reach a required standard.",
+      "collocations": [
+        "fall short of expectations",
+        "fall short of targets"
+      ],
+      "example": "Sales fell short of expectations.",
+      "ieltsExample": "Current policies fall short of Paris Agreement targets."
+    },
+    {
+      "id": "w200",
+      "word": "Zero in on",
+      "phonetic": "/ˈzɪə.rəʊ ɪn ɒn/",
+      "type": "phrasal verb",
+      "category": "phrasal",
+      "cefr": "C1",
+      "def": "To focus attention on.",
+      "collocations": [
+        "zero in on the problem",
+        "zero in on key"
+      ],
+      "example": "Investigators zeroed in on the suspect.",
+      "ieltsExample": "Strong essays zero in on the most relevant causes."
+    }
+  ]
+}

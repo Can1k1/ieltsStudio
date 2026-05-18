@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "name": "IELTS Studio Vocabulary Pool",
+    "stage": 2,
+    "description": "Master index of vocabulary data sources for modular app (Stage 3+)."
+  },
+  "sources": [
+    {
+      "id": "oxford3000",
+      "file": "vocab-oxford3000.json",
+      "count": "run parser (~2983 expected)",
+      "enrichment": "word + POS + CEFR; phonetic/definition via client API + localStorage cache",
+      "generate": "node scripts/parse-oxford3000.mjs <oxford-lines.txt>"
+    },
+    {
+      "id": "awl570",
+      "file": "vocab-awl570.json",
+      "count": 570,
+      "enrichment": "headword + sublist; client API optional",
+      "generate": "node scripts/build-awl.mjs (requires scripts/sublist01–10.html)"
+    },
+    {
+      "id": "band8plus",
+      "file": "vocab-band8plus.json",
+      "count": 200,
+      "categories": {
+        "academic": 100,
+        "general": 35,
+        "connector": 25,
+        "opinion": 15,
+        "speaking": 15,
+        "phrasal": 10
+      },
+      "enrichment": "full offline (phonetic, definition, collocations, IELTS examples)",
+      "generate": "node scripts/build-band8.mjs"
+    }
+  ],
+  "totals": {
+    "band8plusCurated": 200,
+    "awlHeadwords": 570,
+    "oxford3000Note": "Run parser when PDF text export is available (~2983 words)"
+  }
+}

@@ -1,0 +1,3444 @@
+{
+  "meta": {
+    "name": "Academic Word List",
+    "version": "2000",
+    "author": "Averil Coxhead",
+    "sourceUrl": "https://www.wgtn.ac.nz/lals/resources/academicwordlist/",
+    "headwordCount": 570,
+    "sublistSizes": {
+      "1": 60,
+      "2": 60,
+      "3": 61,
+      "4": 60,
+      "5": 60,
+      "6": 60,
+      "7": 59,
+      "8": 60,
+      "9": 60,
+      "10": 30
+    },
+    "note": "Headwords only; definitions enriched client-side (Free Dictionary API + cache)."
+  },
+  "entries": [
+    {
+      "id": "awl-001",
+      "headword": "analyse",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-002",
+      "headword": "approach",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-003",
+      "headword": "area",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-004",
+      "headword": "assess",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-005",
+      "headword": "assume",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-006",
+      "headword": "authority",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-007",
+      "headword": "available",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-008",
+      "headword": "benefit",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-009",
+      "headword": "concept",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-010",
+      "headword": "consist",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-011",
+      "headword": "constitute",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-012",
+      "headword": "context",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-013",
+      "headword": "contract",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-014",
+      "headword": "create",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-015",
+      "headword": "data",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-016",
+      "headword": "define",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-017",
+      "headword": "derive",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-018",
+      "headword": "distribute",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-019",
+      "headword": "economy",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-020",
+      "headword": "environment",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-021",
+      "headword": "establish",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-022",
+      "headword": "estimate",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-023",
+      "headword": "evident",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-024",
+      "headword": "export",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-025",
+      "headword": "factor",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-026",
+      "headword": "finance",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-027",
+      "headword": "formula",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-028",
+      "headword": "function",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-029",
+      "headword": "identify",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-030",
+      "headword": "income",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-031",
+      "headword": "indicate",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-032",
+      "headword": "individual",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-033",
+      "headword": "interpret",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-034",
+      "headword": "involve",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-035",
+      "headword": "issue",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-036",
+      "headword": "labour",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-037",
+      "headword": "legal",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-038",
+      "headword": "legislate",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-039",
+      "headword": "major",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-040",
+      "headword": "method",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-041",
+      "headword": "occur",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-042",
+      "headword": "percent",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-043",
+      "headword": "period",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-044",
+      "headword": "policy",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-045",
+      "headword": "principle",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-046",
+      "headword": "proceed",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-047",
+      "headword": "process",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-048",
+      "headword": "require",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-049",
+      "headword": "research",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-050",
+      "headword": "respond",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-051",
+      "headword": "role",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-052",
+      "headword": "section",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-053",
+      "headword": "sector",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-054",
+      "headword": "significant",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-055",
+      "headword": "similar",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-056",
+      "headword": "source",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-057",
+      "headword": "specific",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-058",
+      "headword": "structure",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-059",
+      "headword": "theory",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-060",
+      "headword": "vary",
+      "sublist": 1,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-061",
+      "headword": "achieve",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-062",
+      "headword": "acquire",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-063",
+      "headword": "administrate",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-064",
+      "headword": "affect",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-065",
+      "headword": "appropriate",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-066",
+      "headword": "aspect",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-067",
+      "headword": "assist",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-068",
+      "headword": "category",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-069",
+      "headword": "chapter",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-070",
+      "headword": "commission",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-071",
+      "headword": "community",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-072",
+      "headword": "complex",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-073",
+      "headword": "compute",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-074",
+      "headword": "conclude",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-075",
+      "headword": "conduct",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-076",
+      "headword": "consequent",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-077",
+      "headword": "construct",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-078",
+      "headword": "consume",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-079",
+      "headword": "credit",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-080",
+      "headword": "culture",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-081",
+      "headword": "design",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-082",
+      "headword": "distinct",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-083",
+      "headword": "element",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-084",
+      "headword": "equate",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-085",
+      "headword": "evaluate",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-086",
+      "headword": "feature",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-087",
+      "headword": "final",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-088",
+      "headword": "focus",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-089",
+      "headword": "impact",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-090",
+      "headword": "injure",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-091",
+      "headword": "institute",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-092",
+      "headword": "invest",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-093",
+      "headword": "item",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-094",
+      "headword": "journal",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-095",
+      "headword": "maintain",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-096",
+      "headword": "normal",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-097",
+      "headword": "obtain",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-098",
+      "headword": "participate",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-099",
+      "headword": "perceive",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-100",
+      "headword": "positive",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-101",
+      "headword": "potential",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-102",
+      "headword": "previous",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-103",
+      "headword": "primary",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-104",
+      "headword": "purchase",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-105",
+      "headword": "range",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-106",
+      "headword": "region",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-107",
+      "headword": "regulate",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-108",
+      "headword": "relevant",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-109",
+      "headword": "reside",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-110",
+      "headword": "resource",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-111",
+      "headword": "restrict",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-112",
+      "headword": "secure",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-113",
+      "headword": "seek",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-114",
+      "headword": "select",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-115",
+      "headword": "site",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-116",
+      "headword": "strategy",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-117",
+      "headword": "survey",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-118",
+      "headword": "text",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-119",
+      "headword": "tradition",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-120",
+      "headword": "transfer",
+      "sublist": 2,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-121",
+      "headword": "alternative",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-122",
+      "headword": "circumstance",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-123",
+      "headword": "comment",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-124",
+      "headword": "compensate",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-125",
+      "headword": "component",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-126",
+      "headword": "consent",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-127",
+      "headword": "considerable",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-128",
+      "headword": "constant",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-129",
+      "headword": "constrain",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-130",
+      "headword": "contribute",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-131",
+      "headword": "convene",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-132",
+      "headword": "coordinate",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-133",
+      "headword": "core",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-134",
+      "headword": "corporate",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-135",
+      "headword": "correspond",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-136",
+      "headword": "criteria",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-137",
+      "headword": "deduce",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-138",
+      "headword": "demonstrate",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-139",
+      "headword": "document",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-140",
+      "headword": "dominate",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-141",
+      "headword": "emphasis",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-142",
+      "headword": "ensure",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-143",
+      "headword": "exclude",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-144",
+      "headword": "framework",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-145",
+      "headword": "fund",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-146",
+      "headword": "illustrate",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-147",
+      "headword": "immigrate",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-148",
+      "headword": "imply",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-149",
+      "headword": "initial",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-150",
+      "headword": "instance",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-151",
+      "headword": "interact",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-152",
+      "headword": "justify",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-153",
+      "headword": "layer",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-154",
+      "headword": "link",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-155",
+      "headword": "locate",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-156",
+      "headword": "maximise",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-157",
+      "headword": "minor",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-158",
+      "headword": "negate",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-159",
+      "headword": "outcome",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-160",
+      "headword": "partner",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-161",
+      "headword": "philosophy",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-162",
+      "headword": "physical",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-163",
+      "headword": "proportion",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-164",
+      "headword": "publish",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-165",
+      "headword": "react",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-166",
+      "headword": "register",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-167",
+      "headword": "rely",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-168",
+      "headword": "reliability",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-169",
+      "headword": "remove",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-170",
+      "headword": "scheme",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-171",
+      "headword": "sequence",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-172",
+      "headword": "sex",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-173",
+      "headword": "shift",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-174",
+      "headword": "specify",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-175",
+      "headword": "sufficient",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-176",
+      "headword": "task",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-177",
+      "headword": "technical",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-178",
+      "headword": "technique",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-179",
+      "headword": "technology",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-180",
+      "headword": "valid",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-181",
+      "headword": "volume",
+      "sublist": 3,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-182",
+      "headword": "access",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-183",
+      "headword": "adequate",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-184",
+      "headword": "annual",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-185",
+      "headword": "apparent",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-186",
+      "headword": "approximate",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-187",
+      "headword": "attitude",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-188",
+      "headword": "attribute",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-189",
+      "headword": "civil",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-190",
+      "headword": "code",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-191",
+      "headword": "commit",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-192",
+      "headword": "communicate",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-193",
+      "headword": "concentrate",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-194",
+      "headword": "confer",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-195",
+      "headword": "contrast",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-196",
+      "headword": "cycle",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-197",
+      "headword": "debate",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-198",
+      "headword": "despite",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-199",
+      "headword": "dimension",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-200",
+      "headword": "domestic",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-201",
+      "headword": "emerge",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-202",
+      "headword": "error",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-203",
+      "headword": "ethnic",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-204",
+      "headword": "goal",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-205",
+      "headword": "grant",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-206",
+      "headword": "hence",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-207",
+      "headword": "hypothesis",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-208",
+      "headword": "implement",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-209",
+      "headword": "implicate",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-210",
+      "headword": "impose",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-211",
+      "headword": "integrate",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-212",
+      "headword": "internal",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-213",
+      "headword": "investigate",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-214",
+      "headword": "job",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-215",
+      "headword": "label",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-216",
+      "headword": "mechanism",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-217",
+      "headword": "obvious",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-218",
+      "headword": "occupy",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-219",
+      "headword": "option",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-220",
+      "headword": "output",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-221",
+      "headword": "overall",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-222",
+      "headword": "parallel",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-223",
+      "headword": "parameter",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-224",
+      "headword": "phase",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-225",
+      "headword": "predict",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-226",
+      "headword": "principal",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-227",
+      "headword": "prior",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-228",
+      "headword": "professional",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-229",
+      "headword": "project",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-230",
+      "headword": "promote",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-231",
+      "headword": "regime",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-232",
+      "headword": "resolve",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-233",
+      "headword": "retain",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-234",
+      "headword": "series",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-235",
+      "headword": "statistic",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-236",
+      "headword": "status",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-237",
+      "headword": "stress",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-238",
+      "headword": "subsequent",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-239",
+      "headword": "sum",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-240",
+      "headword": "summary",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-241",
+      "headword": "undertake",
+      "sublist": 4,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-242",
+      "headword": "academy",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-243",
+      "headword": "adjust",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-244",
+      "headword": "alter",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-245",
+      "headword": "amend",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-246",
+      "headword": "aware",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-247",
+      "headword": "capacity",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-248",
+      "headword": "challenge",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-249",
+      "headword": "clause",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-250",
+      "headword": "compound",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-251",
+      "headword": "conflict",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-252",
+      "headword": "consult",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-253",
+      "headword": "contact",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-254",
+      "headword": "decline",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-255",
+      "headword": "discrete",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-256",
+      "headword": "draft",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-257",
+      "headword": "enable",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-258",
+      "headword": "energy",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-259",
+      "headword": "enforce",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-260",
+      "headword": "entity",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-261",
+      "headword": "equivalent",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-262",
+      "headword": "evolve",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-263",
+      "headword": "expand",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-264",
+      "headword": "expose",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-265",
+      "headword": "external",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-266",
+      "headword": "facilitate",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-267",
+      "headword": "fundamental",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-268",
+      "headword": "generate",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-269",
+      "headword": "generation",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-270",
+      "headword": "image",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-271",
+      "headword": "liberal",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-272",
+      "headword": "licence",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-273",
+      "headword": "logic",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-274",
+      "headword": "margin",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-275",
+      "headword": "medical",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-276",
+      "headword": "mental",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-277",
+      "headword": "modify",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-278",
+      "headword": "monitor",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-279",
+      "headword": "network",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-280",
+      "headword": "notion",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-281",
+      "headword": "objective",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-282",
+      "headword": "orient",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-283",
+      "headword": "perspective",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-284",
+      "headword": "precise",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-285",
+      "headword": "prime",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-286",
+      "headword": "psychology",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-287",
+      "headword": "pursue",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-288",
+      "headword": "ratio",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-289",
+      "headword": "reject",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-290",
+      "headword": "revenue",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-291",
+      "headword": "stable",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-292",
+      "headword": "style",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-293",
+      "headword": "substitute",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-294",
+      "headword": "sustain",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-295",
+      "headword": "symbol",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-296",
+      "headword": "target",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-297",
+      "headword": "transit",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-298",
+      "headword": "trend",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-299",
+      "headword": "version",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-300",
+      "headword": "welfare",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-301",
+      "headword": "whereas",
+      "sublist": 5,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-302",
+      "headword": "abstract",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-303",
+      "headword": "accurate",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-304",
+      "headword": "acknowledge",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-305",
+      "headword": "aggregate",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-306",
+      "headword": "allocate",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-307",
+      "headword": "assign",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-308",
+      "headword": "attach",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-309",
+      "headword": "author",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-310",
+      "headword": "bond",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-311",
+      "headword": "brief",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-312",
+      "headword": "capable",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-313",
+      "headword": "cite",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-314",
+      "headword": "cooperate",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-315",
+      "headword": "discriminate",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-316",
+      "headword": "display",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-317",
+      "headword": "diverse",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-318",
+      "headword": "domain",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-319",
+      "headword": "edit",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-320",
+      "headword": "enhance",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-321",
+      "headword": "estate",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-322",
+      "headword": "exceed",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-323",
+      "headword": "expert",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-324",
+      "headword": "explicit",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-325",
+      "headword": "federal",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-326",
+      "headword": "fee",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-327",
+      "headword": "flexible",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-328",
+      "headword": "furthermore",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-329",
+      "headword": "gender",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-330",
+      "headword": "ignorant",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-331",
+      "headword": "incentive",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-332",
+      "headword": "incidence",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-333",
+      "headword": "incorporate",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-334",
+      "headword": "index",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-335",
+      "headword": "inhibit",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-336",
+      "headword": "initiate",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-337",
+      "headword": "input",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-338",
+      "headword": "instruct",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-339",
+      "headword": "intelligent",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-340",
+      "headword": "interval",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-341",
+      "headword": "lecture",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-342",
+      "headword": "migrate",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-343",
+      "headword": "minimum",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-344",
+      "headword": "ministry",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-345",
+      "headword": "motive",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-346",
+      "headword": "neutral",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-347",
+      "headword": "nevertheless",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-348",
+      "headword": "overseas",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-349",
+      "headword": "precede",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-350",
+      "headword": "presume",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-351",
+      "headword": "rational",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-352",
+      "headword": "recover",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-353",
+      "headword": "reveal",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-354",
+      "headword": "scope",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-355",
+      "headword": "subsidy",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-356",
+      "headword": "tape",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-357",
+      "headword": "trace",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-358",
+      "headword": "transform",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-359",
+      "headword": "transport",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-360",
+      "headword": "underlie",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-361",
+      "headword": "utilise",
+      "sublist": 6,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-362",
+      "headword": "adapt",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-363",
+      "headword": "adult",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-364",
+      "headword": "advocate",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-365",
+      "headword": "aid",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-366",
+      "headword": "channel",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-367",
+      "headword": "chemical",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-368",
+      "headword": "classic",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-369",
+      "headword": "comprehensive",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-370",
+      "headword": "comprise",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-371",
+      "headword": "contrary",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-372",
+      "headword": "convert",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-373",
+      "headword": "couple",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-374",
+      "headword": "decade",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-375",
+      "headword": "definite",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-376",
+      "headword": "deny",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-377",
+      "headword": "differentiate",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-378",
+      "headword": "dispose",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-379",
+      "headword": "dynamic",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-380",
+      "headword": "eliminate",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-381",
+      "headword": "empirical",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-382",
+      "headword": "equip",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-383",
+      "headword": "extract",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-384",
+      "headword": "file",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-385",
+      "headword": "finite",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-386",
+      "headword": "foundation",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-387",
+      "headword": "globe",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-388",
+      "headword": "grade",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-389",
+      "headword": "guarantee",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-390",
+      "headword": "hierarchy",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-391",
+      "headword": "identical",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-392",
+      "headword": "ideology",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-393",
+      "headword": "infer",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-394",
+      "headword": "innovate",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-395",
+      "headword": "insert",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-396",
+      "headword": "intervene",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-397",
+      "headword": "isolate",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-398",
+      "headword": "media",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-399",
+      "headword": "mode",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-400",
+      "headword": "paradigm",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-401",
+      "headword": "phenomenon",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-402",
+      "headword": "priority",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-403",
+      "headword": "prohibit",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-404",
+      "headword": "publication",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-405",
+      "headword": "quote",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-406",
+      "headword": "release",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-407",
+      "headword": "reverse",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-408",
+      "headword": "simulate",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-409",
+      "headword": "sole",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-410",
+      "headword": "somewhat",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-411",
+      "headword": "submit",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-412",
+      "headword": "successor",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-413",
+      "headword": "survive",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-414",
+      "headword": "thesis",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-415",
+      "headword": "topic",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-416",
+      "headword": "transmit",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-417",
+      "headword": "ultimate",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-418",
+      "headword": "unique",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-419",
+      "headword": "visible",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-420",
+      "headword": "voluntary",
+      "sublist": 7,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-421",
+      "headword": "abandon",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-422",
+      "headword": "accompany",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-423",
+      "headword": "accumulate",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-424",
+      "headword": "ambiguous",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-425",
+      "headword": "append",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-426",
+      "headword": "appreciate",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-427",
+      "headword": "arbitrary",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-428",
+      "headword": "automate",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-429",
+      "headword": "bias",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-430",
+      "headword": "chart",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-431",
+      "headword": "clarify",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-432",
+      "headword": "commodity",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-433",
+      "headword": "complement",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-434",
+      "headword": "conform",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-435",
+      "headword": "contemporary",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-436",
+      "headword": "contradict",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-437",
+      "headword": "crucial",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-438",
+      "headword": "currency",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-439",
+      "headword": "denote",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-440",
+      "headword": "detect",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-441",
+      "headword": "deviate",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-442",
+      "headword": "displace",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-443",
+      "headword": "drama",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-444",
+      "headword": "eventual",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-445",
+      "headword": "exhibit",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-446",
+      "headword": "exploit",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-447",
+      "headword": "fluctuate",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-448",
+      "headword": "guideline",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-449",
+      "headword": "highlight",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-450",
+      "headword": "implicit",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-451",
+      "headword": "induce",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-452",
+      "headword": "inevitable",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-453",
+      "headword": "infrastructure",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-454",
+      "headword": "inspect",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-455",
+      "headword": "intense",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-456",
+      "headword": "manipulate",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-457",
+      "headword": "minimise",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-458",
+      "headword": "nuclear",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-459",
+      "headword": "offset",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-460",
+      "headword": "paragraph",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-461",
+      "headword": "plus",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-462",
+      "headword": "practitioner",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-463",
+      "headword": "predominant",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-464",
+      "headword": "prospect",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-465",
+      "headword": "radical",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-466",
+      "headword": "random",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-467",
+      "headword": "reinforce",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-468",
+      "headword": "restore",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-469",
+      "headword": "revise",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-470",
+      "headword": "schedule",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-471",
+      "headword": "tense",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-472",
+      "headword": "terminate",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-473",
+      "headword": "theme",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-474",
+      "headword": "thereby",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-475",
+      "headword": "uniform",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-476",
+      "headword": "vehicle",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-477",
+      "headword": "via",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-478",
+      "headword": "virtual",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-479",
+      "headword": "visual",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-480",
+      "headword": "widespread",
+      "sublist": 8,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-481",
+      "headword": "accommodate",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-482",
+      "headword": "analogy",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-483",
+      "headword": "anticipate",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-484",
+      "headword": "assure",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-485",
+      "headword": "attain",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-486",
+      "headword": "behalf",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-487",
+      "headword": "bulk",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-488",
+      "headword": "cease",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-489",
+      "headword": "coherent",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-490",
+      "headword": "coincide",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-491",
+      "headword": "commence",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-492",
+      "headword": "compatible",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-493",
+      "headword": "concurrent",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-494",
+      "headword": "confine",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-495",
+      "headword": "controversy",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-496",
+      "headword": "converse",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-497",
+      "headword": "device",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-498",
+      "headword": "devote",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-499",
+      "headword": "diminish",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-500",
+      "headword": "distort",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-501",
+      "headword": "duration",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-502",
+      "headword": "erode",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-503",
+      "headword": "ethic",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-504",
+      "headword": "format",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-505",
+      "headword": "found",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-506",
+      "headword": "inherent",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-507",
+      "headword": "insight",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-508",
+      "headword": "integral",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-509",
+      "headword": "intermediate",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-510",
+      "headword": "manual",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-511",
+      "headword": "mature",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-512",
+      "headword": "mediate",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-513",
+      "headword": "medium",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-514",
+      "headword": "military",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-515",
+      "headword": "minimal",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-516",
+      "headword": "mutual",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-517",
+      "headword": "norm",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-518",
+      "headword": "overlap",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-519",
+      "headword": "passive",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-520",
+      "headword": "portion",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-521",
+      "headword": "preliminary",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-522",
+      "headword": "protocol",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-523",
+      "headword": "qualitative",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-524",
+      "headword": "refine",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-525",
+      "headword": "relax",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-526",
+      "headword": "restrain",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-527",
+      "headword": "revolution",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-528",
+      "headword": "rigid",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-529",
+      "headword": "route",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-530",
+      "headword": "scenario",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-531",
+      "headword": "sphere",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-532",
+      "headword": "subordinate",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-533",
+      "headword": "supplement",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-534",
+      "headword": "suspend",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-535",
+      "headword": "team",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-536",
+      "headword": "temporary",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-537",
+      "headword": "trigger",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-538",
+      "headword": "unify",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-539",
+      "headword": "violate",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-540",
+      "headword": "vision",
+      "sublist": 9,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-541",
+      "headword": "adjacent",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-542",
+      "headword": "albeit",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-543",
+      "headword": "assemble",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-544",
+      "headword": "collapse",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-545",
+      "headword": "colleague",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-546",
+      "headword": "compile",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-547",
+      "headword": "conceive",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-548",
+      "headword": "convince",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-549",
+      "headword": "depress",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-550",
+      "headword": "encounter",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-551",
+      "headword": "enormous",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-552",
+      "headword": "forthcoming",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-553",
+      "headword": "incline",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-554",
+      "headword": "integrity",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-555",
+      "headword": "intrinsic",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-556",
+      "headword": "invoke",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-557",
+      "headword": "levy",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-558",
+      "headword": "likewise",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-559",
+      "headword": "nonetheless",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-560",
+      "headword": "notwithstanding",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-561",
+      "headword": "odd",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-562",
+      "headword": "ongoing",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-563",
+      "headword": "panel",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-564",
+      "headword": "persist",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-565",
+      "headword": "pose",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-566",
+      "headword": "reluctance",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-567",
+      "headword": "so called",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-568",
+      "headword": "straightforward",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-569",
+      "headword": "undergo",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    },
+    {
+      "id": "awl-570",
+      "headword": "whereby",
+      "sublist": 10,
+      "source": "coxhead-2000"
+    }
+  ]
+}
