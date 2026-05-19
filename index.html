@@ -2082,41 +2082,5 @@ async function bootApp() {
 }
 bootApp();
 </script>
-<script src="ai-service.js"></script>
-
-<script>
-async function getAIFeedback(text, taskType = 'task2', minWords = 250) {
-  try {
-    if (typeof fetchClaudeFeedback === 'function') {
-      return await fetchClaudeFeedback(text, text.split(/\s+/).length, taskType);
-    }
-
-    if (typeof generateLocalFeedback === 'function') {
-      return generateLocalFeedback(text, taskType, minWords);
-    }
-
-    throw new Error('AI system not loaded');
-
-  } catch (err) {
-    console.error(err);
-
-    if (typeof generateLocalFeedback === 'function') {
-      return generateLocalFeedback(text, taskType, minWords);
-    }
-
-    return {
-      ta: 6,
-      cc: 6,
-      lr: 6,
-      gra: 6,
-      overall: 6,
-      strengths: 'Essay structure is generally clear.',
-      improvements: 'Add more complex grammar and vocabulary.',
-      tip: 'Use more advanced linking words.',
-      vocab: ['substantial', 'facilitate', 'mitigate']
-    };
-  }
-}
-</script>
 </body>
 </html>
