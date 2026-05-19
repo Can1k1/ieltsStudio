@@ -214,14 +214,25 @@ async function _fetchClaudeFeedback(text, words, taskType) {
     `Essay (${words} words):\n${text}`;
 
   const res = await fetch(AI_CONFIG.ANTHROPIC_URL, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      model:      AI_CONFIG.ANTHROPIC_MODEL,
-      max_tokens: AI_CONFIG.MAX_TOKENS,
-      messages:   [{ role: 'user', content: prompt }],
-    }),
-  });
+  method: 'POST',
+
+  headers: {
+    'Content-Type': 'application/json',
+    'x-api-key': apiKey,
+    'anthropic-version': '2023-06-01'
+  },
+
+  body: JSON.stringify({
+    model: AI_CONFIG.ANTHROPIC_MODEL,
+    max_tokens: AI_CONFIG.MAX_TOKENS,
+    messages: [
+      {
+        role: 'user',
+        content: prompt
+      }
+    ]
+  })
+});
 
   if (res.status === 429) {
     const e = new Error('Anthropic API rate limit. Otomatik olarak Smart Coach\'a geçiliyor…');

@@ -1425,7 +1425,22 @@ function renderFeedbackUI(fb, r, providerLabel, providerClass) {
   ].join('');
 }
 
-
+async function fetchOpenAIFeedback(text, words, taskType) {
+  const key = (appState.openaiKey || '').trim();
+  if (!key) throw new Error('Add your OpenAI API key in Settings to use ChatGPT feedback.');
+  const prompt = 'You are an expert IELTS examiner. Evaluate this ' + (taskType === 'task1' ? 'Task 1' : 'Task 2') + ' essay. Respond ONLY with valid JSON, no markdown:\n' +
+    '{"ta":X,"cc":X,"lr":X,"gra":X,"overall":X,"strengths":"...","improvements":"...","tip":"...","vocab":["w1","w2","w3"]}\n' +
+    'X = band 4.0-9.0 in 0.5 steps. Keep text fields to 1-2 sentences. vocab = 3 academic alternatives.\nEssay (' + words + ' words):\n' + text;
+  const res = await fetch('https://api.openai.com/v1/chat/completions', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + key },
+    body: JSON.stringify({
+      model: 'gpt-4o-mini',
+      messages: [{ role: 'user', content: prompt }],
+      max_tokens: 900,
+      temperature: 0.4
+    })
+  });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error?.message || 'OpenAI request failed');
   const raw = data.choices?.[0]?.message?.content || '';
@@ -2067,7 +2082,7 @@ async function bootApp() {
 }
 bootApp();
 </script>
-  <script src="ai-service.js"></script>
+<script src="ai-service.js"></script>
 
 <script>
 async function getAIFeedback(text, taskType = 'task2', minWords = 250) {
@@ -2103,7 +2118,5 @@ async function getAIFeedback(text, taskType = 'task2', minWords = 250) {
   }
 }
 </script>
-  <script src="ai-service.js"></script>
-  
 </body>
 </html>
