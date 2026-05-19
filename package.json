@@ -1,14 +1,12 @@
 {
   "name": "ielts-studio",
-  "private": true,
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "build:awl": "node scripts/build-awl.mjs",
     "build:band8": "node scripts/build-band8.mjs",
     "build:vocab": "npm run build:awl && npm run build:band8",
     "sync:html": "node scripts/sync-html-vocab.mjs",
-    "build": "npm run build:vocab && npm run sync:html",
-    "serve": "npx --yes serve . -p 3456",
-    "parse:oxford": "node scripts/parse-oxford3000.mjs"
+    "build": "npm run build:vocab && npm run sync:html"
   }
 }
