@@ -1,0 +1,51 @@
+{
+  "promptDefault": "wt005",
+  "cases": [
+    {
+      "id": "weak-01",
+      "category": "weak",
+      "file": "weak-01.txt",
+      "neverBand7Plus": true,
+      "mustFlags": ["shallowTask"],
+      "expected": { "overall": [4, 5.5], "ta": [4, 5.5] }
+    },
+    {
+      "id": "average-01",
+      "category": "average",
+      "file": "average-01.txt",
+      "expected": { "overall": [5, 6.5] }
+    },
+    {
+      "id": "strong-01",
+      "category": "strong",
+      "file": "strong-01.txt",
+      "minOverall": 6,
+      "expected": { "overall": [6, 7.5] }
+    },
+    {
+      "id": "off-topic-01",
+      "category": "off-topic",
+      "file": "off-topic-01.txt",
+      "neverBand7Plus": true,
+      "mustFlags": ["offTopic"],
+      "maxOverall": 5.5,
+      "expected": { "overall": [4, 5.5] }
+    },
+    {
+      "id": "repetitive-01",
+      "category": "repetitive",
+      "file": "repetitive-01.txt",
+      "neverBand7Plus": true,
+      "mustFlags": ["repetitiveVocabulary"],
+      "expected": { "overall": [4, 6], "lr": [4, 5.5] }
+    },
+    {
+      "id": "grammar-heavy-01",
+      "category": "grammar-heavy",
+      "file": "grammar-heavy-01.txt",
+      "neverBand7Plus": true,
+      "mustFlags": ["weakGrammar"],
+      "expected": { "overall": [4, 6], "gra": [4, 5.5] }
+    }
+  ]
+}

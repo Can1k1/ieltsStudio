@@ -8,7 +8,10 @@
     "build:vocab": "npm run build:awl && npm run build:band8",
     "sync:html": "node scripts/sync-html-vocab.mjs",
     "build": "npm run build:vocab && npm run sync:html",
-    "serve": "npx --yes serve . -p 3456"
+    "serve": "npx --yes serve . -p 3456",
+    "build:evaluator": "node scripts/build-evaluator.mjs",
+    "sync:feedback": "node scripts/build-evaluator.mjs && node scripts/sync-writing-feedback.mjs",
+    "test:evaluation": "node tests/evaluation/validation.test.mjs && node tests/evaluation/stress.test.mjs",
     "parse:oxford": "node scripts/parse-oxford3000.mjs"
   }
 }

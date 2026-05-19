@@ -1,0 +1,41 @@
+{
+  "source": "Condensed from IELTS public Writing Task 2 band descriptors (Task Response, Coherence & Cohesion, Lexical Resource, Grammatical Range & Accuracy).",
+  "bands": {
+    "9": {
+      "ta": "Fully addresses all parts; fully developed position with relevant, extended ideas.",
+      "cc": "Cohesion very rarely attracts attention; skilful paragraphing.",
+      "lr": "Wide, natural, sophisticated control; rare minor slips.",
+      "gra": "Wide range of structures; full flexibility; rare minor errors."
+    },
+    "8": {
+      "ta": "Sufficiently addresses all parts; clear well-developed position; ideas relevant and extended.",
+      "cc": "Sequences ideas logically; clear progression; appropriate cohesive devices.",
+      "lr": "Wide resource; skilful use of uncommon items; occasional inaccuracies.",
+      "gra": "Wide range; majority error-free; occasional slips."
+    },
+    "7": {
+      "ta": "Addresses all parts; clear position throughout; main ideas extended and supported.",
+      "cc": "Logical organisation; clear progression; range of cohesive devices.",
+      "lr": "Sufficient resource for flexibility and precision; some less common items; few errors in word choice.",
+      "gra": "Variety of complex structures; frequent error-free sentences; good control with occasional errors."
+    },
+    "6": {
+      "ta": "Addresses all parts though some more fully than others; relevant position; main ideas relevant but some inadequately developed.",
+      "cc": "Coherent arrangement; overall progression; cohesive devices may be faulty or mechanical.",
+      "lr": "Adequate resource; meaning generally clear; errors do not impede communication.",
+      "gra": "Mix of simple and complex forms; errors occur but rarely impede."
+    },
+    "5": {
+      "ta": "Addresses the task only partially; position unclear or repetitive; main ideas limited, not sufficiently developed.",
+      "cc": "Some organisation but lacks overall clarity; inadequate cohesive devices.",
+      "lr": "Limited resource; noticeable repetition; errors may cause difficulty.",
+      "gra": "Limited range; frequent errors; may cause difficulty for reader."
+    },
+    "4": {
+      "ta": "Minimal response to task; position unclear; ideas difficult to identify.",
+      "cc": "Little relevant cohesion; basic linking.",
+      "lr": "Basic vocabulary; repetitive; errors may distort meaning.",
+      "gra": "Very limited range; frequent errors; meaning often unclear."
+    }
+  }
+}

@@ -1,7 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Set your OpenAI API key as an env var alternative:
+     <meta name="openai-key" content="sk-..."> (not committed to git) -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>IELTS Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -263,6 +265,84 @@ body.vocab-banner-open .page{padding-top:108px;}
 .word-counter.short{color:var(--c-error);}
 .writing-actions{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;}
 .ai-feedback-box{margin-top:22px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);padding:24px;display:none;}
+
+/* ── Session bar ─────────────────────────────────────── */
+.session-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:10px 14px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r-sm);margin-top:14px;margin-bottom:0;}
+.session-info{display:flex;align-items:center;gap:10px;min-width:0;}
+.session-badge{font-family:var(--mono);font-size:11px;font-weight:600;background:var(--accent-soft);color:var(--accent);padding:3px 9px;border-radius:6px;white-space:nowrap;}
+.session-timestamp{font-size:11px;color:var(--muted);white-space:nowrap;}
+.session-actions{display:flex;gap:7px;flex-wrap:wrap;}
+.btn-session{font-size:11px;padding:5px 11px;border-radius:7px;border:1px solid var(--border2);background:var(--bg4);color:var(--muted);cursor:pointer;transition:background .15s,color .15s,transform .12s;white-space:nowrap;font-family:var(--sans);}
+.btn-session:hover{background:var(--bg2);color:var(--text);transform:translateY(-1px);}
+.btn-session:active{transform:translateY(0);}
+.btn-new-attempt{border-color:var(--accent-l2);color:var(--accent);}
+.btn-new-attempt:hover{background:var(--accent-soft);}
+.btn-clear-essay{border-color:rgba(232,181,71,.35);color:var(--c-attention);}
+.btn-clear-essay:hover{background:var(--c-attention-soft);}
+.btn-reset-eval{border-color:rgba(224,123,106,.35);color:var(--c-error);}
+.btn-reset-eval:hover{background:var(--c-error-soft);}
+
+/* ── Loading state ───────────────────────────────────── */
+.fb-loading{animation:fadein .2s ease;}
+.loading-state{padding:10px 0 6px;}
+.loading-progress-track{height:3px;background:var(--bg4);border-radius:2px;overflow:hidden;margin-bottom:12px;}
+.loading-progress-bar{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent-l3));border-radius:2px;transition:width .5s cubic-bezier(.4,0,.2,1);}
+.loading-phase{font-size:13px;color:var(--muted);margin-bottom:8px;font-family:var(--mono);}
+.loading-dots-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.loading-never-blank{font-size:12px;color:var(--muted2);margin-top:4px;}
+.loading-dots{display:inline-flex;gap:5px;}
+.loading-dots span{width:7px;height:7px;border-radius:50%;background:var(--accent);opacity:.4;animation:ldot .9s infinite both;}
+.loading-dots span:nth-child(2){animation-delay:.18s;}
+.loading-dots span:nth-child(3){animation-delay:.36s;}
+@keyframes ldot{0%,80%,100%{opacity:.2;transform:scale(.85)}40%{opacity:1;transform:scale(1)}}
+
+/* ── Error state ─────────────────────────────────────── */
+.fb-error .fb-error-body{padding:8px 0;}
+.fb-error-icon{font-size:32px;text-align:center;margin-bottom:12px;}
+.fb-error-msg{font-size:14px;color:var(--c-error);line-height:1.6;margin-bottom:14px;}
+.fb-error-actions{display:flex;gap:10px;flex-wrap:wrap;}
+
+/* ── Streaming reveal ────────────────────────────────── */
+.streaming{opacity:.85;}
+.stream-in{animation:fadein .4s ease both;}
+.feedback-text{transition:opacity .2s ease;}
+
+/* ── AI tag variants ─────────────────────────────────── */
+.ai-tag-loading{background:rgba(95,184,174,.15);color:var(--accent);animation:pulse-tag 1.4s infinite;}
+.ai-tag-error{background:var(--c-error-soft);color:var(--c-error);}
+.ai-tag.openai{background:rgba(167,139,255,.2);color:#a78bff;}
+.ai-tag.local{background:rgba(130,200,150,.18);color:var(--c-mastery);}
+@keyframes pulse-tag{0%,100%{opacity:1}50%{opacity:.5}}
+
+/* ── Toast notifications ─────────────────────────────── */
+#toast-container{position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;flex-direction:column;gap:10px;pointer-events:none;max-width:340px;}
+.toast{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border-radius:12px;backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.08);font-size:13px;line-height:1.45;box-shadow:0 8px 32px rgba(0,0,0,.35);pointer-events:all;transform:translateX(110%);transition:transform .28s cubic-bezier(.4,0,.2,1),opacity .28s ease;opacity:0;}
+.toast-show{transform:translateX(0);opacity:1;}
+.toast-hide{transform:translateX(110%);opacity:0;}
+.toast-success{background:rgba(20,40,30,.92);border-color:rgba(130,200,150,.3);}
+.toast-error{background:rgba(40,18,18,.92);border-color:rgba(224,123,106,.3);}
+.toast-warning{background:rgba(36,30,10,.92);border-color:rgba(232,181,71,.3);}
+.toast-info{background:rgba(18,24,38,.92);border-color:rgba(138,169,224,.3);}
+.toast-icon{font-size:15px;flex-shrink:0;margin-top:1px;}
+.toast-success .toast-icon{color:var(--c-mastery);}
+.toast-error   .toast-icon{color:var(--c-error);}
+.toast-warning .toast-icon{color:var(--c-attention);}
+.toast-info    .toast-icon{color:var(--c-info);}
+.toast-msg{flex:1;color:var(--text);}
+.toast-close{background:none;border:none;color:var(--muted);cursor:pointer;font-size:16px;line-height:1;padding:0 0 0 6px;flex-shrink:0;opacity:.7;transition:opacity .15s;}
+.toast-close:hover{opacity:1;}
+[data-theme="light"] .toast-success{background:rgba(240,254,244,.96);}
+[data-theme="light"] .toast-error  {background:rgba(255,240,240,.96);}
+[data-theme="light"] .toast-warning{background:rgba(255,250,235,.96);}
+[data-theme="light"] .toast-info   {background:rgba(235,240,255,.96);}
+
+/* ── Mobile responsive ───────────────────────────────── */
+@media(max-width:600px){
+  .session-bar{flex-direction:column;align-items:flex-start;}
+  .session-actions{width:100%;}
+  .btn-session{flex:1;text-align:center;}
+  #toast-container{bottom:12px;right:12px;left:12px;max-width:none;}
+}
 .ai-feedback-box.show{display:block;animation:fadein .3s ease;}
 .feedback-header{display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:14px;border-bottom:1px solid var(--border);}
 .feedback-header h3{font-size:16px;font-weight:600;}
@@ -275,6 +355,31 @@ body.vocab-banner-open .page{padding-top:108px;}
 .feedback-text{font-size:14px;line-height:1.8;color:rgba(240,240,242,.85);}
 .feedback-text p{margin-bottom:10px;}
 .feedback-text strong{color:var(--accent);font-weight:600;}
+.examiner-note{font-size:12px;color:var(--muted);margin:-8px 0 16px;line-height:1.5;font-family:var(--mono);}
+.flag-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px;}
+.flag-tag{font-size:10px;padding:4px 8px;border-radius:6px;background:rgba(239,68,68,.15);color:#f87171;font-family:var(--mono);font-weight:600;}
+.validation-panel{margin-bottom:18px;padding:14px 16px;background:rgba(239,68,68,.06);border:1px solid rgba(239,68,68,.25);border-radius:var(--r);}
+.validation-title{font-size:13px;font-weight:600;margin-bottom:8px;color:#f87171;}
+.validation-summary{font-size:12px;color:var(--muted);margin-bottom:10px;}
+.validation-blocked-note,.validation-gate-note{font-size:12px;line-height:1.5;margin-bottom:8px;color:#fbbf24;}
+.validation-list{list-style:none;margin:0;padding:0;}
+.validation-issue{padding:10px 12px;margin-bottom:8px;border-radius:var(--r);border-left:3px solid var(--border);background:var(--bg3);}
+.validation-issue.val-sev-critical{border-left-color:#ef4444;}
+.validation-issue.val-sev-high{border-left-color:#f97316;}
+.validation-issue.val-sev-medium{border-left-color:#eab308;}
+.validation-issue.val-sev-low{border-left-color:#64748b;}
+.validation-severity{font-size:10px;text-transform:uppercase;font-family:var(--mono);font-weight:700;margin-right:8px;}
+.val-sev-critical .validation-severity{color:#ef4444;}
+.val-sev-high .validation-severity{color:#f97316;}
+.validation-category{font-size:10px;color:var(--muted);font-family:var(--mono);}
+.validation-explanation{font-size:13px;margin:6px 0 4px;line-height:1.5;}
+.validation-suggestion{font-size:12px;color:var(--muted);line-height:1.5;margin:0;}
+.crit-label{font-size:11px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin:12px 0 6px;font-family:var(--mono);}
+.crit-list{margin:0 0 12px 18px;font-size:13px;color:rgba(240,240,242,.8);}
+.crit-list li{margin-bottom:4px;}
+.criteria-detail{margin-top:18px;padding-top:16px;border-top:1px solid var(--border);}
+.criterion-block{margin-bottom:16px;padding:12px 14px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--border);}
+.criterion-block h4{font-size:13px;font-weight:600;margin-bottom:8px;color:var(--accent);}
 .loading-dots{display:inline-flex;gap:4px;vertical-align:middle;}
 .loading-dots span{width:6px;height:6px;background:var(--accent);border-radius:50%;animation:dotpulse 1.2s infinite;}
 .loading-dots span:nth-child(2){animation-delay:.2s;}
@@ -282,12 +387,35 @@ body.vocab-banner-open .page{padding-top:108px;}
 @keyframes dotpulse{0%,100%{opacity:.2}50%{opacity:1}}
 
 /* SPEAKING */
-.speaking-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
-.speaking-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;cursor:pointer;transition:all .2s;}
-.speaking-card:hover{border-color:var(--border2);transform:translateY(-2px);}
+.speaking-intro{margin-bottom:20px;padding:16px 18px;background:linear-gradient(135deg,rgba(200,240,74,.08),rgba(167,139,255,.06));border:1px solid var(--border);border-radius:var(--r-lg);}
+.speaking-intro h3{font-size:15px;font-weight:600;margin-bottom:6px;}
+.speaking-intro p{font-size:13px;color:rgba(240,240,242,.8);line-height:1.65;margin:0;}
+.speaking-intro .tr-note{margin-top:10px;padding-top:10px;border-top:1px dashed var(--border);font-size:12px;color:var(--muted);}
+.speaking-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
+.speaking-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden;}
+.speaking-card:hover{border-color:rgba(200,240,74,.35);transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.2);}
+.speaking-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#c8f04a,#a78bff);}
+.sp-badge-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px;}
+.sp-badge{font-size:10px;padding:3px 8px;border-radius:6px;font-family:var(--mono);font-weight:600;letter-spacing:.4px;}
+.sp-badge.new{background:rgba(200,240,74,.15);color:var(--accent);}
+.sp-badge.num{background:rgba(167,139,255,.15);color:#a78bff;}
+.sp-badge.season{background:rgba(255,255,255,.06);color:var(--muted);}
+.sp-theme{font-family:var(--serif);font-size:18px;font-weight:700;margin-bottom:8px;line-height:1.35;}
+.sp-parts{font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:10px;}
+.sp-time{font-size:12px;color:var(--accent);font-family:var(--mono);}
 .sp-part{font-size:11px;color:var(--muted);margin-bottom:7px;letter-spacing:.8px;text-transform:uppercase;font-family:var(--mono);}
 .sp-topic{font-size:14px;font-weight:600;margin-bottom:9px;line-height:1.5;}
-.sp-time{font-size:12px;color:var(--accent);font-family:var(--mono);}
+.sp-set-nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.sp-set-tab{padding:8px 14px;border-radius:var(--r);border:1px solid var(--border);background:var(--bg3);font-size:13px;font-weight:600;cursor:pointer;color:var(--muted);transition:all .15s;}
+.sp-set-tab.active,.sp-set-tab:hover{border-color:var(--accent);color:var(--accent);}
+.sp-main-prompt{font-size:15px;line-height:1.65;margin-bottom:16px;padding:14px 16px;background:rgba(200,240,74,.06);border-left:3px solid var(--accent);border-radius:0 var(--r) var(--r) 0;}
+.sp-checklist{margin:0 0 18px;padding:0;list-style:none;}
+.sp-checklist li{display:flex;gap:10px;align-items:flex-start;font-size:14px;margin-bottom:8px;color:rgba(240,240,242,.88);}
+.sp-checklist li::before{content:"○";color:var(--accent);font-weight:700;flex-shrink:0;}
+.sp-soon-note{font-size:13px;color:#fbbf24;margin-bottom:12px;padding:10px 12px;background:rgba(251,191,36,.08);border-radius:var(--r);border:1px solid rgba(251,191,36,.2);}
+.timer-label{font-size:11px;color:var(--muted);font-family:var(--mono);text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px;}
+.timer-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;}
+.timer-row .timer-box{margin-bottom:0;}
 .speaking-detail{display:none;}
 .speaking-detail.active{display:block;animation:fadein .25s ease;}
 .sp-detail-part{font-size:12px;color:var(--accent);margin-bottom:5px;letter-spacing:1px;text-transform:uppercase;font-family:var(--mono);}
@@ -585,10 +713,10 @@ body.density-compact .ds-value{font-size:26px;}
     <div class="sp-field">
       <label for="aiProviderSelect">Writing feedback</label>
       <select id="aiProviderSelect">
-        <option value="local">Smart coach (free, offline)</option>
+        <option value="local">Strict examiner (free, offline)</option>
         <option value="openai">ChatGPT (OpenAI API key)</option>
       </select>
-      <p class="sp-hint">Smart coach works instantly with no account. For ChatGPT, add your key from <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com</a>.</p>
+      <p class="sp-hint">Strict examiner uses conservative band descriptors offline. ChatGPT adds AI commentary but cannot exceed rule-based caps. Key from <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com</a>.</p>
     </div>
     <div class="sp-field" id="openaiKeyField">
       <label for="openaiKeyInput">OpenAI API key</label>
@@ -623,8 +751,8 @@ body.density-compact .ds-value{font-size:26px;}
   <div class="quick-actions">
     <div class="qa-card" data-page="flashcards"><span class="qa-icon">🃏</span><h3>Vocabulary — SRS</h3><p>200 Band 8+ words with SM-2 spaced repetition. Rate each card: Again, Hard, Good, or Easy.</p><div class="qa-arrow">→</div></div>
     <div class="qa-card" data-page="reading"><span class="qa-icon">📖</span><h3>Reading Practice</h3><p>Academic passages with True/False and multiple-choice questions, instant scoring and explanations.</p><div class="qa-arrow">→</div></div>
-    <div class="qa-card" data-page="writing"><span class="qa-icon">✍️</span><h3>Writing + AI Feedback</h3><p>Task 1 & 2 prompts with band scores — free Smart coach or optional ChatGPT.</p><div class="qa-arrow">→</div></div>
-    <div class="qa-card" data-page="speaking"><span class="qa-icon">🎙️</span><h3>Speaking Topics</h3><p>Part 1, 2 & 3 topics with countdown timer, cue cards, and band-boosting tips.</p><div class="qa-arrow">→</div></div>
+    <div class="qa-card" data-page="writing"><span class="qa-icon">✍️</span><h3>Writing + Strict Feedback</h3><p>Task 1 & 2 with conservative band scoring — offline examiner or optional ChatGPT.</p><div class="qa-arrow">→</div></div>
+    <div class="qa-card" data-page="speaking"><span class="qa-icon">🎙️</span><h3>Speaking — 2026 Topics</h3><p>Part 2 cue cards & Part 3 discussion (Jan–Aug 2026) with prep + speak timers.</p><div class="qa-arrow">→</div></div>
   </div>
 
   <section class="resources-section" aria-labelledby="resourcesHeading">
@@ -811,7 +939,12 @@ body.density-compact .ds-value{font-size:26px;}
 <div class="page" id="page-speaking">
   <div id="speakingList">
     <div class="section-title">Speaking Practice</div>
-    <div class="section-sub">Part 1, 2 & 3 topics with countdown timer, cue cards, and band-boosting tips</div>
+    <div class="section-sub">IELTS Speaking · January – August 2026 · Part 2 & Part 3</div>
+    <div class="speaking-intro">
+      <h3>🎙️ Konuşma pratiği</h3>
+      <p>Her konuda önce <strong>Part 2</strong> (1 dk hazırlık + 2 dk konuşma), sonra <strong>Part 3</strong> tartışma soruları. Zamanlayıcıyı kullan; gerçek sınav ritmine alış.</p>
+      <p class="tr-note">💡 İpucu: Part 2’de cue card’daki <em>tüm</em> maddeleri sırayla anlat. Part 3’te kısa cevap verme — fikir + sebep + örnek.</p>
+    </div>
     <div class="speaking-grid" id="speakingGrid"></div>
   </div>
   <div class="speaking-detail" id="speakingDetail">
@@ -820,6 +953,8 @@ body.density-compact .ds-value{font-size:26px;}
   </div>
 </div>
 
+<script src="speaking-topics-data.js"></script>
+<script src="speaking-ui.js"></script>
 <script type="application/json" id="vocab-embed">{"entries":[{"id":"w001","word":"Ubiquitous","phonetic":"/juːˈbɪk.wɪ.təs/","type":"adjective","category":"academic","cefr":"C1","def":"Present, appearing, or found everywhere.","collocations":["ubiquitous technology","ubiquitous presence","become ubiquitous"],"example":"Mobile phones have become ubiquitous in modern society.","ieltsExample":"The report argues that social media is now ubiquitous across all age groups."},{"id":"w002","word":"Mitigate","phonetic":"/ˈmɪt.ɪ.ɡeɪt/","type":"verb","category":"academic","cefr":"C1","def":"To make something less severe, serious, or painful.","collocations":["mitigate the effects","mitigate climate change","mitigate the risk"],"example":"Governments must act now to mitigate the effects of climate change.","ieltsExample":"Stricter regulations could help mitigate the environmental impact of industrial waste."},{"id":"w003","word":"Proliferate","phonetic":"/prəˈlɪf.ər.eɪt/","type":"verb","category":"academic","cefr":"C1","def":"To increase rapidly in number; to spread widely.","collocations":["proliferate rapidly","proliferate across","continue to proliferate"],"example":"Social media platforms have proliferated over the past decade.","ieltsExample":"As online businesses proliferate, traditional retail faces increasing pressure."},{"id":"w004","word":"Cohesive","phonetic":"/kəʊˈhiː.sɪv/","type":"adjective","category":"academic","cefr":"B2","def":"Forming a united whole; well-integrated and consistent.","collocations":["cohesive argument","cohesive society","cohesive approach"],"example":"A cohesive argument is essential for a high band score in writing.","ieltsExample":"The government aims to build a more cohesive multicultural society."},{"id":"w005","word":"Detrimental","phonetic":"/ˌdet.rɪˈmen.təl/","type":"adjective","category":"academic","cefr":"B2","def":"Causing harm or damage.","collocations":["detrimental effect","detrimental impact","detrimental to health"],"example":"Excessive screen time can be detrimental to children's development.","ieltsExample":"The study revealed that air pollution has a detrimental effect on cognitive function."},{"id":"w006","word":"Exacerbate","phonetic":"/ɪɡˈzæs.ə.beɪt/","type":"verb","category":"academic","cefr":"C1","def":"To make a problem, bad situation, or negative feeling worse.","collocations":["exacerbate the problem","exacerbate inequality","exacerbate tensions"],"example":"The drought has exacerbated the food crisis in the region.","ieltsExample":"Poor urban planning often exacerbates traffic congestion in major cities."},{"id":"w007","word":"Predominantly","phonetic":"/prɪˈdɒm.ɪ.nənt.li/","type":"adverb","category":"academic","cefr":"B2","def":"Mainly; for the most part.","collocations":["predominantly urban","predominantly male","predominantly used"],"example":"The population in this city is predominantly young.","ieltsExample":"The workforce in this sector is predominantly composed of university graduates."},{"id":"w008","word":"Inevitable","phonetic":"/ɪˈnev.ɪ.tə.bəl/","type":"adjective","category":"academic","cefr":"B2","def":"Certain to happen and impossible to avoid.","collocations":["inevitable consequence","inevitable outcome","seem inevitable"],"example":"Some argue that globalisation is inevitable in the modern world.","ieltsExample":"Technological unemployment may be an inevitable consequence of automation."},{"id":"w009","word":"Discrepancy","phonetic":"/dɪˈskrep.ən.si/","type":"noun","category":"academic","cefr":"C1","def":"A difference between two things that should be the same.","collocations":["significant discrepancy","discrepancy between","discrepancy in data"],"example":"There is a significant discrepancy between the two sets of data.","ieltsExample":"The discrepancy between rich and poor nations continues to widen."},{"id":"w010","word":"Substantiate","phonetic":"/səbˈstæn.ʃi.eɪt/","type":"verb","category":"academic","cefr":"C1","def":"To provide evidence to support or prove the truth of something.","collocations":["substantiate a claim","substantiate the argument","substantiate with evidence"],"example":"You must substantiate your claims with specific examples.","ieltsExample":"The researcher failed to substantiate her hypothesis with sufficient data."},{"id":"w011","word":"Ambiguous","phonetic":"/æmˈbɪɡ.ju.əs/","type":"adjective","category":"academic","cefr":"B2","def":"Open to more than one interpretation; unclear.","collocations":["ambiguous language","ambiguous result","deliberately ambiguous"],"example":"The question was ambiguous, leading to many different answers.","ieltsExample":"The policy statement was criticised for its ambiguous wording."},{"id":"w012","word":"Paradigm","phonetic":"/ˈpær.ə.daɪm/","type":"noun","category":"academic","cefr":"C1","def":"A typical example or pattern; a worldview underlying theories of a field.","collocations":["paradigm shift","dominant paradigm","new paradigm"],"example":"The internet created a paradigm shift in how we communicate.","ieltsExample":"Electric vehicles represent a paradigm shift in the automotive industry."},{"id":"w013","word":"Unprecedented","phonetic":"/ʌnˈpres.ɪ.den.tɪd/","type":"adjective","category":"academic","cefr":"C1","def":"Never having happened or existed before.","collocations":["unprecedented growth","unprecedented scale","at an unprecedented rate"],"example":"The pandemic caused unprecedented disruption to global supply chains.","ieltsExample":"The speed of technological change is unprecedented in human history."},{"id":"w014","word":"Facilitate","phonetic":"/fəˈsɪl.ɪ.teɪt/","type":"verb","category":"academic","cefr":"B2","def":"To make an action or process easier.","collocations":["facilitate communication","facilitate learning","facilitate access"],"example":"Technology facilitates communication across long distances.","ieltsExample":"Online platforms facilitate collaboration between researchers worldwide."},{"id":"w015","word":"Catalyst","phonetic":"/ˈkæt.ə.lɪst/","type":"noun","category":"academic","cefr":"C1","def":"A person or thing that causes an important change or event.","collocations":["act as a catalyst","catalyst for change","serve as a catalyst"],"example":"The financial crisis acted as a catalyst for economic reform.","ieltsExample":"Education is often the catalyst for social mobility in developing countries."},{"id":"w016","word":"Volatile","phonetic":"/ˈvɒl.ə.taɪl/","type":"adjective","category":"academic","cefr":"C1","def":"Liable to change rapidly and unpredictably.","collocations":["volatile market","volatile situation","highly volatile"],"example":"Oil prices are highly volatile and hard to predict.","ieltsExample":"Political instability has created a volatile economic climate."},{"id":"w017","word":"Alleviate","phonetic":"/əˈliː.vi.eɪt/","type":"verb","category":"academic","cefr":"C1","def":"To make something less severe.","collocations":["alleviate poverty","alleviate suffering","alleviate pressure"],"example":"Aid organisations work to alleviate suffering in conflict zones.","ieltsExample":"Investment in public transport can alleviate traffic congestion significantly."},{"id":"w018","word":"Disparity","phonetic":"/dɪˈspær.ɪ.ti/","type":"noun","category":"academic","cefr":"C1","def":"A great difference or inequality between things.","collocations":["income disparity","wealth disparity","growing disparity"],"example":"There is a growing disparity between rural and urban incomes.","ieltsExample":"The report highlights the health disparity between high and low-income groups."},{"id":"w019","word":"Empirical","phonetic":"/ɪmˈpɪr.ɪ.kəl/","type":"adjective","category":"academic","cefr":"C1","def":"Based on observation or experiment rather than theory.","collocations":["empirical evidence","empirical research","empirical data"],"example":"We need empirical evidence before drawing any conclusions.","ieltsExample":"The claim lacks empirical support and remains largely theoretical."},{"id":"w020","word":"Pragmatic","phonetic":"/præɡˈmæt.ɪk/","type":"adjective","category":"academic","cefr":"C1","def":"Dealing with things sensibly and realistically.","collocations":["pragmatic approach","pragmatic solution","pragmatic decision"],"example":"A pragmatic approach to policy-making is often more effective than idealism.","ieltsExample":"Businesses must adopt a pragmatic strategy to survive in competitive markets."},{"id":"w021","word":"Viable","phonetic":"/ˈvaɪ.ə.bəl/","type":"adjective","category":"general","cefr":"B2","def":"Capable of working successfully; feasible.","collocations":["viable option","economically viable","viable alternative"],"example":"Solar energy is now a viable alternative to fossil fuels.","ieltsExample":"Public transport is only viable when it is affordable and efficient."},{"id":"w022","word":"Deteriorate","phonetic":"/dɪˈtɪə.ri.ə.reɪt/","type":"verb","category":"general","cefr":"B2","def":"To become progressively worse.","collocations":["deteriorate rapidly","deteriorating conditions","continue to deteriorate"],"example":"Air quality in the city has deteriorated significantly over the past decade.","ieltsExample":"Without investment, public infrastructure will continue to deteriorate."},{"id":"w023","word":"Substantial","phonetic":"/səbˈstæn.ʃəl/","type":"adjective","category":"general","cefr":"B2","def":"Of considerable importance, size, or worth.","collocations":["substantial evidence","substantial investment","substantial growth"],"example":"The project requires a substantial amount of funding.","ieltsExample":"There is substantial evidence that diet affects long-term health outcomes."},{"id":"w024","word":"Advocate","phonetic":"/ˈæd.və.keɪt/","type":"verb","category":"academic","cefr":"B2","def":"To publicly recommend or support.","collocations":["advocate for change","strongly advocate","advocate reform"],"example":"Many scientists advocate for urgent action on climate change.","ieltsExample":"The report advocates a complete ban on single-use plastics."},{"id":"w025","word":"Sustainability","phonetic":"/səˌsteɪ.nəˈbɪl.ɪ.ti/","type":"noun","category":"general","cefr":"B2","def":"The ability to be maintained without depleting natural resources.","collocations":["environmental sustainability","promote sustainability","long-term sustainability"],"example":"Businesses must balance profit with long-term sustainability.","ieltsExample":"The concept of sustainability has moved to the centre of corporate strategy."},{"id":"w026","word":"Marginalise","phonetic":"/ˈmɑː.dʒɪ.nə.laɪz/","type":"verb","category":"academic","cefr":"C1","def":"To treat a person or group as insignificant or peripheral.","collocations":["marginalise communities","feel marginalised","marginalised groups"],"example":"Economic inequality can marginalise whole communities.","ieltsExample":"Social media algorithms may marginalise minority viewpoints."},{"id":"w027","word":"Implement","phonetic":"/ˈɪm.plɪ.ment/","type":"verb","category":"general","cefr":"B2","def":"To put a decision, plan, or agreement into effect.","collocations":["implement a policy","implement changes","implement measures"],"example":"The school plans to implement a new curriculum next year.","ieltsExample":"Many countries struggle to implement environmental legislation effectively."},{"id":"w028","word":"Incentive","phonetic":"/ɪnˈsen.tɪv/","type":"noun","category":"general","cefr":"B2","def":"A thing that motivates or encourages someone to do something.","collocations":["financial incentive","provide incentives","tax incentive"],"example":"Tax incentives encourage businesses to invest in renewable energy.","ieltsExample":"Without economic incentives, it is difficult to persuade companies to reduce emissions."},{"id":"w029","word":"Transparent","phonetic":"/trænsˈpær.ənt/","type":"adjective","category":"general","cefr":"B2","def":"Open, frank, and honest; easy to see through or detect.","collocations":["transparent process","transparent government","fully transparent"],"example":"The company committed to being more transparent about its operations.","ieltsExample":"Citizens demand that their governments be more transparent in decision-making."},{"id":"w030","word":"Innovation","phonetic":"/ˌɪn.əˈveɪ.ʃən/","type":"noun","category":"general","cefr":"B2","def":"The action or process of innovating; a new method or idea.","collocations":["technological innovation","drive innovation","culture of innovation"],"example":"Innovation in medicine has extended human life expectancy significantly.","ieltsExample":"Governments should invest in education to foster a culture of innovation."},{"id":"w031","word":"Resilient","phonetic":"/rɪˈzɪl.i.ənt/","type":"adjective","category":"general","cefr":"B2","def":"Able to withstand or recover quickly from difficult conditions.","collocations":["resilient economy","prove resilient","resilient community"],"example":"A resilient economy can absorb shocks without long-term damage.","ieltsExample":"Cities must become more resilient to the effects of climate change."},{"id":"w032","word":"Consensus","phonetic":"/kənˈsen.səs/","type":"noun","category":"academic","cefr":"C1","def":"General agreement among a group of people.","collocations":["reach a consensus","scientific consensus","broad consensus"],"example":"There is a scientific consensus that human activity is causing climate change.","ieltsExample":"Policymakers must build consensus before implementing major reforms."},{"id":"w033","word":"Scrutinise","phonetic":"/ˈskruː.tɪ.naɪz/","type":"verb","category":"academic","cefr":"C1","def":"To examine or inspect closely and thoroughly.","collocations":["closely scrutinise","scrutinise the data","scrutinise decisions"],"example":"Investors scrutinise company accounts before making decisions.","ieltsExample":"Government spending should be regularly scrutinised by independent bodies."},{"id":"w034","word":"Compelling","phonetic":"/kəmˈpel.ɪŋ/","type":"adjective","category":"academic","cefr":"C1","def":"Evoking interest or admiration in a powerfully irresistible way.","collocations":["compelling argument","compelling evidence","make a compelling case"],"example":"She made a compelling argument for reform.","ieltsExample":"The report presents compelling evidence that diet is linked to mental wellbeing."},{"id":"w035","word":"Undermine","phonetic":"/ˌʌn.dəˈmaɪn/","type":"verb","category":"academic","cefr":"C1","def":"To weaken or damage gradually.","collocations":["undermine confidence","undermine democracy","undermine stability"],"example":"Corruption undermines public trust in government institutions.","ieltsExample":"Fake news can undermine the credibility of legitimate scientific research."},{"id":"w036","word":"Eradicate","phonetic":"/ɪˈræd.ɪ.keɪt/","type":"verb","category":"academic","cefr":"C1","def":"To destroy or remove completely.","collocations":["eradicate poverty","eradicate disease","completely eradicate"],"example":"The WHO aims to eradicate polio from every country in the world.","ieltsExample":"Without international cooperation, it is impossible to eradicate climate change."},{"id":"w037","word":"Tangible","phonetic":"/ˈtæn.dʒɪ.bəl/","type":"adjective","category":"academic","cefr":"C1","def":"Clear and definite; able to be touched or felt.","collocations":["tangible benefit","tangible evidence","tangible results"],"example":"The new policy has produced tangible improvements in air quality.","ieltsExample":"Governments must deliver tangible results, not just empty promises."},{"id":"w038","word":"Perpetuate","phonetic":"/pəˈpet.ju.eɪt/","type":"verb","category":"academic","cefr":"C1","def":"To make something continue indefinitely.","collocations":["perpetuate inequality","perpetuate stereotypes","perpetuate the cycle"],"example":"Biased media can perpetuate harmful stereotypes.","ieltsExample":"A lack of quality education perpetuates cycles of poverty across generations."},{"id":"w039","word":"Rhetoric","phonetic":"/ˈret.ər.ɪk/","type":"noun","category":"academic","cefr":"C1","def":"Language designed to persuade; often insincere or empty speech.","collocations":["political rhetoric","empty rhetoric","inflammatory rhetoric"],"example":"The politician's speech was full of rhetoric but short on detail.","ieltsExample":"Leaders must move beyond rhetoric and take concrete action on climate change."},{"id":"w040","word":"Feasible","phonetic":"/ˈfiː.zɪ.bəl/","type":"adjective","category":"general","cefr":"C1","def":"Possible to do easily or conveniently.","collocations":["technically feasible","economically feasible","feasible solution"],"example":"Renewable energy is now a technically and economically feasible alternative.","ieltsExample":"A zero-carbon economy is feasible within the next thirty years if governments act decisively."},{"id":"w041","word":"Furthermore","phonetic":"/ˌfɜː.ðəˈmɔːr/","type":"adverb","category":"connector","cefr":"B2","def":"In addition; besides — used to introduce a further point.","collocations":["furthermore, it can be argued","furthermore, this demonstrates"],"example":"The plan is costly. Furthermore, it has little public support.","ieltsExample":"The policy reduces emissions. Furthermore, it creates thousands of jobs."},{"id":"w042","word":"Nevertheless","phonetic":"/ˌnev.ə.ðəˈles/","type":"adverb","category":"connector","cefr":"B2","def":"In spite of that; notwithstanding; all the same.","collocations":["nevertheless, it is important","nevertheless, there is evidence"],"example":"The task was difficult. Nevertheless, they completed it on time.","ieltsExample":"The cost is high. Nevertheless, the long-term benefits justify the investment."},{"id":"w043","word":"Consequently","phonetic":"/ˈkɒn.sɪ.kwənt.li/","type":"adverb","category":"connector","cefr":"B2","def":"As a result; therefore.","collocations":["consequently, the situation","consequently resulting in"],"example":"The harvest failed; consequently, food prices rose sharply.","ieltsExample":"Investment fell. Consequently, unemployment rose to a record high."},{"id":"w044","word":"In contrast","phonetic":"/ɪn ˈkɒn.trɑːst/","type":"phrase","category":"connector","cefr":"B2","def":"When compared with something else, showing a difference.","collocations":["in contrast to","in stark contrast","in contrast, some argue"],"example":"In contrast to urban areas, rural regions saw little growth.","ieltsExample":"In contrast to previous decades, modern workers value flexibility over job security."},{"id":"w045","word":"Notwithstanding","phonetic":"/ˌnɒt.wɪðˈstæn.dɪŋ/","type":"preposition","category":"connector","cefr":"C1","def":"In spite of; despite.","collocations":["notwithstanding the challenges","notwithstanding these concerns"],"example":"Notwithstanding the difficulties, the project was a success.","ieltsExample":"Notwithstanding the economic downturn, some sectors continued to grow."},{"id":"w046","word":"In my view","phonetic":"/ɪn maɪ vjuː/","type":"phrase","category":"speaking","cefr":"B2","def":"Used to introduce a personal opinion.","collocations":["in my view, the most important","in my view, this is because"],"example":"In my view, education should be free for all.","ieltsExample":"In my view, governments bear the greatest responsibility for tackling climate change."},{"id":"w047","word":"To a certain extent","phonetic":"/tuː ə ˈsɜː.tɪn ɪkˈstent/","type":"phrase","category":"speaking","cefr":"C1","def":"Partly; in some degree, but not completely.","collocations":["to a certain extent, yes","to a large extent","to some extent"],"example":"To a certain extent, the results were predictable.","ieltsExample":"To a certain extent, social media has improved global communication."},{"id":"w048","word":"It goes without saying","phonetic":"/ɪt ɡəʊz wɪðˈaʊt ˈseɪɪŋ/","type":"phrase","category":"speaking","cefr":"C1","def":"It is obvious; it does not need to be stated.","collocations":["it goes without saying that","it almost goes without saying"],"example":"It goes without saying that honesty is the best policy.","ieltsExample":"It goes without saying that access to clean water is a fundamental human right."},{"id":"w049","word":"On the one hand","phonetic":"/ɒn ðə wʌn hænd/","type":"phrase","category":"speaking","cefr":"B2","def":"Used to present two contrasting aspects of an argument.","collocations":["on the one hand... on the other","on the one hand... but"],"example":"On the one hand, technology creates jobs; on the other, it destroys them.","ieltsExample":"On the one hand, nuclear energy is clean; on the other, waste disposal is problematic."},{"id":"w050","word":"As far as I'm concerned","phonetic":"/æz fɑːr æz aɪm kənˈsɜːnd/","type":"phrase","category":"speaking","cefr":"B2","def":"In my opinion; from my perspective.","collocations":["as far as I'm concerned, the key issue"],"example":"As far as I'm concerned, kindness is the most important quality a person can have.","ieltsExample":"As far as I'm concerned, the benefits of technology far outweigh the drawbacks."},{"id":"w051","word":"Account for","phonetic":"/əˈkaʊnt fɔːr/","type":"phrasal verb","category":"phrasal","cefr":"B2","def":"To be the reason for; to constitute a proportion of something.","collocations":["account for a large proportion","account for most","account for the difference"],"example":"Technology accounts for a large proportion of GDP in developed countries.","ieltsExample":"Carbon dioxide accounts for the majority of greenhouse gas emissions."},{"id":"w052","word":"Give rise to","phonetic":"/ɡɪv raɪz tuː/","type":"phrasal verb","category":"phrasal","cefr":"C1","def":"To cause or produce something.","collocations":["give rise to concerns","give rise to problems","give rise to opportunities"],"example":"Rapid urbanisation gives rise to increased demand for housing.","ieltsExample":"The growth of social media has given rise to new forms of communication and misinformation."},{"id":"w053","word":"Draw on","phonetic":"/drɔː ɒn/","type":"phrasal verb","category":"phrasal","cefr":"C1","def":"To use as a source; to rely on.","collocations":["draw on experience","draw on resources","draw on evidence"],"example":"Good writers draw on a wide range of vocabulary.","ieltsExample":"The report draws on data from over 50 countries to support its conclusions."},{"id":"w054","word":"Build on","phonetic":"/bɪld ɒn/","type":"phrasal verb","category":"phrasal","cefr":"B2","def":"To use as a foundation for further development.","collocations":["build on success","build on existing","build on the foundations"],"example":"The new strategy builds on the success of last year's initiative.","ieltsExample":"Developing countries must build on their existing economic strengths."},{"id":"w055","word":"Carry out","phonetic":"/ˈkær.i aʊt/","type":"phrasal verb","category":"phrasal","cefr":"B1","def":"To perform or conduct a task or action.","collocations":["carry out research","carry out a study","carry out instructions"],"example":"The scientists carried out extensive research before publishing their findings.","ieltsExample":"Government agencies must carry out regular inspections of food production facilities."},{"id":"w056","word":"Corroborate","phonetic":"/kəˈrɒb.ə.reɪt/","type":"verb","category":"academic","cefr":"C1","def":"To confirm or support with evidence.","collocations":["corroborate the findings","corroborate a claim","corroborate testimony"],"example":"Witnesses corroborated his account of the events.","ieltsExample":"Independent studies corroborate the link between sleep deprivation and poor academic performance."},{"id":"w057","word":"Delineate","phonetic":"/dɪˈlɪn.i.eɪt/","type":"verb","category":"academic","cefr":"C1","def":"To describe or portray precisely.","collocations":["delineate the scope","clearly delineate","delineate boundaries"],"example":"The contract delineates each party's responsibilities.","ieltsExample":"The introduction should delineate the main issues the essay will address."},{"id":"w058","word":"Elucidate","phonetic":"/ɪˈluː.sɪ.deɪt/","type":"verb","category":"academic","cefr":"C1","def":"To make something clear; to explain.","collocations":["elucidate the concept","elucidate further","elucidate a theory"],"example":"The professor elucidated the theory with simple examples.","ieltsExample":"The conclusion elucidates why the proposed policy is preferable."},{"id":"w059","word":"Salient","phonetic":"/ˈseɪ.li.ənt/","type":"adjective","category":"academic","cefr":"C1","def":"Most noticeable or important.","collocations":["salient feature","salient point","salient characteristics"],"example":"Cost remains the most salient concern for consumers.","ieltsExample":"The most salient difference between the two approaches is long-term sustainability."},{"id":"w060","word":"Ramification","phonetic":"/ˌræm.ɪ.fɪˈkeɪ.ʃən/","type":"noun","category":"academic","cefr":"C1","def":"A complex consequence of an action.","collocations":["far-reaching ramifications","political ramifications","economic ramifications"],"example":"The decision had serious ramifications for the whole industry.","ieltsExample":"Governments must consider the social ramifications of automation."},{"id":"w061","word":"Pervasive","phonetic":"/pəˈveɪ.sɪv/","type":"adjective","category":"academic","cefr":"C1","def":"Spreading widely throughout an area or group.","collocations":["pervasive influence","pervasive problem","increasingly pervasive"],"example":"Social media has a pervasive influence on young people.","ieltsExample":"Plastic pollution is now pervasive in marine ecosystems worldwide."},{"id":"w062","word":"Precarious","phonetic":"/prɪˈkeə.ri.əs/","type":"adjective","category":"academic","cefr":"C1","def":"Not securely held or in position; dangerously uncertain.","collocations":["precarious situation","precarious employment","precarious balance"],"example":"Many workers face precarious employment conditions.","ieltsExample":"Climate change puts coastal communities in a precarious position."},{"id":"w063","word":"Prevalent","phonetic":"/ˈprev.əl.ənt/","type":"adjective","category":"academic","cefr":"C1","def":"Widespread in a particular area or at a particular time.","collocations":["highly prevalent","increasingly prevalent","prevalent among"],"example":"Obesity is increasingly prevalent among adolescents.","ieltsExample":"Remote working has become prevalent since the pandemic."},{"id":"w064","word":"Inherent","phonetic":"/ɪnˈher.ənt/","type":"adjective","category":"academic","cefr":"C1","def":"Existing as a permanent or essential attribute.","collocations":["inherent risk","inherent limitation","inherent bias"],"example":"There are inherent risks in any surgical procedure.","ieltsExample":"Tourism carries inherent environmental costs that must be managed."},{"id":"w065","word":"Intrinsic","phonetic":"/ɪnˈtrɪn.sɪk/","type":"adjective","category":"academic","cefr":"C1","def":"Belonging naturally; essential.","collocations":["intrinsic value","intrinsic motivation","intrinsic quality"],"example":"Some argue that art has intrinsic value beyond profit.","ieltsExample":"Learning a language offers intrinsic rewards beyond career prospects."},{"id":"w066","word":"Conducive","phonetic":"/kənˈdjuː.sɪv/","type":"adjective","category":"academic","cefr":"C1","def":"Making a situation or outcome likely or possible.","collocations":["conducive to learning","conducive environment","conducive atmosphere"],"example":"Quiet spaces are conducive to concentration.","ieltsExample":"Flexible hours are conducive to better work–life balance."},{"id":"w067","word":"Contentious","phonetic":"/kənˈten.ʃəs/","type":"adjective","category":"academic","cefr":"C1","def":"Causing or likely to cause disagreement.","collocations":["contentious issue","highly contentious","contentious debate"],"example":"Immigration remains a contentious political topic.","ieltsExample":"Nuclear energy is a contentious subject in environmental debates."},{"id":"w068","word":"Formidable","phonetic":"/ˈfɔː.mɪ.də.bəl/","type":"adjective","category":"academic","cefr":"C1","def":"Inspiring fear or respect through being impressively capable.","collocations":["formidable challenge","formidable opponent","formidable reputation"],"example":"She is a formidable competitor in international markets.","ieltsExample":"Reducing carbon emissions is a formidable task for any government."},{"id":"w069","word":"Imminent","phonetic":"/ˈɪm.ɪ.nənt/","type":"adjective","category":"academic","cefr":"C1","def":"About to happen.","collocations":["imminent danger","imminent threat","imminent collapse"],"example":"They prepared for the imminent storm.","ieltsExample":"Experts warn of imminent water shortages in several regions."},{"id":"w070","word":"Imperative","phonetic":"/ɪmˈper.ə.tɪv/","type":"adjective","category":"academic","cefr":"C1","def":"Of vital importance; crucial.","collocations":["imperative that","moral imperative","economic imperative"],"example":"It is imperative that we reduce waste.","ieltsExample":"Investing in renewable energy is an economic imperative."},{"id":"w071","word":"Plausible","phonetic":"/ˈplɔː.zɪ.bəl/","type":"adjective","category":"academic","cefr":"C1","def":"Seeming reasonable or probable.","collocations":["plausible explanation","plausible argument","plausible scenario"],"example":"Her explanation sounded plausible at first.","ieltsExample":"The report offers a plausible account of rising inequality."},{"id":"w072","word":"Robust","phonetic":"/rəʊˈbʌst/","type":"adjective","category":"academic","cefr":"C1","def":"Strong and healthy; vigorous.","collocations":["robust economy","robust evidence","robust framework"],"example":"The company reported robust quarterly earnings.","ieltsExample":"A robust public health system can withstand future crises."},{"id":"w073","word":"Stagnant","phonetic":"/ˈstæɡ.nənt/","type":"adjective","category":"academic","cefr":"C1","def":"Showing no activity; dull and sluggish.","collocations":["stagnant wages","stagnant economy","stagnant growth"],"example":"Wages have remained stagnant for years.","ieltsExample":"Without reform, productivity growth may remain stagnant."},{"id":"w074","word":"Susceptible","phonetic":"/səˈsep.tɪ.bəl/","type":"adjective","category":"academic","cefr":"C1","def":"Likely or vulnerable to be influenced or harmed.","collocations":["susceptible to disease","highly susceptible","susceptible population"],"example":"Children are more susceptible to infections.","ieltsExample":"Coastal areas are especially susceptible to flooding."},{"id":"w075","word":"Tenacious","phonetic":"/təˈneɪ.ʃəs/","type":"adjective","category":"academic","cefr":"C1","def":"Persistent; not readily letting go.","collocations":["tenacious pursuit","tenacious defender","tenacious effort"],"example":"She is tenacious in pursuing her goals.","ieltsExample":"Tenacious advocacy helped secure stronger environmental laws."},{"id":"w076","word":"Versatile","phonetic":"/ˈvɜː.sə.taɪl/","type":"adjective","category":"academic","cefr":"C1","def":"Able to adapt to many functions or activities.","collocations":["versatile tool","versatile skills","highly versatile"],"example":"The software is versatile enough for many industries.","ieltsExample":"A versatile education prepares graduates for changing labour markets."},{"id":"w077","word":"Bolster","phonetic":"/ˈbəʊl.stər/","type":"verb","category":"academic","cefr":"C1","def":"To support or strengthen.","collocations":["bolster confidence","bolster the economy","bolster defences"],"example":"The news bolstered investor confidence.","ieltsExample":"Subsidies can bolster innovation in clean technology."},{"id":"w078","word":"Culminate","phonetic":"/ˈkʌl.mɪ.neɪt/","type":"verb","category":"academic","cefr":"C1","def":"To reach a climax or point of highest development.","collocations":["culminate in","culminate with","years culminate"],"example":"Years of research culminated in a breakthrough.","ieltsExample":"The project culminated in a landmark international agreement."},{"id":"w079","word":"Entail","phonetic":"/ɪnˈteɪl/","type":"verb","category":"academic","cefr":"C1","def":"To involve as a necessary part or consequence.","collocations":["entail significant costs","entail risks","entail changes"],"example":"The role entails frequent travel abroad.","ieltsExample":"Banning cars from city centres would entail major infrastructure changes."},{"id":"w080","word":"Entrench","phonetic":"/ɪnˈtrentʃ/","type":"verb","category":"academic","cefr":"C1","def":"To establish firmly so that change is difficult.","collocations":["entrench inequality","deeply entrenched","entrench power"],"example":"Old habits are deeply entrenched in the organisation.","ieltsExample":"Poor funding can entrench educational inequality across regions."},{"id":"w081","word":"Exemplify","phonetic":"/ɪɡˈzem.plɪ.faɪ/","type":"verb","category":"academic","cefr":"C1","def":"To be a typical example of.","collocations":["exemplify the trend","clearly exemplify","exemplify best practice"],"example":"The case exemplifies broader problems in the sector.","ieltsExample":"Nordic welfare models exemplify successful social investment."},{"id":"w082","word":"Refute","phonetic":"/rɪˈfjuːt/","type":"verb","category":"academic","cefr":"C1","def":"To prove a statement or theory wrong.","collocations":["refute the claim","refute an argument","difficult to refute"],"example":"New data refuted the earlier hypothesis.","ieltsExample":"Critics attempted to refute the study's methodology."},{"id":"w083","word":"Reiterate","phonetic":"/riˈɪt.ə.reɪt/","type":"verb","category":"academic","cefr":"C1","def":"To say something again for emphasis.","collocations":["reiterate the importance","reiterate a commitment","reiterate that"],"example":"The minister reiterated the government's commitment.","ieltsExample":"The essay should reiterate the thesis without introducing new ideas."},{"id":"w084","word":"Stipulate","phonetic":"/ˈstɪp.jə.leɪt/","type":"verb","category":"academic","cefr":"C1","def":"To demand or specify as part of an agreement.","collocations":["stipulate conditions","contract stipulates","clearly stipulate"],"example":"The contract stipulates a thirty-day notice period.","ieltsExample":"Regulations stipulate minimum safety standards for all vehicles."},{"id":"w085","word":"Surge","phonetic":"/sɜːdʒ/","type":"verb","category":"academic","cefr":"C1","def":"To increase suddenly and powerfully.","collocations":["surge in demand","prices surge","surge ahead"],"example":"Demand for electric vehicles has surged.","ieltsExample":"Energy prices surged following the supply disruption."},{"id":"w086","word":"Ascribe","phonetic":"/əˈskraɪb/","type":"verb","category":"academic","cefr":"C1","def":"To attribute something to a stated cause.","collocations":["ascribe to","widely ascribed","ascribe importance"],"example":"He ascribed his success to hard work.","ieltsExample":"Many failures are ascribed to poor planning rather than bad luck."},{"id":"w087","word":"Conjecture","phonetic":"/kənˈdʒek.tʃər/","type":"noun","category":"academic","cefr":"C1","def":"An opinion formed without sufficient evidence.","collocations":["mere conjecture","informed conjecture","speculation and conjecture"],"example":"Their claims were based on conjecture, not data.","ieltsExample":"Until further research is done, any figure remains conjecture."},{"id":"w088","word":"Discourse","phonetic":"/ˈdɪs.kɔːs/","type":"noun","category":"academic","cefr":"C1","def":"Written or spoken communication on a subject.","collocations":["public discourse","political discourse","academic discourse"],"example":"Climate change dominates public discourse today.","ieltsExample":"Media discourse shapes how societies view immigration."},{"id":"w089","word":"Hypothesis","phonetic":"/haɪˈpɒθ.ə.sɪs/","type":"noun","category":"academic","cefr":"C1","def":"A proposed explanation made on limited evidence.","collocations":["test a hypothesis","working hypothesis","null hypothesis"],"example":"Scientists tested the hypothesis in controlled trials.","ieltsExample":"The hypothesis that homework improves outcomes remains contested."},{"id":"w090","word":"Predicament","phonetic":"/prɪˈdɪk.ə.mənt/","type":"noun","category":"academic","cefr":"C1","def":"A difficult or unpleasant situation.","collocations":["economic predicament","financial predicament","awkward predicament"],"example":"The company found itself in a financial predicament.","ieltsExample":"Developing nations face a predicament between growth and emissions."},{"id":"w091","word":"Proximity","phonetic":"/prɒkˈsɪm.ɪ.ti/","type":"noun","category":"academic","cefr":"C1","def":"Nearness in space, time, or relationship.","collocations":["in close proximity","proximity to","geographical proximity"],"example":"Housing costs rise in proximity to the city centre.","ieltsExample":"Proximity to universities attracts technology firms."},{"id":"w092","word":"Scrutiny","phonetic":"/ˈskruː.tɪ.ni/","type":"noun","category":"academic","cefr":"C1","def":"Critical observation or examination.","collocations":["under scrutiny","close scrutiny","public scrutiny"],"example":"The policy came under intense public scrutiny.","ieltsExample":"Corporate tax arrangements deserve greater parliamentary scrutiny."},{"id":"w093","word":"Surplus","phonetic":"/ˈsɜː.pləs/","type":"noun","category":"academic","cefr":"C1","def":"An amount left over when requirements have been met.","collocations":["budget surplus","trade surplus","food surplus"],"example":"The nation reported a trade surplus last year.","ieltsExample":"Agricultural surpluses can depress prices for farmers."},{"id":"w094","word":"Trajectory","phonetic":"/trəˈdʒek.tər.i/","type":"noun","category":"academic","cefr":"C1","def":"The path followed by something; course of development.","collocations":["career trajectory","growth trajectory","upward trajectory"],"example":"The startup is on an upward trajectory.","ieltsExample":"Current policies put emissions on a dangerous trajectory."},{"id":"w095","word":"Hindrance","phonetic":"/ˈhɪn.drəns/","type":"noun","category":"academic","cefr":"C1","def":"A thing that provides resistance or delay.","collocations":["major hindrance","without hindrance","potential hindrance"],"example":"Lack of funding was a major hindrance to progress.","ieltsExample":"Bureaucracy can be a hindrance to small business growth."},{"id":"w096","word":"Detriment","phonetic":"/ˈdet.rɪ.mənt/","type":"noun","category":"academic","cefr":"C1","def":"Harm or damage.","collocations":["to the detriment of","detriment to health","serious detriment"],"example":"Long hours work to the detriment of family life.","ieltsExample":"Over-tourism can be to the detriment of local culture."},{"id":"w097","word":"Manifest","phonetic":"/ˈmæn.ɪ.fest/","type":"verb","category":"academic","cefr":"C1","def":"To display or show clearly.","collocations":["manifest itself","symptoms manifest","manifest as"],"example":"Stress can manifest as physical illness.","ieltsExample":"Inequality manifests in unequal access to healthcare."},{"id":"w098","word":"Render","phonetic":"/ˈren.dər/","type":"verb","category":"academic","cefr":"C1","def":"To cause to become; to provide or give.","collocations":["render obsolete","render assistance","render ineffective"],"example":"Automation may render some jobs obsolete.","ieltsExample":"Poor maintenance can render public transport unreliable."},{"id":"w099","word":"Warrant","phonetic":"/ˈwɒr.ənt/","type":"verb","category":"academic","cefr":"C1","def":"To justify or necessitate.","collocations":["warrant further investigation","warrant attention","warrant concern"],"example":"The results warrant further research.","ieltsExample":"Rising crime rates warrant a review of policing strategy."},{"id":"w100","word":"Ephemeral","phonetic":"/ɪˈfem.ər.əl/","type":"adjective","category":"academic","cefr":"C1","def":"Lasting for a very short time.","collocations":["ephemeral nature","ephemeral trends","ephemeral success"],"example":"Fame on social media can be ephemeral.","ieltsExample":"Many digital trends prove ephemeral within months."},{"id":"w101","word":"Opaque","phonetic":"/əʊˈpeɪk/","type":"adjective","category":"academic","cefr":"C1","def":"Not able to be seen through; unclear.","collocations":["opaque process","remain opaque","opaque language"],"example":"The decision-making process remained opaque.","ieltsExample":"Opaque pricing makes it hard for consumers to compare services."},{"id":"w102","word":"Obsolete","phonetic":"/ˈɒb.sə.liːt/","type":"adjective","category":"academic","cefr":"C1","def":"No longer produced or used; out of date.","collocations":["become obsolete","largely obsolete","render obsolete"],"example":"Floppy disks are now obsolete technology.","ieltsExample":"Traditional retail models risk becoming obsolete."},{"id":"w103","word":"Parochial","phonetic":"/pəˈrəʊ.ki.əl/","type":"adjective","category":"academic","cefr":"C1","def":"Having a limited outlook; narrow-minded.","collocations":["parochial attitudes","parochial interests","parochial view"],"example":"We must avoid parochial thinking in global policy.","ieltsExample":"Parochial education policies ignore international best practice."},{"id":"w104","word":"Skeptical","phonetic":"/ˈskep.tɪ.kəl/","type":"adjective","category":"academic","cefr":"C1","def":"Not easily convinced; having doubts.","collocations":["skeptical about","remain skeptical","deeply skeptical"],"example":"Investors remain skeptical about the merger.","ieltsExample":"Many citizens are skeptical of politicians' climate promises."},{"id":"w105","word":"Intermittent","phonetic":"/ˌɪn.təˈmɪt.ənt/","type":"adjective","category":"academic","cefr":"C1","def":"Occurring at irregular intervals.","collocations":["intermittent rain","intermittent fasting","intermittent supply"],"example":"The region suffers intermittent power cuts.","ieltsExample":"Intermittent lockdowns disrupted education worldwide."},{"id":"w106","word":"Integral","phonetic":"/ˈɪn.tɪ.ɡrəl/","type":"adjective","category":"academic","cefr":"C1","def":"Necessary to make a whole complete; essential.","collocations":["integral part","integral component","integral role"],"example":"Trust is integral to any partnership.","ieltsExample":"Technology is now integral to modern classroom teaching."},{"id":"w107","word":"Lucrative","phonetic":"/ˈluː.krə.tɪv/","type":"adjective","category":"academic","cefr":"C1","def":"Producing a great deal of profit.","collocations":["lucrative market","lucrative career","highly lucrative"],"example":"Tech offers lucrative career paths for graduates.","ieltsExample":"Tourism can be lucrative but environmentally costly."},{"id":"w108","word":"Notorious","phonetic":"/nəʊˈtɔː.ri.əs/","type":"adjective","category":"academic","cefr":"C1","def":"Famous for something bad.","collocations":["notorious for","notorious criminal","notorious difficulty"],"example":"The road is notorious for accidents.","ieltsExample":"The city is notorious for traffic congestion."},{"id":"w109","word":"Remedy","phonetic":"/ˈrem.ə.di/","type":"noun","category":"academic","cefr":"C1","def":"A means of counteracting or eliminating something undesirable.","collocations":["remedy the situation","seek a remedy","effective remedy"],"example":"Education is often seen as a remedy for poverty.","ieltsExample":"There is no simple remedy for urban overcrowding."},{"id":"w110","word":"Spawn","phonetic":"/spɔːn/","type":"verb","category":"academic","cefr":"C1","def":"To produce or generate in large numbers.","collocations":["spawn debate","spawn innovation","spawn a generation"],"example":"The scandal spawned numerous investigations.","ieltsExample":"The internet has spawned new forms of entrepreneurship."},{"id":"w111","word":"Suppress","phonetic":"/səˈpres/","type":"verb","category":"academic","cefr":"C1","def":"To forcibly put an end to; to prevent development.","collocations":["suppress dissent","suppress information","suppress growth"],"example":"The regime tried to suppress free speech.","ieltsExample":"High taxes may suppress small business growth."},{"id":"w112","word":"Uniform","phonetic":"/ˈjuː.nɪ.fɔːm/","type":"adjective","category":"academic","cefr":"C1","def":"Not varying; the same in all cases.","collocations":["uniform standards","uniform approach","uniform distribution"],"example":"Schools adopted uniform dress codes.","ieltsExample":"A uniform curriculum may not suit diverse learners."},{"id":"w113","word":"Vindicate","phonetic":"/ˈvɪn.dɪ.keɪt/","type":"verb","category":"academic","cefr":"C1","def":"To clear of blame or suspicion; to justify.","collocations":["vindicate the decision","fully vindicated","vindicate claims"],"example":"The results vindicated years of research.","ieltsExample":"Later evidence vindicated early warnings about the crisis."},{"id":"w114","word":"Demographic","phonetic":"/ˌdem.əˈɡræf.ɪk/","type":"noun","category":"academic","cefr":"C1","def":"A particular sector of a population.","collocations":["age demographic","key demographic","demographic shift"],"example":"Advertisers target specific demographics.","ieltsExample":"An ageing demographic poses challenges for healthcare systems."},{"id":"w115","word":"Inadvertent","phonetic":"/ˌɪn.ədˈvɜː.tənt/","type":"adjective","category":"academic","cefr":"C1","def":"Not resulting from or achieved through deliberate planning.","collocations":["inadvertent error","inadvertent consequence","inadvertent bias"],"example":"The breach was caused by inadvertent human error.","ieltsExample":"Inadvertent policy gaps can widen inequality."},{"id":"w116","word":"Optimal","phonetic":"/ˈɒp.tɪ.məl/","type":"adjective","category":"academic","cefr":"C1","def":"Best or most favourable.","collocations":["optimal conditions","optimal solution","optimal level"],"example":"Plants grow best under optimal conditions.","ieltsExample":"Governments seek the optimal balance between growth and protection."},{"id":"w117","word":"Proclivity","phonetic":"/prəˈklɪv.ə.ti/","type":"noun","category":"academic","cefr":"C1","def":"A tendency to choose or do something regularly.","collocations":["natural proclivity","proclivity for","proclivity towards"],"example":"He has a proclivity for risk-taking.","ieltsExample":"Humans have a proclivity to favour short-term rewards."},{"id":"w118","word":"Subordinate","phonetic":"/səˈbɔː.dɪ.nət/","type":"adjective","category":"academic","cefr":"C1","def":"Lower in rank or position.","collocations":["subordinate role","subordinate clause","subordinate status"],"example":"Women were often given subordinate roles historically.","ieltsExample":"Economic concerns should not be subordinate to environmental protection—or vice versa without debate."},{"id":"w119","word":"Tenuous","phonetic":"/ˈten.ju.əs/","type":"adjective","category":"academic","cefr":"C1","def":"Very weak or slight.","collocations":["tenuous link","tenuous connection","tenuous argument"],"example":"The link between the events is tenuous.","ieltsExample":"The argument rests on tenuous statistical evidence."},{"id":"w120","word":"Unfettered","phonetic":"/ʌnˈfet.əd/","type":"adjective","category":"academic","cefr":"C1","def":"Not confined or restricted.","collocations":["unfettered access","unfettered capitalism","unfettered growth"],"example":"They demanded unfettered access to information.","ieltsExample":"Unfettered development can damage fragile ecosystems."},{"id":"w121","word":"Vacillate","phonetic":"/ˈvæs.ɪ.leɪt/","type":"verb","category":"academic","cefr":"C1","def":"To waver between different opinions or actions.","collocations":["vacillate between","continue to vacillate","vacillate on policy"],"example":"The committee vacillated for months before deciding.","ieltsExample":"Governments that vacillate on climate policy lose public trust."},{"id":"w122","word":"Exacerbation","phonetic":"/ɪɡˌzæs.əˈbeɪ.ʃən/","type":"noun","category":"academic","cefr":"C1","def":"The act of making something worse.","collocations":["exacerbation of symptoms","further exacerbation","risk of exacerbation"],"example":"Stress led to an exacerbation of her condition.","ieltsExample":"War caused an exacerbation of the refugee crisis."},{"id":"w123","word":"Juxtaposition","phonetic":"/ˌdʒʌk.stə.pəˈzɪʃ.ən/","type":"noun","category":"academic","cefr":"C1","def":"The fact of placing things close together for contrast.","collocations":["striking juxtaposition","juxtaposition of","in juxtaposition"],"example":"The film uses juxtaposition of rich and poor districts.","ieltsExample":"The juxtaposition of wealth and poverty is stark in many capitals."},{"id":"w124","word":"Normative","phonetic":"/ˈnɔː.mə.tɪv/","type":"adjective","category":"academic","cefr":"C1","def":"Establishing a standard; prescriptive.","collocations":["normative assumptions","normative framework","normative influence"],"example":"The study questions normative views of gender roles.","ieltsExample":"Normative claims about how people ought to live are debated in ethics."},{"id":"w125","word":"Pertinent","phonetic":"/ˈpɜː.tɪ.nənt/","type":"adjective","category":"academic","cefr":"C1","def":"Relevant or applicable to a particular matter.","collocations":["pertinent question","pertinent information","particularly pertinent"],"example":"Please keep your comments pertinent to the topic.","ieltsExample":"Only pertinent examples should appear in the body paragraphs."},{"id":"w126","word":"Affluent","phonetic":"/ˈæf.lu.ənt/","type":"adjective","category":"general","cefr":"C1","def":"Having a great deal of money; wealthy.","collocations":["affluent society","affluent neighbourhood","increasingly affluent"],"example":"They live in an affluent suburb.","ieltsExample":"Affluent consumers drive demand for luxury goods."},{"id":"w127","word":"Burgeoning","phonetic":"/ˈbɜː.dʒən.ɪŋ/","type":"adjective","category":"general","cefr":"C1","def":"Growing or developing rapidly.","collocations":["burgeoning industry","burgeoning population","burgeoning market"],"example":"The city has a burgeoning tech scene.","ieltsExample":"Burgeoning urban populations strain public services."},{"id":"w128","word":"Conspicuous","phonetic":"/kənˈspɪk.ju.əs/","type":"adjective","category":"general","cefr":"C1","def":"Standing out so as to be clearly visible.","collocations":["conspicuous consumption","conspicuous absence","highly conspicuous"],"example":"His wealth was displayed in conspicuous consumption.","ieltsExample":"The conspicuous gap between rich and poor fuels resentment."},{"id":"w129","word":"Daunting","phonetic":"/ˈdɔːn.tɪŋ/","type":"adjective","category":"general","cefr":"C1","def":"Seeming difficult to deal with; intimidating.","collocations":["daunting task","daunting prospect","daunting challenge"],"example":"Starting a business can be daunting.","ieltsExample":"Learning academic writing is daunting for many candidates."},{"id":"w130","word":"Egregious","phonetic":"/ɪˈɡriː.dʒəs/","type":"adjective","category":"general","cefr":"C1","def":"Outstandingly bad; shocking.","collocations":["egregious error","egregious violation","egregious misconduct"],"example":"The report revealed egregious safety violations.","ieltsExample":"Egregious inequality undermines social cohesion."},{"id":"w131","word":"Frugal","phonetic":"/ˈfruː.ɡəl/","type":"adjective","category":"general","cefr":"B2","def":"Sparing or economical with money or resources.","collocations":["frugal lifestyle","frugal habits","remain frugal"],"example":"Her frugal habits helped her save quickly.","ieltsExample":"Frugal energy use benefits both households and the planet."},{"id":"w132","word":"Gregarious","phonetic":"/ɡrɪˈɡeə.ri.əs/","type":"adjective","category":"general","cefr":"C1","def":"Fond of company; sociable.","collocations":["gregarious personality","gregarious nature","less gregarious"],"example":"She has a gregarious personality.","ieltsExample":"Gregarious students often thrive in discussion-based classes."},{"id":"w133","word":"Haphazard","phonetic":"/hæpˈhæz.əd/","type":"adjective","category":"general","cefr":"C1","def":"Lacking organisation or planning.","collocations":["haphazard approach","haphazard growth","haphazard arrangement"],"example":"The files were stored in a haphazard way.","ieltsExample":"Haphazard urban planning creates long-term infrastructure problems."},{"id":"w134","word":"Impartial","phonetic":"/ɪmˈpɑː.ʃəl/","type":"adjective","category":"general","cefr":"C1","def":"Treating all rivals or disputants equally.","collocations":["impartial judge","impartial assessment","remain impartial"],"example":"Judges must remain impartial.","ieltsExample":"Examiners are trained to give impartial feedback."},{"id":"w135","word":"Meticulous","phonetic":"/məˈtɪk.jə.ləs/","type":"adjective","category":"general","cefr":"C1","def":"Showing great attention to detail.","collocations":["meticulous planning","meticulous research","meticulous attention"],"example":"She is meticulous about proofreading.","ieltsExample":"Meticulous Task 1 descriptions can lift band scores."},{"id":"w136","word":"Nuance","phonetic":"/ˈnjuː.ɑːns/","type":"noun","category":"general","cefr":"C1","def":"A subtle difference in meaning or expression.","collocations":["cultural nuance","subtle nuance","capture the nuance"],"example":"The translation missed important nuance.","ieltsExample":"Strong essays capture nuance rather than oversimplifying issues."},{"id":"w137","word":"Onerous","phonetic":"/ˈəʊ.nər.əs/","type":"adjective","category":"general","cefr":"C1","def":"Involving a great deal of effort or difficulty.","collocations":["onerous burden","onerous regulations","onerous task"],"example":"The tax forms were onerous to complete.","ieltsExample":"Onerous visa requirements deter skilled migrants."},{"id":"w138","word":"Prolific","phonetic":"/prəˈlɪf.ɪk/","type":"adjective","category":"general","cefr":"C1","def":"Producing much; abundantly fruitful.","collocations":["prolific writer","prolific output","prolific career"],"example":"She is a prolific author of research papers.","ieltsExample":"China has become a prolific producer of renewable technology."},{"id":"w139","word":"Quintessential","phonetic":"/ˌkwɪn.tɪˈsen.ʃəl/","type":"adjective","category":"general","cefr":"C1","def":"Representing the most perfect example.","collocations":["quintessential example","quintessential British","quintessential feature"],"example":"Fish and chips is quintessential British cuisine.","ieltsExample":"Paris is often seen as the quintessential romantic city."},{"id":"w140","word":"Redundant","phonetic":"/rɪˈdʌn.dənt/","type":"adjective","category":"general","cefr":"C1","def":"No longer needed or useful.","collocations":["made redundant","redundant equipment","feel redundant"],"example":"Several staff were made redundant last year.","ieltsExample":"Automation may render some skills redundant."},{"id":"w141","word":"Stark","phonetic":"/stɑːk/","type":"adjective","category":"general","cefr":"C1","def":"Severe or bare in appearance; blunt.","collocations":["stark contrast","stark reality","stark choice"],"example":"There is a stark contrast between rich and poor areas.","ieltsExample":"The data presents a stark picture of climate impact."},{"id":"w142","word":"Incumbent","phonetic":"/ɪnˈkʌm.bənt/","type":"adjective","category":"general","cefr":"C1","def":"Necessary as a duty or responsibility.","collocations":["it is incumbent on","incumbent upon governments"],"example":"It is incumbent on leaders to act responsibly.","ieltsExample":"It is incumbent on policymakers to protect vulnerable groups."},{"id":"w143","word":"Ubiquity","phonetic":"/juːˈbɪk.wɪ.ti/","type":"noun","category":"general","cefr":"C1","def":"The fact of appearing everywhere.","collocations":["ubiquity of smartphones","cultural ubiquity","increasing ubiquity"],"example":"We discuss the ubiquity of digital advertising.","ieltsExample":"The ubiquity of English gives native speakers an advantage abroad."},{"id":"w144","word":"Venerable","phonetic":"/ˈven.ər.ə.bəl/","type":"adjective","category":"general","cefr":"C1","def":"Accorded great respect due to age or wisdom.","collocations":["venerable institution","venerable tradition","venerable professor"],"example":"The university is a venerable institution.","ieltsExample":"Venerable customs may still hinder gender equality."},{"id":"w145","word":"Wholesale","phonetic":"/ˈhəʊl.seɪl/","type":"adjective","category":"general","cefr":"C1","def":"On a large scale; complete.","collocations":["wholesale changes","wholesale reform","wholesale destruction"],"example":"The company announced wholesale restructuring.","ieltsExample":"Wholesale adoption of electric buses could cut urban emissions."},{"id":"w146","word":"Austere","phonetic":"/ɒˈstɪər/","type":"adjective","category":"general","cefr":"C1","def":"Severe or strict in manner; having no comforts.","collocations":["austere conditions","austere measures","austere lifestyle"],"example":"They lived under austere economic conditions.","ieltsExample":"Austerity programmes impose austere spending limits on welfare."},{"id":"w147","word":"Copious","phonetic":"/ˈkəʊ.pi.əs/","type":"adjective","category":"general","cefr":"C1","def":"Abundant in supply or quantity.","collocations":["copious notes","copious amounts","copious research"],"example":"She took copious notes during the lecture.","ieltsExample":"Copious evidence supports the benefits of early childhood education."},{"id":"w148","word":"Dubious","phonetic":"/ˈdjuː.bi.əs/","type":"adjective","category":"general","cefr":"C1","def":"Hesitating or doubting; not to be relied upon.","collocations":["dubious claim","dubious distinction","remain dubious"],"example":"I am dubious about their promises.","ieltsExample":"Many remain dubious of quick-fix solutions to climate change."},{"id":"w149","word":"Fleeting","phonetic":"/ˈfliː.tɪŋ/","type":"adjective","category":"general","cefr":"C1","def":"Lasting for a very short time.","collocations":["fleeting moment","fleeting glance","fleeting fame"],"example":"Happiness can be a fleeting feeling.","ieltsExample":"Social media offers only fleeting satisfaction for some users."},{"id":"w150","word":"Gravitas","phonetic":"/ˈɡræv.ɪ.tæs/","type":"noun","category":"general","cefr":"C1","def":"Dignity, seriousness, or solemnity of manner.","collocations":["political gravitas","lack gravitas","considerable gravitas"],"example":"The leader spoke with real gravitas.","ieltsExample":"Academic writing benefits from gravitas without being pompous."},{"id":"w151","word":"Moreover","phonetic":"/mɔːˈrəʊ.vər/","type":"adverb","category":"connector","cefr":"B2","def":"As a further matter; besides.","collocations":["moreover, it is clear","moreover, evidence suggests"],"example":"The plan is expensive. Moreover, it may fail.","ieltsExample":"Renewable energy reduces emissions. Moreover, it creates jobs."},{"id":"w152","word":"Hence","phonetic":"/hens/","type":"adverb","category":"connector","cefr":"B2","def":"As a consequence; for this reason.","collocations":["hence the need","hence, we conclude","hence the term"],"example":"The data was incomplete; hence the delay.","ieltsExample":"Investment fell; hence unemployment rose sharply."},{"id":"w153","word":"Thus","phonetic":"/ðʌs/","type":"adverb","category":"connector","cefr":"B2","def":"As a result or consequence; therefore.","collocations":["thus far","thus indicating","thus, the argument"],"example":"He studied hard and thus passed easily.","ieltsExample":"Costs have risen; thus consumers seek cheaper alternatives."},{"id":"w154","word":"Accordingly","phonetic":"/əˈkɔː.dɪŋ.li/","type":"adverb","category":"connector","cefr":"C1","def":"In a way that is appropriate to the circumstances.","collocations":["act accordingly","adjust accordingly","respond accordingly"],"example":"Rules changed and staff acted accordingly.","ieltsExample":"Governments must legislate accordingly to meet climate targets."},{"id":"w155","word":"Conversely","phonetic":"/ˈkɒn.vɜːs.li/","type":"adverb","category":"connector","cefr":"C1","def":"In an opposite or reversed way.","collocations":["conversely, some argue","conversely, evidence shows"],"example":"Urban areas grew; conversely, rural populations shrank.","ieltsExample":"Wealth rose in cities; conversely, rural incomes stagnated."},{"id":"w156","word":"Likewise","phonetic":"/ˈlaɪk.waɪz/","type":"adverb","category":"connector","cefr":"B2","def":"In the same way; also.","collocations":["likewise, many believe","and likewise"],"example":"She excelled in maths; likewise in physics.","ieltsExample":"Japan invested in rail; likewise, France expanded its network."},{"id":"w157","word":"Subsequently","phonetic":"/ˈsʌb.sɪ.kwənt.li/","type":"adverb","category":"connector","cefr":"B2","def":"After a particular thing has happened.","collocations":["subsequently discovered","subsequently led to"],"example":"He resigned and subsequently moved abroad.","ieltsExample":"The law passed and subsequently reduced smoking rates."},{"id":"w158","word":"Chiefly","phonetic":"/ˈtʃiːf.li/","type":"adverb","category":"connector","cefr":"C1","def":"Mainly; above all.","collocations":["chiefly because","chiefly concerned with","chiefly responsible"],"example":"The delay was chiefly caused by weather.","ieltsExample":"The decline was chiefly due to falling investment."},{"id":"w159","word":"Invariably","phonetic":"/ɪnˈveə.ri.ə.bli/","type":"adverb","category":"connector","cefr":"C1","def":"In every case or on every occasion.","collocations":["almost invariably","invariably leads to"],"example":"The test invariably proves difficult.","ieltsExample":"Poor planning invariably leads to weaker essays."},{"id":"w160","word":"Admittedly","phonetic":"/ədˈmɪt.ɪd.li/","type":"adverb","category":"connector","cefr":"C1","def":"Used to introduce a concession.","collocations":["admittedly, there are","admittedly difficult"],"example":"Admittedly, the cost is high.","ieltsExample":"Admittedly, technology has drawbacks; nevertheless, benefits outweigh them."},{"id":"w161","word":"Granted","phonetic":"/ˈɡrɑːn.tɪd/","type":"adverb","category":"connector","cefr":"C1","def":"Used to concede a point before making another.","collocations":["granted, this is true","granted that"],"example":"Granted, the policy is costly, but it is necessary.","ieltsExample":"Granted, tourism creates jobs; however, it can harm the environment."},{"id":"w162","word":"By contrast","phonetic":"/baɪ ˈkɒn.trɑːst/","type":"phrase","category":"connector","cefr":"B2","def":"Used to highlight a difference.","collocations":["by contrast, rural","by contrast, the data"],"example":"Cities grew rapidly. By contrast, villages declined.","ieltsExample":"By contrast, renewable investment doubled in the same period."},{"id":"w163","word":"On balance","phonetic":"/ɒn ˈbæl.əns/","type":"phrase","category":"connector","cefr":"C1","def":"Taking everything into consideration.","collocations":["on balance, the benefits","on balance, I believe"],"example":"On balance, the project was worthwhile.","ieltsExample":"On balance, remote work benefits outweigh the drawbacks."},{"id":"w164","word":"To that end","phonetic":"/tuː ðæt end/","type":"phrase","category":"connector","cefr":"C1","def":"For that purpose.","collocations":["to that end, governments","to that end, schools"],"example":"To that end, they hired more teachers.","ieltsExample":"To that end, governments fund teacher training programmes."},{"id":"w165","word":"In light of","phonetic":"/ɪn laɪt ɒv/","type":"phrase","category":"connector","cefr":"C1","def":"Because of new information or circumstances.","collocations":["in light of recent","in light of evidence"],"example":"In light of new evidence, they reopened the case.","ieltsExample":"In light of climate data, stricter regulations are justified."},{"id":"w166","word":"With respect to","phonetic":"/wɪð rɪˈspekt tuː/","type":"phrase","category":"connector","cefr":"C1","def":"Regarding; concerning.","collocations":["with respect to policy","with respect to costs"],"example":"With respect to safety, changes are needed.","ieltsExample":"With respect to education, funding remains inadequate."},{"id":"w167","word":"Insofar as","phonetic":"/ˌɪn.səʊˈfɑːr æz/","type":"phrase","category":"connector","cefr":"C1","def":"To the extent that.","collocations":["insofar as possible","insofar as we know"],"example":"Help will be given insofar as funds allow.","ieltsExample":"Technology helps insofar as users develop digital literacy."},{"id":"w168","word":"Not least","phonetic":"/nɒt liːst/","type":"phrase","category":"connector","cefr":"C1","def":"Especially; particularly important.","collocations":["not least because","not least among"],"example":"The plan matters, not least for the poor.","ieltsExample":"Education reform matters, not least for rural communities."},{"id":"w169","word":"That said","phonetic":"/ðæt sed/","type":"phrase","category":"connector","cefr":"B2","def":"Nevertheless; however (after a concession).","collocations":["that said, there are","that said, I agree"],"example":"The film was long. That said, it was engaging.","ieltsExample":"Tourism boosts income. That said, it can damage heritage sites."},{"id":"w170","word":"All things considered","phonetic":"/ɔːl θɪŋz kənˈsɪd.əd/","type":"phrase","category":"connector","cefr":"C1","def":"Taking all factors into account.","collocations":["all things considered","all things considered, the"],"example":"All things considered, we made the right choice.","ieltsExample":"All things considered, nuclear power remains controversial."},{"id":"w171","word":"It is arguable that","phonetic":"/ɪt ɪz ˈɑː.ɡju.ə.bəl ðæt/","type":"phrase","category":"opinion","cefr":"C1","def":"Used to present a debatable claim.","collocations":["it is arguable that governments","it is arguable that technology"],"example":"It is arguable that the policy failed.","ieltsExample":"It is arguable that free university education benefits society overall."},{"id":"w172","word":"I am inclined to believe","phonetic":"/aɪ æm ɪnˈklaɪnd tuː bɪˈliːv/","type":"phrase","category":"opinion","cefr":"C1","def":"Used to express a tentative personal view.","collocations":["I am inclined to believe that","inclined to believe"],"example":"I am inclined to believe he is right.","ieltsExample":"I am inclined to believe that prevention is cheaper than cure."},{"id":"w173","word":"It would be remiss to","phonetic":"/ɪt wʊd biː rɪˈmɪs tuː/","type":"phrase","category":"opinion","cefr":"C1","def":"Used to say something must be mentioned.","collocations":["it would be remiss to ignore","remiss not to"],"example":"It would be remiss to ignore safety concerns.","ieltsExample":"It would be remiss to overlook the role of poverty in crime."},{"id":"w174","word":"There is merit in","phonetic":"/ðeər ɪz ˈmer.ɪt ɪn/","type":"phrase","category":"opinion","cefr":"C1","def":"Used to acknowledge a valid point.","collocations":["there is merit in both","merit in the argument"],"example":"There is merit in both proposals.","ieltsExample":"There is merit in restricting cars in city centres."},{"id":"w175","word":"On balance, I contend","phonetic":"/ɒn ˈbæl.əns aɪ kənˈtend/","type":"phrase","category":"opinion","cefr":"C1","def":"Used to state a weighed final position.","collocations":["on balance, I contend that","I contend that"],"example":"On balance, I contend that reform is necessary.","ieltsExample":"On balance, I contend that governments should regulate social media."},{"id":"w176","word":"It is tempting to assume","phonetic":"/ɪt ɪz ˈtemp.tɪŋ tuː əˈsjuːm/","type":"phrase","category":"opinion","cefr":"C1","def":"Used to caution against oversimplification.","collocations":["tempting to assume that","it is tempting to assume"],"example":"It is tempting to assume success was inevitable.","ieltsExample":"It is tempting to assume technology alone solves education gaps."},{"id":"w177","word":"Few would dispute that","phonetic":"/fjuː wʊd dɪˈspjuːt ðæt/","type":"phrase","category":"opinion","cefr":"C1","def":"Used for widely accepted claims.","collocations":["few would dispute that","few would dispute"],"example":"Few would dispute that health matters.","ieltsExample":"Few would dispute that climate change poses serious risks."},{"id":"w178","word":"It is not unreasonable to","phonetic":"/ɪt ɪz nɒt ʌnˈriː.zən.ə.bəl tuː/","type":"phrase","category":"opinion","cefr":"C1","def":"Used to present a moderate claim.","collocations":["not unreasonable to suggest","not unreasonable to argue"],"example":"It is not unreasonable to ask for proof.","ieltsExample":"It is not unreasonable to expect cleaner air in cities."},{"id":"w179","word":"I would venture that","phonetic":"/aɪ wʊd ˈven.tʃər ðæt/","type":"phrase","category":"opinion","cefr":"C1","def":"Used to offer a careful opinion.","collocations":["I would venture that","venture that most"],"example":"I would venture that costs will rise.","ieltsExample":"I would venture that cultural exchange fosters mutual understanding."},{"id":"w180","word":"The crux of the matter","phonetic":"/ðə krʌks ɒv ðə ˈmæt.ər/","type":"phrase","category":"opinion","cefr":"C1","def":"The most important point.","collocations":["the crux of the matter is","crux of the matter"],"example":"The crux of the matter is funding.","ieltsExample":"The crux of the matter is whether growth can be sustainable."},{"id":"w181","word":"To my mind","phonetic":"/tuː maɪ maɪnd/","type":"phrase","category":"opinion","cefr":"B2","def":"In my opinion.","collocations":["to my mind, the key","to my mind, this"],"example":"To my mind, the film was overrated.","ieltsExample":"To my mind, public transport deserves greater investment."},{"id":"w182","word":"I take the view that","phonetic":"/aɪ teɪk ðə vjuː ðæt/","type":"phrase","category":"opinion","cefr":"C1","def":"Used to state a formal personal opinion.","collocations":["I take the view that","take the view that"],"example":"I take the view that change is overdue.","ieltsExample":"I take the view that arts education should not be cut."},{"id":"w183","word":"It is open to debate","phonetic":"/ɪt ɪz ˌəʊ.pən tuː dɪˈbeɪt/","type":"phrase","category":"opinion","cefr":"C1","def":"Used when no consensus exists.","collocations":["open to debate whether","remains open to debate"],"example":"Whether it will work is open to debate.","ieltsExample":"Whether homework improves learning remains open to debate."},{"id":"w184","word":"I am persuaded that","phonetic":"/aɪ æm pəˈsweɪ.dɪd ðæt/","type":"phrase","category":"opinion","cefr":"C1","def":"Used to express conviction after consideration.","collocations":["I am persuaded that","persuaded that the"],"example":"I am persuaded that the evidence is sound.","ieltsExample":"I am persuaded that early intervention reduces crime long-term."},{"id":"w185","word":"On the whole","phonetic":"/ɒn ðə həʊl/","type":"phrase","category":"opinion","cefr":"B2","def":"Generally; considering everything.","collocations":["on the whole, positive","on the whole, I think"],"example":"On the whole, the trip was enjoyable.","ieltsExample":"On the whole, globalisation has lifted living standards."},{"id":"w186","word":"Off the top of my head","phonetic":"/ɒf ðə tɒp ɒv maɪ hed/","type":"phrase","category":"speaking","cefr":"B2","def":"Without careful thought or preparation.","collocations":["off the top of my head, I'd say","off the top of my head"],"example":"Off the top of my head, I'd say about fifty.","ieltsExample":"Off the top of my head, I'd guess tourism is the main industry there."},{"id":"w187","word":"That rings a bell","phonetic":"/ðæt rɪŋz ə bel/","type":"phrase","category":"speaking","cefr":"B2","def":"Sounds familiar; I think I remember.","collocations":["that rings a bell","doesn't ring a bell"],"example":"The name rings a bell but I can't place him.","ieltsExample":"Your description of the festival rings a bell — I read about it."},{"id":"w188","word":"I'm on the fence","phonetic":"/aɪm ɒn ðə fens/","type":"phrase","category":"speaking","cefr":"B2","def":"Undecided between two options.","collocations":["I'm on the fence about","still on the fence"],"example":"I'm on the fence about which job to take.","ieltsExample":"I'm on the fence about whether cities should ban cars entirely."},{"id":"w189","word":"Come to think of it","phonetic":"/kʌm tuː θɪŋk ɒv ɪt/","type":"phrase","category":"speaking","cefr":"B2","def":"Used when something occurs to you.","collocations":["come to think of it","now that I come to think"],"example":"Come to think of it, I did meet her once.","ieltsExample":"Come to think of it, my hometown has changed dramatically."},{"id":"w190","word":"It slips my mind","phonetic":"/ɪt slɪps maɪ maɪnd/","type":"phrase","category":"speaking","cefr":"B2","def":"To forget something temporarily.","collocations":["it completely slips my mind","names slip my mind"],"example":"Sorry, your number slips my mind.","ieltsExample":"Important details sometimes slip my mind under pressure."},{"id":"w191","word":"Broadly speaking","phonetic":"/ˈbrɔːd.li ˈspiː.kɪŋ/","type":"phrase","category":"speaking","cefr":"B2","def":"In general terms; without detail.","collocations":["broadly speaking, yes","broadly speaking, the"],"example":"Broadly speaking, the plan makes sense.","ieltsExample":"Broadly speaking, young people are more environmentally aware."},{"id":"w192","word":"If memory serves","phonetic":"/ɪf ˈmem.ər.i sɜːvz/","type":"phrase","category":"speaking","cefr":"C1","def":"As far as I can remember.","collocations":["if memory serves, it was","if memory serves me"],"example":"If memory serves, we met in 2019.","ieltsExample":"If memory serves, the course lasted six months."},{"id":"w193","word":"I wouldn't go so far as to say","phonetic":"/aɪ ˈwʊd.ənt ɡəʊ səʊ fɑː æz tuː seɪ/","type":"phrase","category":"speaking","cefr":"C1","def":"Used to moderate a strong claim.","collocations":["wouldn't go so far as to","go so far as to say"],"example":"I wouldn't go so far as to call it a disaster.","ieltsExample":"I wouldn't go so far as to say technology ruins relationships."},{"id":"w194","word":"That's a moot point","phonetic":"/ðæts ə muːt pɔɪnt/","type":"phrase","category":"speaking","cefr":"C1","def":"A matter open to debate or no longer relevant.","collocations":["that's a moot point","somewhat moot"],"example":"Whether he intended it is a moot point.","ieltsExample":"Whether the old stadium should reopen is a moot point now."},{"id":"w195","word":"I'm inclined to say","phonetic":"/aɪm ɪnˈklaɪnd tuː seɪ/","type":"phrase","category":"speaking","cefr":"B2","def":"Used to give a tentative answer.","collocations":["I'm inclined to say yes","inclined to say that"],"example":"I'm inclined to say she'll agree.","ieltsExample":"I'm inclined to say rural life is quieter but less convenient."},{"id":"w196","word":"Boil down to","phonetic":"/bɔɪl daʊn tuː/","type":"phrasal verb","category":"phrasal","cefr":"C1","def":"To be reducible to the essential element.","collocations":["boil down to cost","boil down to two"],"example":"The issue boils down to trust.","ieltsExample":"Most environmental debates boil down to economic priorities."},{"id":"w197","word":"Brush up on","phonetic":"/brʌʃ ʌp ɒn/","type":"phrasal verb","category":"phrasal","cefr":"B2","def":"To improve knowledge by revising.","collocations":["brush up on grammar","brush up on skills"],"example":"I need to brush up on my Spanish.","ieltsExample":"Candidates should brush up on Task 1 chart vocabulary."},{"id":"w198","word":"Do away with","phonetic":"/duː əˈweɪ wɪð/","type":"phrasal verb","category":"phrasal","cefr":"C1","def":"To abolish or remove.","collocations":["do away with the rule","do away with exams"],"example":"They want to do away with the old law.","ieltsExample":"Some argue we should do away with homework entirely."},{"id":"w199","word":"Fall short of","phonetic":"/fɔːl ʃɔːt ɒv/","type":"phrasal verb","category":"phrasal","cefr":"C1","def":"To fail to reach a required standard.","collocations":["fall short of expectations","fall short of targets"],"example":"Sales fell short of expectations.","ieltsExample":"Current policies fall short of Paris Agreement targets."},{"id":"w200","word":"Zero in on","phonetic":"/ˈzɪə.rəʊ ɪn ɒn/","type":"phrasal verb","category":"phrasal","cefr":"C1","def":"To focus attention on.","collocations":["zero in on the problem","zero in on key"],"example":"Investigators zeroed in on the suspect.","ieltsExample":"Strong essays zero in on the most relevant causes."}]}</script>
 <script>
 // ============================================================
@@ -930,14 +1065,7 @@ const WRITING_TASKS = [
   {id:'wt005',type:'task2',label:'Task 2',title:'Education and Employment',prompt:'Many young people today struggle to find employment after graduating from university. Some argue that universities should focus more on practical skills and less on academic theory. To what extent do you agree with this view?',minWords:250,timeLimit:40,tips:['Consider what "practical skills" means in different fields','A nuanced answer often scores higher than a black-and-white one','Think about both employer and student perspectives','Use examples from specific industries if possible','Acknowledge counter-arguments before refuting them']},
 ];
 
-const SPEAKING_TOPICS = [
-  {id:'sp001',part:'PART 1',topic:'Daily Routine & Time Management',time:'4–5 min',timeSeconds:270,questions:['Can you describe your typical daily routine?','Are you a morning person or a night owl? Why?','How do you usually manage your time when you have a lot to do?','Do you think people today are busier than they were in the past? Why?'],tips:['Extend your answers — aim for 2–4 sentences per question.','Use time expressions: "first thing in the morning," "by the time I...," "as soon as I..."','Show vocabulary range: instead of "busy," try "hectic," "demanding," or "frantic."','Add a personal detail to make your answers memorable and authentic.']},
-  {id:'sp002',part:'PART 2',topic:'Describe a place you have visited that left a strong impression on you.',time:'2 min',timeSeconds:120,cues:['Where the place is and when you visited','What you saw and did there','Why it made such a strong impression on you','Whether you would recommend it to others'],tips:['Use vivid, sensory language: what did you see, hear, smell?','Structure your talk: don\'t just list facts — tell a story.','Use past perfect for context: "I had always wanted to visit..."','Pause briefly to think — a moment\'s silence is better than "um."','End with a strong personal reflection to demonstrate cohesion.']},
-  {id:'sp003',part:'PART 3',topic:'Tourism and its Impact on Society',time:'4–5 min',timeSeconds:270,questions:['What are the main benefits of tourism for a country\'s economy?','How can mass tourism damage local cultures and environments?','Do you think governments do enough to manage the negative effects of tourism?','What is the difference between a "tourist" and a "traveller"? Does this distinction matter?'],tips:['Part 3 requires abstract, analytical thinking — go beyond personal experience.','Use hedging: "It could be argued that...," "There is a strong case for..."','Demonstrate a range of grammatical structures: conditionals, passives, modals.','Agree partially then qualify: "To some extent, yes, but..."','Use discourse markers: "In contrast," "Nevertheless," "Consequently."']},
-  {id:'sp004',part:'PART 1',topic:'Social Media & Technology',time:'4–5 min',timeSeconds:270,questions:['How much time do you spend on social media each day?','Do you think social media has made it easier or harder to maintain friendships?','What are the main disadvantages of smartphones in your view?','Have you ever tried to spend less time online? What happened?'],tips:['Don\'t just agree or disagree — add nuance: "It depends on how you use it."','Use collocations for fluency: "scroll through feeds," "go viral," "stay connected."','Show awareness of different perspectives for a higher score.','Avoid very short answers — the examiner wants to hear you speak.']},
-  {id:'sp005',part:'PART 2',topic:'Describe a time when you worked as part of a team to achieve a goal.',time:'2 min',timeSeconds:120,cues:['What the goal or task was','Who was in the team and what your role was','What challenges the team faced','Whether the goal was achieved and what you learned'],tips:['Use narrative tenses: "we had been working... when suddenly..."','Show cooperation vocabulary: "delegate," "coordinate," "compromise."','A genuine personal story is more convincing than a fabricated one.','End with a reflection: "This experience taught me the importance of..."']},
-  {id:'sp006',part:'PART 3',topic:'Work, Careers, and the Future of Employment',time:'4–5 min',timeSeconds:270,questions:['How has the nature of work changed over the past 30 years?','Do you think artificial intelligence will create more jobs than it destroys?','What qualities do employers value most in workers today?','Should the government provide financial support for people who lose their jobs to automation?'],tips:['Use sophisticated vocabulary: "displacement," "upskilling," "automation," "gig economy."','Structure complex answers: "Firstly... Furthermore... However... In conclusion..."','Demonstrate conditional logic: "If governments fail to invest in retraining, then..."','Don\'t be afraid to say "That\'s a complex question" — it shows academic maturity.','Aim for at least 5–6 sentences per answer in Part 3.']},
-];
+// SPEAKING_TOPIC_SETS + SPEAKING_TOPICS → speaking-topics-data.js
 
 // ============================================================
 // 3. SRS (SM-2)
@@ -1005,6 +1133,7 @@ function showPage(name) {
     fcFlipped = false;
     renderFC();
   }
+  if (name === 'speaking' && typeof closeSpeaking === 'function') closeSpeaking();
 }
 
 function updateStreak() {
@@ -1317,6 +1446,17 @@ function openWriting(id) {
       <span class="word-counter" id="wc-${id}">0 words</span>
       <span style="color:var(--muted);font-size:12px;font-family:var(--mono)">Target: ${t.minWords}+ words</span>
     </div>
+    <div class="session-bar" id="session-bar-${id}">
+      <div class="session-info">
+        <span class="session-badge" id="session-badge-${id}">Attempt #1</span>
+        <span class="session-timestamp" id="session-ts-${id}">${new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'})}</span>
+      </div>
+      <div class="session-actions">
+        <button class="btn-session btn-new-attempt" onclick="startNewAttempt('${id}',${t.minWords})" title="Start fresh with a blank essay — attempt counter increases">↺ New Attempt</button>
+        <button class="btn-session btn-clear-essay" onclick="clearEssay('${id}',${t.minWords})" title="Clear the essay text only — keep attempt number">🗑 Clear Essay</button>
+        <button class="btn-session btn-reset-eval" onclick="resetEvaluation('${id}')" title="Hide and wipe the score panel — re-submit for new feedback">✕ Reset Score</button>
+      </div>
+    </div>
     <div class="writing-actions">
       <button class="btn-primary" onclick="getAIFeedback('${id}',${t.minWords})">Get AI Feedback</button>
       <button class="btn-secondary" onclick="saveDraft('${id}')">Save Draft</button>
@@ -1342,73 +1482,1348 @@ function saveDraft(id) {
   setTimeout(() => btn.textContent = 'Save Draft', 1800);
 }
 
+/* Strict IELTS evaluator — lib/evaluation/essay-validator.mjs + ielts-evaluator.mjs (npm run build:evaluator) */
+/**
+ * Pre-scoring essay validation — detects invalid, fake, copied, or low-quality submissions
+ * before band evaluation runs.
+ */
+
+const STOP = new Set([
+  'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by',
+  'from', 'as', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has', 'had',
+  'do', 'does', 'did', 'will', 'would', 'could', 'should', 'may', 'might', 'must', 'can',
+  'that', 'this', 'these', 'those', 'it', 'its', 'they', 'them', 'their', 'we', 'our', 'you',
+  'your', 'i', 'my', 'he', 'she', 'his', 'her', 'not', 'no', 'so', 'if', 'when', 'while',
+  'than', 'then', 'also', 'very', 'more', 'most', 'some', 'any', 'all', 'both', 'each',
+  'such', 'into', 'about', 'over', 'under', 'between', 'through', 'during', 'before', 'after',
+  'there', 'here', 'what', 'which', 'who', 'whom', 'how', 'why', 'where', 'because', 'although',
+  'however', 'therefore', 'thus', 'hence', 'whereas', 'whether', 'though', 'even',
+  'much', 'many', 'few', 'one', 'ones', 'other', 'others', 'another', 'same',
+  'just', 'only', 'own', 'up', 'out', 'off', 'down', 'away', 'back', 'well', 'now', 'today',
+]);
+
+const TEMPLATE_PHRASES = [
+  'in this day and age',
+  'in today\'s world',
+  'in the modern world',
+  'with the advent of technology',
+  'this essay will discuss',
+  'this essay will examine',
+  'there are both advantages and disadvantages',
+  'it is undeniable that',
+  'it is irrefutable that',
+  'plays a vital role',
+  'plays an important role',
+  'a double-edged sword',
+  'last but not least',
+  'in conclusion, i believe',
+  'to sum up, i believe',
+  'needless to say',
+  'as far as i am concerned',
+  'from my point of view',
+  'in my opinion, i think',
+  'every coin has two sides',
+  'a hot topic',
+  'a burning issue',
+  'shed light on',
+  'a plethora of',
+  'myriad of',
+];
+
+const ROBOTIC_INTRO_PATTERNS = [
+  /^in (this day and age|today'?s world|the modern world)/i,
+  /^it is (often |widely )?(said|believed|argued) that/i,
+  /^nowadays,?\s/i,
+  /^with the (development|advancement|advent) of/i,
+  /^this essay (will|shall) (discuss|examine|explore|address)/i,
+];
+
+const ROBOTIC_CONCLUSION_PATTERNS = [
+  /in conclusion,?\s+(i believe|it is clear|we can see)/i,
+  /to (sum up|conclude),?\s+(i believe|it is evident)/i,
+  /all in all,?\s+i (believe|think)/i,
+  /in summary,?\s+the (advantages|disadvantages) outweigh/i,
+];
+
+const SEVERITY_RANK = { low: 1, medium: 2, high: 3, critical: 4 };
+
+function tokenize(text) {
+  return text.trim().split(/\s+/).filter(Boolean);
+}
+
+function normalize(text) {
+  return text.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function contentTokens(words) {
+  return words
+    .map(w => w.toLowerCase().replace(/[^a-z'-]/g, ''))
+    .filter(w => w.length > 2 && !STOP.has(w));
+}
+
+function extractPromptKeywords(prompt) {
+  if (!prompt) return [];
+  return [...new Set(
+    normalize(prompt).split(/\s+/).filter(w => w.length > 4 && !STOP.has(w))
+  )];
+}
+
+function ngrams(words, n) {
+  const out = [];
+  for (let i = 0; i <= words.length - n; i++) {
+    out.push(words.slice(i, i + n).join(' '));
+  }
+  return out;
+}
+
+function issue(id, category, severity, explanation, suggestion) {
+  return { id, category, severity, explanation, suggestion };
+}
+
+/** Longest shared word sequence between prompt and essay (5+ words). */
+function detectPromptCopy(text, prompt) {
+  const issues = [];
+  if (!prompt || prompt.length < 20) return issues;
+
+  const essayNorm = normalize(text);
+  const promptNorm = normalize(prompt);
+  const promptWords = promptNorm.split(/\s+/).filter(Boolean);
+
+  for (let len = Math.min(12, promptWords.length); len >= 5; len--) {
+    for (const phrase of ngrams(promptWords, len)) {
+      if (essayNorm.includes(phrase)) {
+        issues.push(issue(
+          'prompt_direct_copy',
+          'prompt_copy',
+          len >= 8 ? 'high' : 'medium',
+          `A ${len}-word phrase from the question appears verbatim in your essay.`,
+          'Paraphrase the task in your own words; do not copy the question wording.'
+        ));
+        return issues;
+      }
+    }
+  }
+
+  const promptKeys = extractPromptKeywords(prompt);
+  if (promptKeys.length < 3) return issues;
+
+  const intro = normalize((text.split(/\n\s*\n/)[0] || text).slice(0, 500));
+  const introWords = new Set(intro.split(/\s+/));
+  const introHits = promptKeys.filter(k => introWords.has(k)).length;
+  const introRatio = introHits / promptKeys.length;
+
+  if (introRatio >= 0.65 && intro.length > 80) {
+    issues.push(issue(
+      'prompt_paraphrase_copy',
+      'prompt_copy',
+      'medium',
+      'Your introduction closely mirrors the question wording instead of answering it.',
+      'Open with your position or main idea, not a restatement of the prompt.'
+    ));
+  }
+
+  const essayKeys = new Set(contentTokens(tokenize(text)));
+  const overlap = promptKeys.filter(k => essayKeys.has(k)).length / promptKeys.length;
+  if (overlap >= 0.85 && tokenize(text).length < 120) {
+    issues.push(issue(
+      'prompt_keyword_padding',
+      'prompt_copy',
+      'high',
+      'The response mostly repeats question vocabulary without developing an argument.',
+      'Add your own ideas, examples, and explanations beyond the question words.'
+    ));
+  }
+
+  return issues;
+}
+
+function detectLowEffort(text, wordCount, minWords) {
+  const issues = [];
+  const lower = text.toLowerCase();
+  const words = tokenize(text);
+  const content = contentTokens(words);
+
+  if (wordCount < Math.min(80, minWords * 0.32)) {
+    issues.push(issue(
+      'extremely_short',
+      'low_effort',
+      'critical',
+      `Essay is far too short (${wordCount} words; target ${minWords}+).`,
+      `Write a full response of at least ${minWords} words with developed paragraphs.`
+    ));
+  } else if (wordCount < minWords * 0.5) {
+    issues.push(issue(
+      'under_length',
+      'low_effort',
+      'high',
+      `Word count (${wordCount}) is well below the ${minWords}-word requirement.`,
+      'Expand each body paragraph with explanation and a specific example.'
+    ));
+  }
+
+  if (/\blorem ipsum\b/i.test(text)) {
+    issues.push(issue(
+      'lorem_ipsum',
+      'low_effort',
+      'critical',
+      'Placeholder (lorem ipsum) text detected.',
+      'Replace placeholder text with a genuine essay that answers the question.'
+    ));
+  }
+
+  if (/(.)\1{5,}/.test(text.replace(/\s/g, '')) || /[bcdfghjklmnpqrstvwxyz]{6,}/i.test(text)) {
+    issues.push(issue(
+      'random_characters',
+      'low_effort',
+      'critical',
+      'Random or keyboard-spam character sequences detected.',
+      'Write coherent English sentences that address the task.'
+    ));
+  }
+
+  const alphaRatio = (text.match(/[a-zA-Z]/g) || []).length / Math.max(text.length, 1);
+  if (text.length > 40 && alphaRatio < 0.55) {
+    issues.push(issue(
+      'non_linguistic_content',
+      'low_effort',
+      'critical',
+      'Too many non-letter characters — submission does not read as an essay.',
+      'Submit a prose essay in English, not symbols or filler characters.'
+    ));
+  }
+
+  const gibberishWords = content.filter(w => {
+    if (w.length < 4) return false;
+    const vowels = (w.match(/[aeiou]/gi) || []).length;
+    return vowels / w.length < 0.15;
+  });
+  if (content.length >= 10 && gibberishWords.length / content.length > 0.35) {
+    issues.push(issue(
+      'meaningless_text',
+      'low_effort',
+      'critical',
+      'Many words appear nonsensical or not valid English.',
+      'Use clear vocabulary and complete sentences that express real ideas.'
+    ));
+  }
+
+  const uniqueContent = new Set(content).size;
+  const ttr = content.length ? uniqueContent / content.length : 0;
+  if (wordCount >= 40 && ttr < 0.28) {
+    issues.push(issue(
+      'low_lexical_variety',
+      'low_effort',
+      'high',
+      'Very low vocabulary variety — text may be spam or repeated filler.',
+      'Use varied vocabulary and avoid repeating the same few words.'
+    ));
+  }
+
+  const sentences = text.split(/[.!?]+/).map(s => s.trim()).filter(s => s.length > 3);
+  const normSentences = sentences.map(s => normalize(s)).filter(Boolean);
+  const sentFreq = new Map();
+  for (const s of normSentences) {
+    if (s.length > 15) sentFreq.set(s, (sentFreq.get(s) || 0) + 1);
+  }
+  const dupSentences = [...sentFreq.entries()].filter(([, n]) => n >= 2);
+  if (dupSentences.length >= 1) {
+    issues.push(issue(
+      'repeated_sentences',
+      'low_effort',
+      'high',
+      'Identical or near-identical sentences are repeated.',
+      'Each sentence should add new information; remove copy-pasted lines.'
+    ));
+  }
+
+  const phraseMap = new Map();
+  const contentWords = content;
+  for (let len = 4; len <= 6; len++) {
+    for (const p of ngrams(contentWords, len)) {
+      phraseMap.set(p, (phraseMap.get(p) || 0) + 1);
+    }
+  }
+  const hotPhrases = [...phraseMap.entries()].filter(([, n]) => n >= 3);
+  if (hotPhrases.length >= 2) {
+    issues.push(issue(
+      'repeated_phrases',
+      'low_effort',
+      'medium',
+      'The same multi-word phrases are repeated excessively.',
+      'Paraphrase and develop ideas instead of looping the same phrase.'
+    ));
+  }
+
+  const freq = new Map();
+  for (const w of content) freq.set(w, (freq.get(w) || 0) + 1);
+  for (const [w, n] of freq.entries()) {
+    if (content.length > 0 && n / content.length > 0.12 && n >= 8) {
+      issues.push(issue(
+        'keyword_stuffing',
+        'low_effort',
+        'medium',
+        `The word "${w}" is overused (${n} times) — possible keyword stuffing.`,
+        'Use synonyms and topic-specific vocabulary rather than repeating one word.'
+      ));
+      break;
+    }
+  }
+
+  if (/(\btest\b|\bhello\b|\basdf\b|\bqwerty\b|\bxxx+\b)/i.test(lower) && wordCount < 150) {
+    issues.push(issue(
+      'spam_markers',
+      'low_effort',
+      'critical',
+      'Test or filler words detected with insufficient real content.',
+      'Write a complete essay that responds to the question.'
+    ));
+  }
+
+  const singleWordDominance = words.length > 0
+    && Math.max(...[...freq.values()], 0) / words.length > 0.22;
+  if (singleWordDominance && wordCount < 200) {
+    issues.push(issue(
+      'spam_repetition',
+      'low_effort',
+      'high',
+      'One word dominates the text — typical of spam or padding.',
+      'Distribute ideas across varied vocabulary and sentence structures.'
+    ));
+  }
+
+  return issues;
+}
+
+function detectOffTopic(text, prompt, wordCount) {
+  const issues = [];
+  const promptKeys = extractPromptKeywords(prompt);
+  if (promptKeys.length < 3) return issues;
+
+  const lower = text.toLowerCase();
+  const hits = promptKeys.filter(k => lower.includes(k)).length;
+  const coverage = hits / promptKeys.length;
+
+  if (coverage < 0.18 && wordCount >= 60) {
+    issues.push(issue(
+      'off_topic',
+      'off_topic',
+      'critical',
+      'The essay does not address key ideas from the question.',
+      'Re-read the prompt and answer every part directly with relevant arguments.'
+    ));
+  } else if (coverage < 0.32) {
+    issues.push(issue(
+      'partially_off_topic',
+      'off_topic',
+      'high',
+      'Several important concepts from the question are missing.',
+      'Include vocabulary and ideas from the task so the examiner sees you answered it.'
+    ));
+  }
+
+  const hasPosition = /\b(i (believe|agree|disagree|think)|in my view|to what extent|while .+ i)\b/i.test(text);
+  const hasSupport = /\b(for example|for instance|such as|research|study|percent|%|\d{4})\b/i.test(text);
+  if (wordCount >= 100 && coverage >= 0.35 && !hasSupport && !hasPosition) {
+    issues.push(issue(
+      'shallow_task_response',
+      'off_topic',
+      'high',
+      'The task is touched on but not developed — no clear position or supporting detail.',
+      'State your view explicitly and support each main point with an example or reason.'
+    ));
+  }
+
+  return issues;
+}
+
+function detectRepetition(text, words, content) {
+  const issues = [];
+  const wordCount = words.length;
+  const uniqueContent = new Set(content).size;
+  const ttr = content.length ? uniqueContent / content.length : 0;
+
+  if (content.length >= 30 && ttr < 0.38) {
+    issues.push(issue(
+      'low_lexical_diversity',
+      'repetition',
+      'medium',
+      `Lexical diversity is low (TTR ≈ ${ttr.toFixed(2)}).`,
+      'Replace repeated nouns and adjectives with precise synonyms.'
+    ));
+  }
+
+  const freq = new Map();
+  for (const w of content) freq.set(w, (freq.get(w) || 0) + 1);
+  const overused = [...freq.entries()]
+    .filter(([, n]) => n >= 6 || (wordCount > 0 && n / wordCount > 0.028))
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3);
+  if (overused.length >= 2) {
+    const list = overused.map(([w, n]) => `"${w}" (${n}×)`).join(', ');
+    issues.push(issue(
+      'excessive_word_repetition',
+      'repetition',
+      'medium',
+      `Overused words: ${list}.`,
+      'Paraphrase key terms after the first mention; use pronouns and synonyms.'
+    ));
+  }
+
+  const rawSentences = text.split(/[.!?]+/).filter(s => s.trim().length > 10);
+  const starts = rawSentences.map(s => {
+    const w = tokenize(s).slice(0, 3).join(' ').toLowerCase();
+    return w;
+  }).filter(Boolean);
+  const startFreq = new Map();
+  for (const st of starts) startFreq.set(st, (startFreq.get(st) || 0) + 1);
+  const repetitiveStarts = [...startFreq.entries()].filter(([, n]) => n >= 3);
+  if (repetitiveStarts.length >= 2) {
+    issues.push(issue(
+      'repetitive_sentence_structure',
+      'repetition',
+      'medium',
+      'Many sentences begin the same way — writing feels mechanical.',
+      'Vary sentence openings (adverbials, subordinate clauses, passive voice where appropriate).'
+    ));
+  }
+
+  const lengths = rawSentences.map(s => tokenize(s).length);
+  if (lengths.length >= 6) {
+    const buckets = lengths.map(l => (l < 12 ? 'short' : l < 22 ? 'mid' : 'long'));
+    const oneBucket = buckets.filter(b => b === buckets[0]).length / buckets.length;
+    if (oneBucket >= 0.85) {
+      issues.push(issue(
+        'uniform_sentence_length',
+        'repetition',
+        'low',
+        'Sentence lengths are unusually uniform.',
+        'Mix short and longer sentences for better rhythm and cohesion.'
+      ));
+    }
+  }
+
+  return issues;
+}
+
+function detectTemplateAbuse(text) {
+  const issues = [];
+  const lower = text.toLowerCase();
+  const hits = TEMPLATE_PHRASES.filter(p => lower.includes(p));
+  if (hits.length >= 3) {
+    issues.push(issue(
+      'memorised_templates',
+      'template_abuse',
+      'high',
+      `Multiple stock IELTS phrases detected (${hits.length} templates).`,
+      'Use natural, task-specific language instead of memorised template sentences.'
+    ));
+  } else if (hits.length >= 2) {
+    issues.push(issue(
+      'template_phrases',
+      'template_abuse',
+      'medium',
+      'Memorised template phrases reduce authenticity.',
+      'Write introductions and conclusions that respond directly to this question.'
+    ));
+  }
+
+  const paragraphs = text.split(/\n\s*\n/).filter(p => p.trim());
+  const intro = paragraphs[0] || text.slice(0, 350);
+  const conclusion = paragraphs[paragraphs.length - 1] || text.slice(-350);
+
+  if (ROBOTIC_INTRO_PATTERNS.some(re => re.test(intro.trim()))) {
+    issues.push(issue(
+      'robotic_introduction',
+      'template_abuse',
+      'medium',
+      'Introduction follows a generic, memorised IELTS opener.',
+      'Begin with a direct answer or clear thesis linked to the question.'
+    ));
+  }
+  if (ROBOTIC_CONCLUSION_PATTERNS.some(re => re.test(conclusion))) {
+    issues.push(issue(
+      'robotic_conclusion',
+      'template_abuse',
+      'medium',
+      'Conclusion uses a formulaic template rather than synthesising your argument.',
+      'Summarise your main points and restate your position without stock phrases.'
+    ));
+  }
+
+  if (/\bfirstly\b/i.test(text) && /\bsecondly\b/i.test(text) && /\b(in conclusion|to conclude)\b/i.test(text)) {
+    issues.push(issue(
+      'formulaic_structure',
+      'template_abuse',
+      'medium',
+      'Rigid firstly/secondly/in conclusion structure suggests a memorised essay skeleton.',
+      'Organise by ideas, not by mechanical listing connectors.'
+    ));
+  }
+
+  return issues;
+}
+
+function buildQualityGate(issues, wordCount, minWords) {
+  const maxSeverity = issues.reduce((max, i) => {
+    const rank = SEVERITY_RANK[i.severity] || 0;
+    return rank > max ? rank : max;
+  }, 0);
+
+  const severityLabel = ['none', 'low', 'medium', 'high', 'critical'][maxSeverity] || 'none';
+  const hasHigh = issues.some(i => i.severity === 'high');
+  const offTopic = issues.some(i => i.id === 'off_topic' || i.id === 'partially_off_topic');
+  const shallow = issues.some(i => i.id === 'shallow_task_response');
+  const lowEffortCritical = issues.some(i => i.category === 'low_effort' && i.severity === 'critical');
+  const promptCopyHigh = issues.some(i => i.category === 'prompt_copy' && SEVERITY_RANK[i.severity] >= 3);
+
+  let maxOverall = null;
+  let maxTA = null;
+  let blockBand7Plus = false;
+  let blocked = false;
+  let skipScoring = false;
+
+  if (lowEffortCritical) {
+    blocked = true;
+    skipScoring = true;
+    maxOverall = 4.0;
+    maxTA = 4.0;
+    blockBand7Plus = true;
+  } else if (offTopic) {
+    maxOverall = 5.0;
+    maxTA = 4.5;
+    blockBand7Plus = true;
+  } else if (hasHigh || shallow || promptCopyHigh) {
+    maxOverall = 6.0;
+    maxTA = 6.0;
+    blockBand7Plus = true;
+  } else if (maxSeverity >= 2) {
+    maxOverall = 6.5;
+    blockBand7Plus = true;
+  }
+
+  if (wordCount < minWords * 0.45) {
+    blockBand7Plus = true;
+    maxTA = maxTA === null ? 5.5 : Math.min(maxTA, 5.5);
+    maxOverall = maxOverall === null ? 6.0 : Math.min(maxOverall, 6.0);
+  }
+
+  return {
+    severity: severityLabel,
+    blockBand7Plus,
+    blocked,
+    skipScoring,
+    maxOverall,
+    maxTA,
+    maxCC: blockBand7Plus ? 6.5 : null,
+    maxLR: blockBand7Plus ? 6.5 : null,
+    maxGRA: blockBand7Plus ? 6.5 : null,
+  };
+}
+
+/**
+ * Validate essay before scoring.
+ * @param {string} text
+ * @param {{ taskType?: string, minWords?: number, prompt?: string }} opts
+ */
+function validateEssay(text, opts = {}) {
+  const { taskType = 'task2', minWords = 250, prompt = '' } = opts;
+  const trimmed = (text || '').trim();
+  const words = tokenize(trimmed);
+  const wordCount = words.length;
+  const content = contentTokens(words);
+
+  const issues = [
+    ...detectPromptCopy(trimmed, prompt),
+    ...detectLowEffort(trimmed, wordCount, minWords),
+    ...detectOffTopic(trimmed, prompt, wordCount),
+    ...detectRepetition(trimmed, words, content),
+    ...detectTemplateAbuse(trimmed),
+  ];
+
+  const seen = new Set();
+  const deduped = issues.filter((i) => {
+    if (seen.has(i.id)) return false;
+    seen.add(i.id);
+    return true;
+  });
+
+  const qualityGate = buildQualityGate(deduped, wordCount, minWords);
+  const passed = !qualityGate.blocked && qualityGate.severity !== 'critical';
+
+  return {
+    passed,
+    blocked: qualityGate.blocked,
+    skipScoring: qualityGate.skipScoring,
+    severity: qualityGate.severity,
+    issues: deduped,
+    qualityGate,
+    metrics: {
+      wordCount,
+      minWords,
+      taskType,
+      issueCount: deduped.length,
+    },
+    suggestions: deduped.map(i => i.suggestion).filter((s, i, a) => a.indexOf(s) === i),
+  };
+}
+
+/**
+ * Strict IELTS Writing evaluator — conservative, descriptor-aligned.
+ * Does not inflate scores. Band 7+ blocked when coherence, lexis, grammar, or task response are weak.
+ */
+
+// Shared with essay-validator.mjs when bundled for the browser (STOP, tokenize, TEMPLATE_PHRASES, etc.)
+
+const BOILERPLATE = [
+  'many people believe',
+  'some people think',
+  'it is important to',
+  'it is essential to',
+  'in recent years',
+  'in conclusion',
+  'to conclude',
+  'on the one hand',
+  'on the other hand',
+  'firstly',
+  'secondly',
+  'thirdly',
+  'overall',
+  'society',
+  'people',
+  'important',
+  'significant',
+  'various',
+  'numerous',
+  'several',
+];
+
+const CONNECTORS = [
+  'furthermore', 'however', 'therefore', 'in contrast', 'moreover', 'nevertheless',
+  'consequently', 'on the other hand', 'in addition', 'whereas', 'thus', 'hence',
+  'although', 'while', 'because', 'accordingly', 'conversely', 'admittedly',
+];
+
+const GRAMMAR_PATTERNS = [
+  { re: /\bpeople is\b/gi, msg: 'Subject–verb agreement: "people" takes "are".' },
+  { re: /\bgovernment are\b/gi, msg: 'Subject–verb agreement: "government" (singular) takes "is".' },
+  { re: /\beveryone are\b/gi, msg: 'Subject–verb agreement: "everyone" takes "is".' },
+  { re: /\bthe the\b/gi, msg: 'Repeated article.' },
+  { re: /\ba a\b/gi, msg: 'Repeated article.' },
+  { re: /\bis are\b/gi, msg: 'Conflicting verb forms.' },
+  { re: /\bhave has\b/gi, msg: 'Conflicting verb forms.' },
+  { re: /\bdont\b/gi, msg: 'Missing apostrophe in "don\'t".' },
+  { re: /\bcant\b/gi, msg: 'Missing apostrophe in "can\'t".' },
+  { re: /\bits a\b/gi, msg: 'Possible confusion of "its" vs "it\'s".' },
+  { re: /\balot\b/gi, msg: '"a lot" is two words.' },
+  { re: /\bmore better\b/gi, msg: 'Double comparative.' },
+  { re: /\bmore easier\b/gi, msg: 'Double comparative.' },
+  { re: /\bless easier\b/gi, msg: 'Conflicting comparison forms.' },
+  { re: /\bin nowadays\b/gi, msg: 'Redundant: "nowadays" does not need "in".' },
+  { re: /\bdue to the fact that\b/gi, msg: 'Wordy phrase; weak control of style.' },
+  { re: /\bPeoples\b/g, msg: 'Incorrect plural: use "people".' },
+  { re: /\bpeoples\b/g, msg: 'Incorrect form: use "people".' },
+  { re: /\bpeoples is\b/gi, msg: 'Subject–verb agreement with "people".' },
+  { re: /\bcompanies wants\b/gi, msg: 'Subject–verb agreement.' },
+  { re: /\bcompany need\b/gi, msg: 'Subject–verb agreement.' },
+  { re: /\buniversity teach\b/gi, msg: 'Subject–verb agreement.' },
+  { re: /\ba IT\b/gi, msg: 'Article error: use "an" before vowel sounds.' },
+  { re: /\bcan coding\b/gi, msg: 'Verb form error.' },
+  { re: /\bThis are\b/g, msg: 'Subject–verb agreement.' },
+  { re: /\btheory are\b/gi, msg: 'Subject–verb agreement.' },
+  { re: /\btheory is sometimes not\b/gi, msg: 'Awkward / inaccurate collocation.' },
+  { re: /\bgraduate can\b/gi, msg: 'Possible missing plural: "graduates can".' },
+  { re: /\bthey dont\b/gi, msg: 'Missing apostrophe in "don\'t".' },
+];
+
 function clampBand(x) {
   return Math.max(4, Math.min(9, Math.round(x * 2) / 2));
 }
 
-function generateLocalFeedback(text, taskType, minWords) {
-  const words = text.trim().split(/\s+/).filter(Boolean);
+/** Conservative overall: favour lower half-step on borderline. */
+function overallBandConservative(ta, cc, lr, gra) {
+  const raw = (ta + cc + lr + gra) / 4;
+  const floor = Math.floor(raw * 2) / 2;
+  const remainder = raw - floor;
+  if (remainder < 0.2) return floor;
+  if (remainder > 0.35) return floor + 0.5;
+  return floor;
+}
+
+function countMatches(text, list) {
+  const lower = text.toLowerCase();
+  return list.filter(p => lower.includes(p)).length;
+}
+
+function findRepeatedWords(content, wordCount) {
+  const freq = new Map();
+  for (const w of content) freq.set(w, (freq.get(w) || 0) + 1);
+  const repeated = [...freq.entries()]
+    .filter(([, n]) => n >= 5 || (wordCount > 0 && n / wordCount > 0.025))
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 8)
+    .map(([word, count]) => ({ word, count }));
+  return repeated;
+}
+
+function findGrammarIssues(text) {
+  const issues = [];
+  for (const { re, msg } of GRAMMAR_PATTERNS) {
+    const m = text.match(re);
+    if (m) issues.push({ msg, count: m.length });
+  }
+  const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 5);
+  const fragments = sentences.filter(s => s.trim().split(/\s+/).length < 6).length;
+  if (fragments >= 3 && sentences.length >= 5) {
+    issues.push({ msg: 'Several very short sentence fragments.', count: fragments });
+  }
+  return issues;
+}
+
+function hasClearPosition(intro, taskType) {
+  const p = intro.toLowerCase();
+  if (taskType === 'task1') return /overall|in summary|clearly|main trend|most noticeable/i.test(intro);
+  return /\b(i (strongly )?(believe|agree|disagree|think)|in my view|this essay (argues|contends)|while .+ (i|my) (believe|argue))\b/i.test(p)
+    || /\b(to a (large|great) extent|largely agree|largely disagree)\b/i.test(p);
+}
+
+function countSpecificSupport(text) {
+  let n = 0;
+  if (/\b(for example|for instance|such as|e\.g\.)\b/i.test(text)) n += 1;
+  if (/\b\d{2,4}\b/.test(text)) n += 1;
+  if (/\b(in|since) (19|20)\d{2}\b/.test(text)) n += 1;
+  if (/\b(percent|%|million|billion)\b/i.test(text)) n += 1;
+  const proper = text.match(/\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?\b/g) || [];
+  const filtered = proper.filter(p => !['I', 'In', 'On', 'The', 'This', 'However', 'Furthermore', 'Moreover', 'Therefore', 'Firstly', 'Secondly'].includes(p));
+  if (filtered.length >= 2) n += 1;
+  return n;
+}
+
+/**
+ * @param {string} text
+ * @param {{ taskType: 'task1'|'task2', minWords: number, prompt?: string }} opts
+ */
+function analyzeEssay(text, opts = {}) {
+  const { taskType = 'task2', minWords = 250, prompt = '' } = opts;
+  const words = tokenize(text);
   const wordCount = words.length;
   const lower = text.toLowerCase();
+  const content = contentTokens(words);
+  const uniqueContent = new Set(content).size;
+  const ttr = content.length ? uniqueContent / content.length : 0;
   const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 8);
   const paragraphs = text.split(/\n\s*\n/).filter(p => p.trim());
-  const connectors = ['furthermore','however','therefore','in contrast','moreover','nevertheless','consequently','on the other hand','in addition','whereas','thus','hence','although','while','because','accordingly','conversely','admittedly','granted'];
-  const foundConnectors = connectors.filter(c => lower.includes(c));
-  const academicHits = VOCAB.filter(v => lower.includes(v.word.toLowerCase()));
-  const uniqueRatio = wordCount ? new Set(words.map(w => w.toLowerCase())).size / wordCount : 0;
-  const avgLen = wordCount / Math.max(1, sentences.length);
-  const complex = (text.match(/\b(which|who|although|whereas|if|when|while|despite|unless)\b/gi) || []).length;
+  const intro = paragraphs[0] || text.slice(0, 400);
+  const promptKeywords = extractPromptKeywords(prompt);
+  const promptHits = promptKeywords.filter(k => lower.includes(k)).length;
+  const promptCoverage = promptKeywords.length
+    ? promptHits / promptKeywords.length
+    : 0.5;
+  const templateHits = countMatches(text, TEMPLATE_PHRASES);
+  const boilerplateHits = countMatches(text, BOILERPLATE);
+  const connectorHits = CONNECTORS.filter(c => lower.includes(c));
+  const repeatedWords = findRepeatedWords(content, wordCount);
+  const grammarIssues = findGrammarIssues(text);
+  const grammarErrorCount = grammarIssues.reduce((a, i) => a + i.count, 0);
+  const errorPerSentence = sentences.length ? grammarErrorCount / sentences.length : grammarErrorCount;
+  const specificSupport = countSpecificSupport(text);
+  const subordinates = (text.match(/\b(which|who|whom|whose|although|whereas|while|unless|if|when|because|since|despite|even though)\b/gi) || []).length;
+  const simpleDominant = sentences.length >= 6 && subordinates < 2;
+  const mechanicalCc = connectorHits.length >= 4 && ttr < 0.48;
+  const offTopic = promptKeywords.length >= 3 && promptCoverage < 0.22;
+  const underLength = wordCount < minWords * 0.75;
+  const severelyUnderLength = wordCount < minWords * 0.5;
+  const repetitiveVocabulary = repeatedWords.length >= 2
+    || repeatedWords.some(r => r.count >= 6)
+    || ttr < 0.42;
+  const shallowTask = specificSupport < 2
+    && (boilerplateHits >= 4 || severelyUnderLength || wordCount < minWords * 0.45);
+  const templateStyle = templateHits >= 2 || (/\bfirstly\b/i.test(text) && /\bsecondly\b/i.test(text) && /\bin conclusion\b/i.test(text));
+  const weakCoherence = paragraphs.length < 3 || (taskType === 'task2' && paragraphs.length < 4) || mechanicalCc;
+  const weakGrammar = errorPerSentence >= 0.28 || grammarErrorCount >= 4
+    || (grammarErrorCount >= 2 && underLength);
+  const clearPosition = hasClearPosition(intro, taskType);
+  const task1Overview = taskType === 'task1' && /\b(overall|in summary|main trend|most significant)\b/i.test(text);
 
-  let ta = 6, cc = 6, lr = 6, gra = 6;
-  if (wordCount >= minWords) ta += 0.5;
-  if (wordCount >= minWords * 1.15) ta += 0.5;
-  if (wordCount < minWords * 0.75) ta -= 1;
-  if (taskType === 'task2' && paragraphs.length >= 4) ta += 0.5;
-  if (taskType === 'task1' && /overall|in summary|clearly/i.test(text)) ta += 0.5;
+  return {
+    wordCount,
+    minWords,
+    taskType,
+    sentences: sentences.length,
+    paragraphs: paragraphs.length,
+    ttr,
+    promptCoverage,
+    promptHits,
+    promptKeywordCount: promptKeywords.length,
+    templateHits,
+    boilerplateHits,
+    connectorHits,
+    connectorCount: connectorHits.length,
+    repeatedWords,
+    grammarIssues,
+    grammarErrorCount,
+    errorPerSentence,
+    specificSupport,
+    subordinates,
+    simpleDominant,
+    mechanicalCc,
+    offTopic,
+    repetitiveVocabulary,
+    shallowTask,
+    templateStyle,
+    weakCoherence,
+    weakGrammar,
+    underLength,
+    severelyUnderLength,
+    clearPosition,
+    task1Overview,
+  };
+}
 
-  if (foundConnectors.length >= 4) cc += 1;
-  else if (foundConnectors.length >= 2) cc += 0.5;
-  if (paragraphs.length >= 3) cc += 0.5;
+function scoreTA(s, deductions, improvements) {
+  let band = 5.0;
+  const reasons = [];
+  const weak = [];
 
-  if (academicHits.length >= 4) lr += 1;
-  else if (academicHits.length >= 2) lr += 0.5;
-  if (uniqueRatio > 0.55) lr += 0.5;
+  if (s.severelyUnderLength) {
+    band = 4.0;
+    reasons.push('Response is far below the minimum word count; task barely addressed.');
+    weak.push('Insufficient length to develop ideas.');
+  } else if (s.underLength) {
+    band -= 1;
+    reasons.push('Word count is under 75% of the requirement — Task Achievement is limited.');
+    weak.push('Essay is too short for full task coverage.');
+  } else if (s.wordCount >= s.minWords) {
+    band += 0.5;
+  }
 
-  if (avgLen >= 12 && avgLen <= 28) gra += 0.5;
-  if (complex >= 3) gra += 0.5;
-  if (sentences.length >= 8) gra += 0.5;
+  if (s.offTopic) {
+    band = Math.min(band, 4.5);
+    reasons.push('Low relevance to the question prompt — parts of the task are not addressed.');
+    weak.push('Content does not align closely enough with the question.');
+  } else if (s.promptCoverage >= 0.55) {
+    band += 0.5;
+  } else if (s.promptCoverage < 0.35) {
+    band -= 0.5;
+    reasons.push('Several key ideas from the prompt are missing or only implied.');
+    weak.push('Partial coverage of the task.');
+  }
 
-  ta = clampBand(ta); cc = clampBand(cc); lr = clampBand(lr); gra = clampBand(gra);
-  const overall = clampBand((ta + cc + lr + gra) / 4);
+  if (s.taskType === 'task2' && !s.clearPosition) {
+    band -= 0.5;
+    reasons.push('No clear, consistent position in the introduction (Band 7 requires a clear position throughout).');
+    weak.push('Thesis / stance is unclear or absent.');
+  }
 
-  const strengths = [
-    wordCount >= minWords ? 'You met the word-count target, which supports Task Achievement.' : null,
-    foundConnectors.length ? 'You used linking words (' + foundConnectors.slice(0, 3).join(', ') + '), which helps coherence.' : null,
-    academicHits.length ? 'You included academic vocabulary such as "' + academicHits.slice(0, 2).map(w => w.word).join('", "') + '".' : null,
-    paragraphs.length >= 4 ? 'The essay has a clear multi-paragraph structure.' : null
-  ].filter(Boolean).join(' ') || 'You addressed the task with a complete response.';
+  if (s.taskType === 'task1' && !s.task1Overview) {
+    band -= 0.5;
+    reasons.push('No clear overview of main trends (required for Band 6+ in Task 1).');
+    weak.push('Missing overview sentence.');
+  }
+
+  if (s.shallowTask) {
+    band -= 1;
+    reasons.push('Main ideas are not extended; limited specific support (examples, data, concrete cases).');
+    weak.push('Shallow argument development — lists points without explaining or exemplifying.');
+  } else if (s.specificSupport >= 3) {
+    band += 0.5;
+  } else if (s.specificSupport >= 1) {
+    band += 0.25;
+  }
+
+  if (s.wordCount >= s.minWords * 0.8 && s.specificSupport >= 3 && s.clearPosition) {
+    band += 0.5;
+    reasons.push('Ideas are relevant and supported, though length is slightly under the target.');
+  }
+
+  if (s.templateStyle) {
+    band -= 0.5;
+    reasons.push('Template-style phrasing suggests memorised structure rather than genuine task response.');
+    weak.push('Over-reliance on stock phrases.');
+  }
+
+  band = clampBand(band);
+  if (s.offTopic) band = Math.min(band, 4.5);
+  if (s.shallowTask) band = Math.min(band, 6.0);
+
+  deductions.push(...reasons);
+  return { band, reasons, weaknesses: weak, improvements: buildTAImprovements(s, weak) };
+}
+
+function scoreCC(s, deductions, improvements) {
+  let band = 5.0;
+  const reasons = [];
+  const weak = [];
+
+  if (s.paragraphs < 2) {
+    band -= 1;
+    reasons.push('Little paragraphing — organisation is difficult to follow.');
+    weak.push('Break text into clear paragraphs.');
+  } else if (s.taskType === 'task2' && s.paragraphs < 4) {
+    band -= 0.5;
+    reasons.push('Fewer than four paragraphs for Task 2 — progression is limited (intro, two bodies, conclusion expected).');
+    weak.push('Use a four-paragraph (or more) structure.');
+  } else if (s.paragraphs >= 4) {
+    band += 0.5;
+  }
+
+  if (s.weakCoherence || s.mechanicalCc) {
+    band -= 0.5;
+    reasons.push('Cohesive devices are mechanical or progression between ideas is weak.');
+    weak.push('Link ideas with reference (this, these, such policies) not only adverbs.');
+  }
+
+  if (s.connectorCount < 2) {
+    band -= 0.5;
+    reasons.push('Insufficient cohesive devices — ideas may not connect clearly.');
+    weak.push('Add logical links (however, therefore, in contrast) where appropriate.');
+  } else if (s.connectorCount >= 3 && !s.mechanicalCc) {
+    band += 0.5;
+  }
+
+  if (s.templateStyle) {
+    band -= 0.5;
+    reasons.push('Rigid template structure (Firstly… Secondly… In conclusion) limits natural cohesion.');
+    weak.push('Avoid exam-template paragraph openers.');
+  }
+
+  band = clampBand(band);
+  if (s.weakCoherence) band = Math.min(band, 6.0);
+
+  deductions.push(...reasons);
+  return { band, reasons, weaknesses: weak, improvements: buildCCImprovements(s, weak) };
+}
+
+function scoreLR(s, deductions, improvements) {
+  let band = 5.0;
+  const reasons = [];
+  const weak = [];
+
+  if (s.repetitiveVocabulary) {
+    band -= 1;
+    const top = s.repeatedWords.slice(0, 3).map(r => `"${r.word}" (${r.count}×)`).join(', ');
+    reasons.push(`Repetitive vocabulary reduces lexical resource — e.g. ${top || 'high-frequency words repeated'}.`);
+    weak.push('Replace repeated nouns/verbs with synonyms or paraphrase the question.');
+  } else if (s.ttr >= 0.7) {
+    band += 1;
+    reasons.push('Good lexical variety for the topic.');
+  } else if (s.ttr >= 0.55) {
+    band += 0.5;
+  } else if (s.ttr >= 0.48) {
+    band += 0.25;
+  } else {
+    band -= 0.5;
+    reasons.push('Limited lexical variety (type–token ratio below Band 6 expectations).');
+    weak.push('Widen vocabulary; avoid repeating "people", "society", "important".');
+  }
+
+  if (s.boilerplateHits >= 6) {
+    band -= 0.5;
+    reasons.push('Heavy use of vague, high-frequency wording (Band 5–6 lexis).');
+    weak.push('Use more precise, topic-specific vocabulary.');
+  }
+
+  if (s.templateHits >= 2) {
+    band -= 0.5;
+    reasons.push('Memorised / formulaic chunks detected — not flexible lexical use.');
+    weak.push('Replace stock phrases with precise, context-specific wording.');
+  }
+
+  band = clampBand(band);
+  if (s.repetitiveVocabulary) band = Math.min(band, 5.5);
+
+  deductions.push(...reasons);
+  return { band, reasons, weaknesses: weak, improvements: buildLRImprovements(s, weak) };
+}
+
+function scoreGRA(s, deductions, improvements) {
+  let band = 5.0;
+  const reasons = [];
+  const weak = [];
+
+  if (s.weakGrammar || s.grammarErrorCount >= 4) {
+    const n = Math.min(1.5, 0.5 + s.errorPerSentence * 0.8);
+    band -= n;
+    const samples = s.grammarIssues.slice(0, 3).map(i => i.msg).join(' ');
+    reasons.push(`Frequent grammar / accuracy issues${samples ? ': ' + samples : '.'}`);
+    weak.push('Proofread for agreement, articles, and sentence boundaries.');
+  } else if (s.grammarErrorCount === 0 && s.sentences >= 10) {
+    band += 1;
+    reasons.push('Wide range with mostly accurate structures.');
+  } else if (s.grammarErrorCount <= 1 && s.sentences >= 8) {
+    band += 0.5;
+  }
+
+  if (s.simpleDominant) {
+    band -= 0.5;
+    reasons.push('Limited grammatical range — mostly simple structures; few subordinate clauses.');
+    weak.push('Use a mix of complex sentences (although, which, whereas, if).');
+  } else if (s.subordinates >= 4) {
+    band += 0.5;
+  }
+
+  if (s.errorPerSentence >= 0.7) {
+    band = Math.min(band, 5.0);
+    reasons.push('Errors may impede meaning at sentence level (Band 5 GRA).');
+  }
+
+  band = clampBand(band);
+  if (s.weakGrammar) band = Math.min(band, 6.0);
+
+  deductions.push(...reasons);
+  return { band, reasons, weaknesses: weak, improvements: buildGRAImprovements(s, weak) };
+}
+
+function buildTAImprovements(s, weak) {
+  const out = [];
+  if (s.underLength) out.push(`Write at least ${s.minWords} words with fully developed body paragraphs.`);
+  if (!s.clearPosition && s.taskType === 'task2') out.push('State your position explicitly in the introduction.');
+  if (s.shallowTask) out.push('Support each main idea with one specific example or piece of evidence.');
+  if (s.offTopic) out.push('Re-read the question and answer every part directly.');
+  return out.length ? out : ['Extend each main point with explanation and an example.'];
+}
+
+function buildCCImprovements(s, weak) {
+  const out = [];
+  if (s.paragraphs < 4 && s.taskType === 'task2') out.push('Organise: introduction → body 1 → body 2 → conclusion.');
+  if (s.connectorCount < 2) out.push('Use cohesive devices to show contrast and cause/effect between ideas.');
+  if (s.mechanicalCc) out.push('Avoid listing connectors; tie sentences with pronouns and clear logic.');
+  return out.length ? out : ['Ensure each paragraph has one central idea and a clear topic sentence.'];
+}
+
+function buildLRImprovements(s, weak) {
+  const out = [];
+  if (s.repetitiveVocabulary) out.push('Paraphrase the question in the introduction; avoid repeating the same words.');
+  out.push('Use precise verbs and topic nouns instead of "important", "good", "bad".');
+  return out;
+}
+
+function buildGRAImprovements(s, weak) {
+  const out = ['Check subject–verb agreement and articles on every edit pass.'];
+  if (s.simpleDominant) out.push('Combine short sentences with subordinating conjunctions.');
+  return out;
+}
+
+function applyBand7Gate(ta, cc, lr, gra, flags, validationGate = null) {
+  const block7 = flags.weakCoherence || flags.repetitiveVocabulary || flags.weakGrammar
+    || flags.shallowTask || flags.offTopic || flags.templateStyle
+    || (validationGate && validationGate.blockBand7Plus);
+  if (!block7) return { ta, cc, lr, gra, capped: false };
+
+  const cap = 6.5;
+  return {
+    ta: Math.min(ta, cap),
+    cc: Math.min(cc, cap),
+    lr: Math.min(lr, cap),
+    gra: Math.min(gra, cap),
+    capped: true,
+    capReason: validationGate?.blockBand7Plus && !flags.offTopic && !flags.shallowTask
+      ? 'Pre-scoring validation: task response or essay quality does not meet Band 7 standards.'
+      : 'Band 7+ requires strong task response, cohesion, lexis, and grammar — one or more areas do not meet that standard.',
+  };
+}
+
+function applyValidationCaps(ta, cc, lr, gra, overall, gate) {
+  if (!gate) return { ta, cc, lr, gra, overall };
+  const cap = (v, max) => (max == null ? v : Math.min(v, max));
+  return {
+    ta: cap(ta, gate.maxTA),
+    cc: cap(cc, gate.maxCC),
+    lr: cap(lr, gate.maxLR),
+    gra: cap(gra, gate.maxGRA),
+    overall: cap(overall, gate.maxOverall),
+  };
+}
+
+function buildValidationOnlyResult(validation, opts) {
+  const gate = validation.qualityGate;
+  const band = gate.maxOverall != null ? gate.maxOverall : 4.0;
+  const explanations = validation.issues.map(i => i.explanation);
+  const suggestions = validation.suggestions;
+  const flagMap = {
+    validationFailed: true,
+    offTopic: validation.issues.some((i) => i.category === 'off_topic'),
+    shallowTask: validation.issues.some((i) => i.id === 'shallow_task_response'),
+    repetitiveVocabulary: validation.issues.some((i) => i.category === 'repetition'),
+    templateStyle: validation.issues.some((i) => i.category === 'template_abuse'),
+    weakCoherence: false,
+    weakGrammar: false,
+    mechanicalCohesion: false,
+  };
+
+  return {
+    ta: gate.maxTA != null ? gate.maxTA : band,
+    cc: band,
+    lr: band,
+    gra: band,
+    overall: clampBand(band),
+    strengths: 'No reliable strengths identified — the submission did not pass quality validation.',
+    improvements: suggestions.join(' ') || 'Rewrite the essay to address the question with original, developed English.',
+    weaknesses: explanations.join(' ') || 'Essay failed pre-scoring validation.',
+    pointsLost: explanations,
+    tip: 'Fix validation issues first, then request scoring again.',
+    vocab: [],
+    criteria: {
+      ta: { band: gate.maxTA ?? band, pointsLost: explanations, weaknesses: [], improvements: suggestions },
+      cc: { band, pointsLost: [], weaknesses: [], improvements: [] },
+      lr: { band, pointsLost: [], weaknesses: [], improvements: [] },
+      gra: { band, pointsLost: [], weaknesses: [], improvements: [] },
+    },
+    flags: validation.issues.map(i => i.explanation.slice(0, 60)),
+    flagMap,
+    validation,
+    validationBlocked: true,
+    disclaimer: 'Scoring was limited because the essay failed pre-scoring quality checks.',
+  };
+}
+
+/**
+ * Main evaluation entry.
+ * @returns {object} Result compatible with UI + extended criteria detail
+ */
+function evaluateIeltsWriting(text, opts = {}) {
+  const validation = validateEssay(text, opts);
+  if (validation.skipScoring) {
+    return buildValidationOnlyResult(validation, opts);
+  }
+
+  const s = analyzeEssay(text, opts);
+  const validationOffTopic = validation.issues.some((i) => i.category === 'off_topic');
+  const validationShallow = validation.issues.some((i) => i.id === 'shallow_task_response');
+  const validationRepetition = validation.issues.some((i) => i.category === 'repetition' && SEVERITY_RANK[i.severity] >= 2);
+  const validationTemplate = validation.issues.some((i) => i.category === 'template_abuse' && SEVERITY_RANK[i.severity] >= 2);
+  const flags = {
+    offTopic: s.offTopic || validationOffTopic,
+    repetitiveVocabulary: s.repetitiveVocabulary || validationRepetition,
+    shallowTask: s.shallowTask || validationShallow,
+    templateStyle: s.templateStyle || validationTemplate,
+    weakCoherence: s.weakCoherence,
+    weakGrammar: s.weakGrammar,
+    mechanicalCohesion: s.mechanicalCc,
+  };
+
+  const allDeductions = [];
+  const taR = scoreTA(s, allDeductions, []);
+  const ccR = scoreCC(s, allDeductions, []);
+  const lrR = scoreLR(s, allDeductions, []);
+  const graR = scoreGRA(s, allDeductions, []);
+
+  let ta = taR.band;
+  let cc = ccR.band;
+  let lr = lrR.band;
+  let gra = graR.band;
+
+  const gated = applyBand7Gate(ta, cc, lr, gra, flags, validation.qualityGate);
+  ta = gated.ta;
+  cc = gated.cc;
+  lr = gated.lr;
+  gra = gated.gra;
+
+  let overall = overallBandConservative(ta, cc, lr, gra);
+  if (flags.offTopic) overall = Math.min(overall, 5.0);
+  if (gated.capped && overall > 6.5) overall = 6.5;
+
+  const capped = applyValidationCaps(ta, cc, lr, gra, overall, validation.qualityGate);
+  ta = capped.ta;
+  cc = capped.cc;
+  lr = capped.lr;
+  gra = capped.gra;
+  overall = capped.overall;
+
+  const flagLabels = [];
+  if (flags.offTopic) flagLabels.push('Off-topic / low prompt relevance');
+  if (flags.repetitiveVocabulary) flagLabels.push('Repetitive vocabulary');
+  if (flags.shallowTask) flagLabels.push('Shallow task response');
+  if (flags.templateStyle) flagLabels.push('Template / memorised style');
+  if (flags.weakCoherence) flagLabels.push('Weak coherence');
+  if (flags.weakGrammar) flagLabels.push('Grammar accuracy issues');
+
+  const strengths = [];
+  if (s.wordCount >= s.minWords && !s.shallowTask) {
+    strengths.push('Adequate length to attempt the task.');
+  }
+  if (s.clearPosition && s.taskType === 'task2') {
+    strengths.push('A discernible position is present.');
+  }
+  if (s.specificSupport >= 2 && !s.shallowTask) {
+    strengths.push('Some ideas are supported with examples or specifics.');
+  }
+  if (s.ttr >= 0.52 && !s.repetitiveVocabulary) {
+    strengths.push('Reasonable lexical variety for this level.');
+  }
+  if (!s.weakGrammar && s.grammarErrorCount <= 2) {
+    strengths.push('Grammar does not seriously obscure meaning in most sentences.');
+  }
 
   const improvements = [
-    wordCount < minWords ? 'Increase length to at least ' + minWords + ' words for a stronger Task Achievement score.' : null,
-    foundConnectors.length < 2 ? 'Add more discourse markers (e.g. however, furthermore, in contrast).' : null,
-    academicHits.length < 2 ? 'Use more Band 7+ vocabulary from the Vocab section in this app.' : null,
-    paragraphs.length < 4 && taskType === 'task2' ? 'Use four clear paragraphs: intro, two body paragraphs, conclusion.' : null
-  ].filter(Boolean).join(' ') || 'Keep developing ideas with specific examples and clearer topic sentences.';
+    ...taR.improvements.slice(0, 2),
+    ...ccR.improvements.slice(0, 1),
+    ...lrR.improvements.slice(0, 1),
+    ...graR.improvements.slice(0, 1),
+  ].filter((v, i, a) => a.indexOf(v) === i);
 
-  const tip = taskType === 'task1'
-    ? 'Start with an overview sentence covering the main trend before giving details.'
-    : 'Make your position clear in the introduction and restate it in the conclusion without new ideas.';
+  const weaknesses = [
+    ...taR.weaknesses,
+    ...ccR.weaknesses,
+    ...lrR.weaknesses,
+    ...graR.weaknesses,
+  ].filter((v, i, a) => a.indexOf(v) === i);
 
-  const vocab = academicHits.length
-    ? academicHits.slice(0, 3).map(w => w.word)
-    : ['mitigate', 'substantial', 'facilitate'].filter(w => !lower.includes(w));
+  const pointsLost = [
+    ...taR.reasons,
+    ...ccR.reasons,
+    ...lrR.reasons,
+    ...graR.reasons,
+  ];
+  if (gated.capped) pointsLost.push(gated.capReason);
+  for (const vi of validation.issues.filter(i => SEVERITY_RANK[i.severity] >= 2)) {
+    pointsLost.push(`[Validation] ${vi.explanation}`);
+  }
 
-  return { ta, cc, lr, gra, overall, strengths, improvements, tip, vocab };
+  const validationFlags = validation.issues
+    .filter(i => i.severity === 'high' || i.severity === 'critical')
+    .map(i => {
+      const labels = {
+        prompt_copy: 'Prompt copying',
+        low_effort: 'Low-effort content',
+        off_topic: 'Off-topic / shallow task',
+        repetition: 'Excessive repetition',
+        template_abuse: 'Template abuse',
+      };
+      return labels[i.category] || i.category;
+    });
+  for (const vf of validationFlags) {
+    if (!flagLabels.includes(vf)) flagLabels.push(vf);
+  }
+
+  return {
+    ta,
+    cc,
+    lr,
+    gra,
+    overall: clampBand(overall),
+    strengths: strengths.length
+      ? strengths.join(' ')
+      : 'Limited strengths at this band — focus on task coverage and accuracy first.',
+    improvements: improvements.join(' ') || 'Revise for task relevance, paragraph structure, and error control.',
+    weaknesses: weaknesses.join(' ') || 'See score reductions below.',
+    pointsLost,
+    tip: opts.taskType === 'task1'
+      ? 'Task 1: one overview sentence, then data-led comparisons — no opinion.'
+      : 'Task 2: answer every part of the question; one idea per paragraph with support.',
+    vocab: suggestVocabUpgrades(s, text),
+    criteria: {
+      ta: { band: ta, pointsLost: taR.reasons, weaknesses: taR.weaknesses, improvements: taR.improvements },
+      cc: { band: cc, pointsLost: ccR.reasons, weaknesses: ccR.weaknesses, improvements: ccR.improvements },
+      lr: { band: lr, pointsLost: lrR.reasons, weaknesses: lrR.weaknesses, improvements: lrR.improvements },
+      gra: { band: gra, pointsLost: graR.reasons, weaknesses: graR.weaknesses, improvements: graR.improvements },
+    },
+    flags: flagLabels,
+    flagMap: flags,
+    analysis: s,
+    validation,
+    validationBlocked: false,
+    disclaimer: validation.issues.length
+      ? 'Conservative estimate; pre-scoring validation applied caps where needed — not an official IELTS score.'
+      : 'Conservative estimate based on public band descriptors — not an official IELTS score.',
+  };
+}
+
+function suggestVocabUpgrades(s, text) {
+  const lower = text.toLowerCase();
+  const pool = ['mitigate', 'substantial', 'facilitate', 'predominantly', 'conversely', 'ramification'];
+  if (s.repetitiveVocabulary && s.repeatedWords.length) {
+    const w = s.repeatedWords[0].word;
+    const alt = { people: 'citizens / the public', society: 'communities / the wider population', important: 'crucial / pivotal', think: 'argue / maintain' }[w];
+    if (alt) return [alt];
+  }
+  return pool.filter(w => !lower.includes(w)).slice(0, 3);
+}
+
+/** Flatten for legacy UI fields + optional detail */
+function formatEvaluationForUI(result) {
+  return result;
+}
+
+
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function generateLocalFeedback(text, taskType, minWords, prompt) {
+  return evaluateIeltsWriting(text, { taskType, minWords, prompt: prompt || '' });
+}
+
+function renderValidationSection(validation) {
+  if (!validation || !validation.issues || !validation.issues.length) return '';
+  const severityClass = {
+    critical: 'val-sev-critical',
+    high: 'val-sev-high',
+    medium: 'val-sev-medium',
+    low: 'val-sev-low',
+    none: 'val-sev-low',
+  };
+  const items = validation.issues.map((i) => {
+    const cls = severityClass[i.severity] || 'val-sev-medium';
+    return [
+      '<li class="validation-issue ', cls, '">',
+      '<span class="validation-severity">', escapeHtml(i.severity), '</span>',
+      '<span class="validation-category">', escapeHtml(i.category.replace(/_/g, ' ')), '</span>',
+      '<p class="validation-explanation">', escapeHtml(i.explanation), '</p>',
+      '<p class="validation-suggestion"><strong>Suggestion:</strong> ', escapeHtml(i.suggestion), '</p>',
+      '</li>',
+    ].join('');
+  }).join('');
+  const gateNote = validation.qualityGate && validation.qualityGate.blockBand7Plus
+    ? '<p class="validation-gate-note">Quality gate: Band 7+ is not available until these issues are resolved.</p>'
+    : '';
+  const blockedNote = validation.skipScoring
+    ? '<p class="validation-blocked-note">This submission did not pass pre-scoring validation. Full band scoring was not applied.</p>'
+    : '';
+  return [
+    '<div class="validation-panel">',
+    '<h4 class="validation-title">Pre-scoring validation</h4>',
+    '<p class="validation-summary">Severity: <strong>', escapeHtml(validation.severity), '</strong>',
+    ' · ', validation.issues.length, ' issue(s) detected</p>',
+    blockedNote,
+    gateNote,
+    '<ul class="validation-list">', items, '</ul>',
+    '</div>',
+  ].join('');
+}
+
+function renderCriterionBlock(label, c) {
+  if (!c) return '';
+  const lost = (c.pointsLost || []).map(p => '<li>' + escapeHtml(p) + '</li>').join('');
+  const weak = (c.weaknesses || []).map(p => '<li>' + escapeHtml(p) + '</li>').join('');
+  const imp = (c.improvements || []).map(p => '<li>' + escapeHtml(p) + '</li>').join('');
+  let html = '<div class="criterion-block"><h4>' + escapeHtml(label) + ' — Band ' + c.band + '</h4>';
+  if (lost) html += '<p class="crit-label">Score reductions</p><ul class="crit-list">' + lost + '</ul>';
+  if (weak) html += '<p class="crit-label">Weaknesses</p><ul class="crit-list">' + weak + '</ul>';
+  if (imp) html += '<p class="crit-label">How to improve</p><ul class="crit-list">' + imp + '</ul>';
+  return html + '</div>';
 }
 
 function renderFeedbackUI(fb, r, providerLabel, providerClass) {
+  const flags = (r.flags || []).map(f => '<span class="flag-tag">' + escapeHtml(f) + '</span>').join('');
+  const globalLost = (r.pointsLost || []).slice(0, 6).map(p => '<li>' + escapeHtml(p) + '</li>').join('');
+  const criteria = r.criteria || {};
+  const critHtml = [
+    renderCriterionBlock('Task Achievement', criteria.ta || { band: r.ta, pointsLost: [], weaknesses: [], improvements: [] }),
+    renderCriterionBlock('Coherence & Cohesion', criteria.cc || { band: r.cc, pointsLost: [], weaknesses: [], improvements: [] }),
+    renderCriterionBlock('Lexical Resource', criteria.lr || { band: r.lr, pointsLost: [], weaknesses: [], improvements: [] }),
+    renderCriterionBlock('Grammar Range & Accuracy', criteria.gra || { band: r.gra, pointsLost: [], weaknesses: [], improvements: [] }),
+  ].join('');
+
+  const validationHtml = renderValidationSection(r.validation);
+
   fb.innerHTML = [
     '<div class="feedback-header"><h3>Writing feedback</h3><span class="ai-tag ', providerClass, '">', providerLabel, '</span></div>',
+    validationHtml,
+    '<p class="examiner-note">Strict examiner estimate — realism over encouragement. ', escapeHtml(r.disclaimer || ''), '</p>',
     '<div class="score-grid">',
     '<div class="score-item"><div class="sc-val">', r.ta, '</div><div class="sc-lbl">Task Achievement</div></div>',
     '<div class="score-item"><div class="sc-val">', r.cc, '</div><div class="sc-lbl">Coherence</div></div>',
@@ -1416,35 +2831,84 @@ function renderFeedbackUI(fb, r, providerLabel, providerClass) {
     '<div class="score-item"><div class="sc-val">', r.gra, '</div><div class="sc-lbl">Grammar</div></div>',
     '</div>',
     '<div class="overall-band">Overall: Band ', r.overall, '</div>',
+    flags ? '<div class="flag-row">' + flags + '</div>' : '',
     '<div class="feedback-text">',
-    '<p><strong>Strengths:</strong> ', r.strengths, '</p>',
-    '<p><strong>To improve:</strong> ', r.improvements, '</p>',
-    '<p><strong>Examiner tip:</strong> ', r.tip, '</p>',
-    r.vocab && r.vocab.length ? '<p><strong>Vocabulary upgrade:</strong> Try ' + r.vocab.map(v => '<em>' + v + '</em>').join(', ') + ' for greater lexical range.</p>' : '',
-    '</div>'
+    globalLost ? '<p class="crit-label">Main reasons marks were lost</p><ul class="crit-list">' + globalLost + '</ul>' : '',
+    r.weaknesses ? '<p><strong>Key weaknesses:</strong> ' + escapeHtml(r.weaknesses) + '</p>' : '',
+    r.strengths ? '<p><strong>Limited strengths (if any):</strong> ' + escapeHtml(r.strengths) + '</p>' : '',
+    '<p><strong>Priority improvements:</strong> ' + escapeHtml(r.improvements) + '</p>',
+    '<p><strong>Examiner note:</strong> ' + escapeHtml(r.tip) + '</p>',
+    r.vocab && r.vocab.length ? '<p><strong>Vocabulary focus:</strong> ' + r.vocab.map(v => '<em>' + escapeHtml(v) + '</em>').join(', ') + '</p>' : '',
+    '</div>',
+    '<div class="criteria-detail">', critHtml, '</div>',
   ].join('');
 }
 
-async function fetchOpenAIFeedback(text, words, taskType) {
+function applyStrictCaps(llm, rule) {
+  const cap = (a, b) => Math.min(Number(a) || 9, Number(b) || 9);
+  const merged = {
+    ta: cap(llm.ta, rule.ta),
+    cc: cap(llm.cc, rule.cc),
+    lr: cap(llm.lr, rule.lr),
+    gra: cap(llm.gra, rule.gra),
+    strengths: llm.strengths || rule.strengths,
+    improvements: [rule.improvements, llm.improvements].filter(Boolean).join(' ').trim(),
+    weaknesses: rule.weaknesses || llm.weaknesses,
+    pointsLost: [...(rule.pointsLost || []), ...(Array.isArray(llm.pointsLost) ? llm.pointsLost : [])].slice(0, 8),
+    tip: llm.tip || rule.tip,
+    vocab: llm.vocab || rule.vocab,
+    criteria: rule.criteria,
+    flags: rule.flags,
+    flagMap: rule.flagMap,
+    disclaimer: rule.disclaimer,
+  };
+  merged.overall = overallBandConservative(merged.ta, merged.cc, merged.lr, merged.gra);
+  if (rule.validationBlocked) merged.overall = rule.overall;
+  else if (rule.flagMap && rule.flagMap.offTopic) merged.overall = Math.min(merged.overall, 5.0);
+  else if (rule.flags && rule.flags.length) merged.overall = Math.min(merged.overall, 6.5);
+  merged.validation = rule.validation;
+  merged.validationBlocked = rule.validationBlocked;
+  return merged;
+}
+
+async function fetchOpenAIFeedback(text, words, taskType, prompt, ruleBaseline) {
   const key = (appState.openaiKey || '').trim();
   if (!key) throw new Error('Add your OpenAI API key in Settings to use ChatGPT feedback.');
-  const prompt = 'You are an expert IELTS examiner. Evaluate this ' + (taskType === 'task1' ? 'Task 1' : 'Task 2') + ' essay. Respond ONLY with valid JSON, no markdown:\n' +
-    '{"ta":X,"cc":X,"lr":X,"gra":X,"overall":X,"strengths":"...","improvements":"...","tip":"...","vocab":["w1","w2","w3"]}\n' +
-    'X = band 4.0-9.0 in 0.5 steps. Keep text fields to 1-2 sentences. vocab = 3 academic alternatives.\nEssay (' + words + ' words):\n' + text;
+  const system = [
+    'You are a strict certified IELTS Writing examiner.',
+    'Use official IELTS public band descriptors. Be conservative; do NOT inflate scores.',
+    'If coherence is weak, vocabulary repetitive, grammar faulty, or task response shallow, NO criterion may be Band 7+.',
+    'When uncertain between two bands, choose the LOWER band.',
+    'Prioritise accuracy over encouragement. List why marks were lost before any praise.',
+  ].join(' ');
+  const user = [
+    'Evaluate this ' + (taskType === 'task1' ? 'Task 1' : 'Task 2') + ' essay.',
+    'QUESTION: ' + (prompt || '(not provided)'),
+    'Rule-based caps (do not exceed): TA≤' + ruleBaseline.ta + ' CC≤' + ruleBaseline.cc,
+    ' LR≤' + ruleBaseline.lr + ' GRA≤' + ruleBaseline.gra + ' overall≤' + ruleBaseline.overall,
+    ' Flags: ' + (ruleBaseline.flags || []).join('; '),
+    'Respond ONLY with valid JSON:',
+    '{"ta":n,"cc":n,"lr":n,"gra":n,"overall":n,"strengths":"...","improvements":"...","weaknesses":"...","pointsLost":["..."],"tip":"...","vocab":["w1","w2"]}',
+    'Bands 4.0–9.0 in 0.5 steps. Essay (' + words + ' words):\n' + text,
+  ].join('\n');
   const res = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + key },
+    headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + key },
     body: JSON.stringify({
       model: 'gpt-4o-mini',
-      messages: [{ role: 'user', content: prompt }],
-      max_tokens: 900,
-      temperature: 0.4
-    })
+      messages: [
+        { role: 'system', content: system },
+        { role: 'user', content: user },
+      ],
+      max_tokens: 1200,
+      temperature: 0.15,
+    }),
   });
   const data = await res.json();
   if (!res.ok) throw new Error(data.error?.message || 'OpenAI request failed');
   const raw = data.choices?.[0]?.message?.content || '';
-  return JSON.parse(raw.replace(/```json|```/g, '').trim());
+  const llm = JSON.parse(raw.replace(/```json|```/g, '').trim());
+  return applyStrictCaps(llm, ruleBaseline);
 }
 
 async function getAIFeedback(id, min) {
@@ -1457,20 +2921,25 @@ async function getAIFeedback(id, min) {
 
   fb.classList.add('show');
   const provider = appState.aiProvider || 'local';
-  const loadingLabel = provider === 'openai' ? 'ChatGPT' : 'Smart coach';
+  const loadingLabel = provider === 'openai' ? 'ChatGPT (strict)' : 'Strict examiner';
   fb.innerHTML = '<div class="feedback-header"><h3>Writing feedback</h3><span class="ai-tag">' + loadingLabel + '</span></div>' +
     '<div style="display:flex;align-items:center;gap:12px;color:var(--muted);font-size:14px;padding:8px 0">' +
-    'Analysing your essay&nbsp;<div class="loading-dots"><span></span><span></span><span></span></div></div>';
+    'Analysing your essay&nbsp;<motion><div class="loading-dots"><span></span><span></span><span></span></div></motion></motion></motion></motion></motion></div>'.replace(/<\/?motion>/g, '');
 
   try {
+    const ruleResult = generateLocalFeedback(text, t.type, min, t.prompt);
     let r;
-    if (provider === 'openai') {
-      r = await fetchOpenAIFeedback(text, words, t.type);
-      renderFeedbackUI(fb, r, 'ChatGPT', 'openai');
+    if (provider === 'openai' && !ruleResult.validationBlocked) {
+      r = await fetchOpenAIFeedback(text, words, t.type, t.prompt, ruleResult);
+      r.validation = r.validation || ruleResult.validation;
+      renderFeedbackUI(fb, r, 'ChatGPT (strict)', 'openai');
+    } else if (provider === 'openai' && ruleResult.validationBlocked) {
+      r = ruleResult;
+      renderFeedbackUI(fb, r, 'Validation gate', 'local');
     } else {
-      await new Promise(res => setTimeout(res, 600));
-      r = generateLocalFeedback(text, t.type, min);
-      renderFeedbackUI(fb, r, 'Smart coach', 'local');
+      await new Promise(res => setTimeout(res, 400));
+      r = ruleResult;
+      renderFeedbackUI(fb, r, 'Strict examiner', 'local');
     }
     if (!appState.essaysDone.includes(id)) appState.essaysDone.push(id);
     appState.bandHistory.push({ ts: Date.now(), band: Number(r.overall), taskId: id, title: t.title });
@@ -1481,10 +2950,11 @@ async function getAIFeedback(id, min) {
     if (area) localStorage.setItem('ielts_essay_' + id, area.value);
   } catch (e) {
     fb.innerHTML = '<div class="feedback-header"><h3>Writing feedback</h3></div>' +
-      '<div style="color:var(--muted);font-size:14px;padding:8px 0;line-height:1.6">' + e.message +
-      '<br><br><button type="button" class="btn-secondary" onclick="appState.aiProvider=\'local\';saveState();getAIFeedback(\'' + id + '\',' + min + ')">Try free Smart coach instead</button></div>';
+      '<div style="color:var(--muted);font-size:14px;padding:8px 0;line-height:1.6">' + escapeHtml(e.message) +
+      '<br><br><button type="button" class="btn-secondary" onclick="appState.aiProvider=\'local\';saveState();getAIFeedback(\'' + id + '\',' + min + ')">Try strict offline examiner instead</button></div>';
   }
 }
+
 
 function closeWriting() {
   document.getElementById('writingList').style.display = 'block';
@@ -1492,81 +2962,7 @@ function closeWriting() {
   renderWritingList();
 }
 
-// ============================================================
-// 8. SPEAKING
-// ============================================================
-let spTimer = null, spSecs = 0, spTotal = 0, spRunning = false;
-
-function renderSpeakingList() {
-  document.getElementById('speakingGrid').innerHTML = SPEAKING_TOPICS.map(t => `
-    <div class="speaking-card" onclick="openSpeaking('${t.id}')">
-      <div class="sp-part">${t.part}</div>
-      <div class="sp-topic">${t.topic}</div>
-      <div class="sp-time">⏱ ${t.time}</div>
-    </div>
-  `).join('');
-}
-
-function openSpeaking(id) {
-  const t = SPEAKING_TOPICS.find(x => x.id === id);
-  if (!t) return;
-  clearInterval(spTimer); spRunning = false; spSecs = spTotal = t.timeSeconds;
-  document.getElementById('speakingList').style.display = 'none';
-  document.getElementById('speakingDetail').classList.add('active');
-
-  const cueHTML = t.cues ? `<div class="cue-card"><h4>📋 Cue Card — Talk about:</h4><ul>${t.cues.map(c=>`<li>${c}</li>`).join('')}</ul></div>` : '';
-  const qHTML   = t.questions ? `<div class="questions-box"><h4>💬 Questions to Answer</h4><ul>${t.questions.map(q=>`<li>${q}</li>`).join('')}</ul></div>` : '';
-
-  document.getElementById('speakingContent').innerHTML = `
-    <div class="sp-detail-part">${t.part}</div>
-    <div class="sp-detail-topic">${t.topic}</div>
-    <div class="timer-box">
-      <div class="timer-display" id="timerDisplay">${fmtTime(t.timeSeconds)}</div>
-      <div class="timer-actions">
-        <button class="timer-btn start" id="timerBtn" onclick="toggleTimer()">Start</button>
-        <button class="timer-btn reset" onclick="resetTimer()">Reset</button>
-      </div>
-    </div>
-    ${cueHTML}${qHTML}
-    <div class="tips-section">
-      <h4>🎯 Band-Boosting Tips</h4>
-      ${t.tips.map(tip => `<div class="tip-item"><div class="tip-dot"></div><div class="tip-text">${tip}</div></div>`).join('')}
-    </div>
-  `;
-}
-
-function fmtTime(s) { return `${String(Math.floor(s/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}`; }
-
-function toggleTimer() {
-  const btn = document.getElementById('timerBtn');
-  const disp = document.getElementById('timerDisplay');
-  if (spRunning) {
-    clearInterval(spTimer); spRunning = false;
-    btn.textContent = 'Resume'; btn.className = 'timer-btn start';
-  } else {
-    spRunning = true;
-    btn.textContent = 'Pause'; btn.className = 'timer-btn pause';
-    spTimer = setInterval(() => {
-      spSecs--;
-      if (disp) { disp.textContent = spSecs <= 0 ? "TIME'S UP!" : fmtTime(spSecs); disp.className = 'timer-display' + (spSecs <= 30 && spSecs > 0 ? ' urgent' : ''); }
-      if (spSecs <= 0) { clearInterval(spTimer); spRunning = false; btn.textContent = 'Start'; btn.className = 'timer-btn start'; }
-    }, 1000);
-  }
-}
-
-function resetTimer() {
-  clearInterval(spTimer); spRunning = false; spSecs = spTotal;
-  const disp = document.getElementById('timerDisplay');
-  const btn  = document.getElementById('timerBtn');
-  if (disp) { disp.textContent = fmtTime(spTotal); disp.className = 'timer-display'; }
-  if (btn)  { btn.textContent = 'Start'; btn.className = 'timer-btn start'; }
-}
-
-function closeSpeaking() {
-  clearInterval(spTimer); spRunning = false;
-  document.getElementById('speakingList').style.display = 'block';
-  document.getElementById('speakingDetail').classList.remove('active');
-}
+// 8. SPEAKING → speaking-topics-data.js + speaking-ui.js
 
 // ============================================================
 // 9. DASHBOARD, WOTD, TWEAKS
@@ -2082,5 +3478,11 @@ async function bootApp() {
 }
 bootApp();
 </script>
+<script src="ai-service.js"></script>
+<script src="essay-session.js"></script>
 </body>
 </html>
+
+
+
+
