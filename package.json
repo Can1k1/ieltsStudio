@@ -9,6 +9,6 @@
     "sync:html": "node scripts/sync-html-vocab.mjs",
     "build": "npm run build:vocab && npm run sync:html",
     "serve": "npx --yes serve . -p 3456",
-    "parse:oxford": "node scripts/parse-oxford3000.mjs",
+    "parse:oxford": "node scripts/parse-oxford3000.mjs"
   }
 }
