@@ -672,6 +672,138 @@ body.density-compact .ds-value{font-size:26px;}
   .nav-tab{font-size:9px;padding:6px 1px;}
   .stat-card .val,.ds-value{font-size:22px;}
 }
+
+/* ═══ EXAM COUNTDOWN WIDGET ══════════════════════════════ */
+.ecw-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);padding:20px 22px;margin-bottom:22px;}
+.ecw-no-date{display:flex;align-items:center;gap:14px;color:var(--muted);}
+.ecw-icon{font-size:28px;flex-shrink:0;}
+.ecw-label{font-size:13px;margin-bottom:6px;color:var(--muted);}
+.ecw-date-input{padding:7px 12px;background:var(--bg3);border:1px solid var(--border2);border-radius:8px;color:var(--text);font-family:var(--mono);font-size:13px;cursor:pointer;}
+.ecw-date-input:focus{outline:2px solid var(--accent);border-color:transparent;}
+.ecw-body{display:flex;flex-direction:column;gap:10px;}
+.ecw-units{display:flex;align-items:center;gap:10px;}
+.ecw-unit{display:flex;flex-direction:column;align-items:center;background:var(--bg3);padding:10px 18px;border-radius:10px;min-width:64px;}
+.ecw-num{font-size:28px;font-weight:700;font-family:var(--mono);color:var(--accent);line-height:1;}
+.ecw-lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;}
+.ecw-sep{font-size:22px;color:var(--muted2);font-weight:700;}
+.ecw-msg{font-size:13px;color:var(--muted);font-style:italic;}
+.ecw-foot{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted2);}
+.ecw-clear{background:none;border:1px solid var(--border2);border-radius:6px;color:var(--muted);font-size:11px;padding:3px 9px;cursor:pointer;}
+.ecw-clear:hover{color:var(--text);}
+.ecw-urgent .ecw-num{color:var(--c-error);}
+.ecw-soon   .ecw-num{color:var(--c-attention);}
+.ecw-done{display:flex;align-items:center;gap:12px;color:var(--c-mastery);font-size:14px;}
+
+/* ═══ SKILL GAP WIDGET ═══════════════════════════════════ */
+.sg-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;}
+.sg-empty{color:var(--muted);font-size:13px;text-align:center;padding:20px 0;}
+.sg-focus-tip{background:var(--accent-soft);border:1px solid var(--accent-l1);border-radius:10px;padding:10px 14px;font-size:13px;color:var(--text);margin-bottom:16px;line-height:1.5;}
+.sg-focus-icon{font-size:16px;margin-right:6px;}
+.sg-bars{display:flex;flex-direction:column;gap:10px;}
+.sg-row{display:grid;grid-template-columns:24px 130px 1fr 36px 130px;align-items:center;gap:8px;font-size:12px;}
+.sg-icon{font-size:15px;}
+.sg-label{color:var(--muted);white-space:nowrap;}
+.sg-track{position:relative;height:8px;background:var(--bg4);border-radius:4px;overflow:visible;}
+.sg-fill{height:100%;border-radius:4px;transition:width .6s cubic-bezier(.4,0,.2,1);}
+.sg-bar-ok{background:var(--c-mastery);}
+.sg-bar-warn{background:var(--c-attention);}
+.sg-bar-crit{background:var(--c-error);}
+.sg-bar-empty{background:var(--bg4);}
+.sg-target-line{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--accent);border-radius:1px;pointer-events:none;}
+.sg-score{font-family:var(--mono);font-size:12px;color:var(--text);text-align:right;}
+.sg-gap{font-size:11px;color:var(--muted);white-space:nowrap;}
+.sg-gap.sg-bar-ok{color:var(--c-mastery);}
+.sg-gap.sg-bar-warn{color:var(--c-attention);}
+.sg-gap.sg-bar-crit{color:var(--c-error);}
+.sg-legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:14px;padding-top:12px;border-top:1px solid var(--border);}
+.sg-lbl-ok{color:var(--c-mastery);} .sg-lbl-warn{color:var(--c-attention);} .sg-lbl-crit{color:var(--c-error);}
+@media(max-width:640px){.sg-row{grid-template-columns:24px 1fr 80px 32px;}.sg-gap{display:none;}}
+
+/* ═══ MODEL ANSWER PANEL ═════════════════════════════════ */
+.btn-model-answer{display:block;width:100%;text-align:left;background:var(--bg3);border:1px dashed var(--border2);border-radius:10px;color:var(--muted);font-size:13px;padding:11px 16px;cursor:pointer;margin-top:14px;transition:background .15s,color .15s;}
+.btn-model-answer:hover{background:var(--accent-soft);color:var(--accent);border-color:var(--accent-l2);}
+.model-answer-panel{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r-lg);padding:22px;margin-top:4px;display:none;animation:fadein .3s ease;}
+.model-answer-panel.ma-open{display:block;}
+.ma-header{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap;}
+.ma-badge{background:linear-gradient(135deg,#5fb8ae,#a78bff);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:8px;font-family:var(--mono);}
+.ma-label{font-size:13px;color:var(--muted);flex:1;}
+.ma-wc{font-size:11px;font-family:var(--mono);color:var(--muted2);}
+.ma-text{font-size:14px;line-height:1.85;color:var(--text);border-left:3px solid var(--accent-l2);padding-left:16px;margin-bottom:14px;}
+.ma-text p{margin:0 0 12px;}
+.ma-note{font-size:12px;color:var(--muted);background:var(--bg3);border-radius:8px;padding:10px 12px;line-height:1.5;}
+.ma-none{color:var(--muted);font-size:13px;text-align:center;padding:16px 0;}
+
+/* ═══ GRAMMAR WARNINGS ════════════════════════════════════ */
+.grammar-warnings{background:rgba(232,181,71,.07);border:1px solid rgba(232,181,71,.3);border-radius:10px;padding:14px 16px;margin-bottom:14px;}
+.gw-title{font-size:13px;font-weight:600;color:var(--c-attention);margin-bottom:8px;}
+.gw-list{margin:0;padding-left:18px;font-size:13px;color:var(--text);line-height:1.7;}
+.gw-match{background:rgba(232,181,71,.2);color:var(--c-attention);padding:1px 5px;border-radius:4px;font-family:var(--mono);font-size:12px;}
+.gw-note{font-size:11px;color:var(--muted2);margin-top:8px;margin-bottom:0;}
+.gw-clean{font-size:13px;color:var(--c-mastery);margin:0;}
+
+/* ═══ WRITING TIMER ══════════════════════════════════════ */
+.wt-timer{display:flex;align-items:center;gap:12px;background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:8px 14px;margin-bottom:10px;}
+.wt-time{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--accent);min-width:56px;}
+.wt-bar-track{flex:1;height:4px;background:var(--bg4);border-radius:2px;}
+.wt-bar-fill{height:100%;background:var(--accent);border-radius:2px;transition:width 1s linear;}
+.wt-btns{display:flex;gap:6px;}
+.wt-urgent .wt-time{color:var(--c-error);}
+.wt-urgent .wt-bar-fill{background:var(--c-error);}
+.wt-paused .wt-time{opacity:.5;}
+
+/* ═══ API TEST ════════════════════════════════════════════ */
+.api-test-result{font-size:12px;padding:7px 10px;border-radius:7px;margin-top:8px;display:none;}
+.api-test-result.testing{display:block;background:var(--bg3);color:var(--muted);}
+.api-test-result.ok{display:block;background:var(--c-mastery-soft);color:var(--c-mastery);}
+.api-test-result.fail{display:block;background:var(--c-error-soft);color:var(--c-error);}
+
+/* ═══ MOBILE BOTTOM NAV ══════════════════════════════════ */
+#mobileBottomNav{display:none;position:fixed;bottom:0;left:0;right:0;z-index:1000;background:var(--bg2);border-top:1px solid var(--border);padding:6px 4px calc(6px + env(safe-area-inset-bottom));justify-content:space-around;}
+#mobileBottomNav .mbn-btn{display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:none;color:var(--muted);font-size:10px;padding:4px 8px;border-radius:8px;cursor:pointer;transition:color .15s;flex:1;}
+#mobileBottomNav .mbn-btn span{font-size:9px;white-space:nowrap;}
+#mobileBottomNav .mbn-btn.active{color:var(--accent);}
+@media(max-width:700px){
+  #mobileBottomNav{display:flex;}
+  body{padding-bottom:65px;}
+  nav .nav-tabs{display:none;}
+}
+
+/* ═══ AI TAG GEMINI ══════════════════════════════════════ */
+.ai-tag.gemini{background:rgba(66,133,244,.18);color:#4285f4;}
+
+/* ═══ WRITING TASK CARD — task type badge ════════════════ */
+.task-type-badge{font-size:10px;font-family:var(--mono);padding:2px 7px;border-radius:5px;font-weight:600;}
+.ttb-t1{background:var(--c-info-soft);color:var(--c-info);}
+.ttb-t2{background:var(--accent-soft);color:var(--accent);}
+/* ═══ VALIDATION BLOCK BANNERS ══════════════════════════════ */
+.validation-panel-blocked { border: 2px solid var(--c-error); background: var(--c-error-soft); }
+.val-block-banner {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 18px 18px 14px; border-radius: 12px; margin-bottom: 14px;
+}
+.val-block-copy     { background: rgba(224,123,106,.12); border: 1.5px solid rgba(224,123,106,.5); }
+.val-block-gibberish{ background: rgba(232,181,71,.10);  border: 1.5px solid rgba(232,181,71,.45); }
+.val-block-icon { font-size: 28px; flex-shrink: 0; line-height: 1; padding-top: 2px; }
+.val-block-body h4  { font-size: 15px; font-weight: 700; color: var(--c-error); margin: 0 0 6px; }
+.val-block-copy .val-block-body h4    { color: var(--c-error); }
+.val-block-gibberish .val-block-body h4{ color: var(--c-attention); }
+.val-block-body p   { font-size: 13px; color: var(--text); line-height: 1.6; margin: 0 0 6px; }
+.val-block-tip      { background: var(--bg3); border-radius: 8px; padding: 8px 11px; font-size: 12px !important; }
+.validation-panel   { margin-bottom: 18px; border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; background: var(--bg3); }
+.validation-title   { font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+.validation-summary { font-size: 13px; color: var(--muted); margin-bottom: 10px; }
+.validation-blocked-note, .validation-gate-note { font-size: 12px; color: var(--c-attention); margin-bottom: 8px; }
+.validation-list    { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; }
+.validation-issue   { border-radius: 8px; padding: 10px 13px; font-size: 13px; line-height: 1.5; }
+.val-sev-critical   { background: var(--c-error-soft);     border-left: 3px solid var(--c-error); }
+.val-sev-high       { background: rgba(232,181,71,.1);      border-left: 3px solid var(--c-attention); }
+.val-sev-medium     { background: var(--c-info-soft);       border-left: 3px solid var(--c-info); }
+.val-sev-low        { background: var(--bg4);               border-left: 3px solid var(--muted2); }
+.validation-severity { font-size: 10px; font-weight: 700; text-transform: uppercase; font-family: var(--mono);
+  padding: 2px 6px; border-radius: 4px; margin-right: 6px; background: rgba(255,255,255,.06); }
+.validation-category { font-size: 11px; color: var(--muted); font-family: var(--mono); }
+.validation-explanation { font-size: 13px; color: var(--text); margin: 5px 0 4px; }
+.validation-suggestion  { font-size: 12px; color: var(--muted); margin: 0; }
 </style>
 </head>
 <body>
@@ -713,14 +845,29 @@ body.density-compact .ds-value{font-size:26px;}
     <div class="sp-field">
       <label for="aiProviderSelect">Writing feedback</label>
       <select id="aiProviderSelect">
-        <option value="local">Strict examiner (free, offline)</option>
-        <option value="openai">ChatGPT (OpenAI API key)</option>
+        <option value="local">🔒 Strict examiner (free, offline)</option>
+        <option value="openai">⚡ ChatGPT — GPT-4o mini (OpenAI)</option>
+        <option value="gemini">✨ Gemini 1.5 Flash (Google — free tier)</option>
       </select>
       <p class="sp-hint">Strict examiner uses conservative band descriptors offline. ChatGPT adds AI commentary but cannot exceed rule-based caps. Key from <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com</a>.</p>
     </div>
     <div class="sp-field" id="openaiKeyField">
       <label for="openaiKeyInput">OpenAI API key</label>
       <input type="password" id="openaiKeyInput" placeholder="sk-..." autocomplete="off">
+    </div>
+    <div class="sp-field" id="geminiKeyField" style="display:none">
+      <label for="geminiKeyInput">Google Gemini API key</label>
+      <input type="password" id="geminiKeyInput" placeholder="AIza..." autocomplete="off">
+      <p class="sp-hint">Free tier: 60 RPM. Get key at <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">aistudio.google.com</a></p>
+    </div>
+    <div class="sp-field">
+      <button type="button" class="btn-secondary" id="apiTestBtn" onclick="testAPIConnection(document.getElementById('aiProviderSelect').value)">Test connection</button>
+      <div class="api-test-result" id="apiTestResult"></div>
+    </div>
+    <div class="sp-field">
+      <label for="examDateSettingInput">Exam date</label>
+      <input type="date" id="examDateSettingInput" class="ecw-date-input" style="width:100%;box-sizing:border-box" onchange="ExamCountdown.setExamDate(this.value)">
+      <p class="sp-hint">Sets the countdown on the home screen.</p>
     </div>
     <div class="sp-actions">
       <button type="button" class="btn-danger" id="resetStreakBtn">Reset day streak</button>
@@ -742,7 +889,10 @@ body.density-compact .ds-value{font-size:26px;}
 
   <div class="wotd-card" id="wotdCard"></div>
 
-  <div class="stats-row">
+  <div class="ecw-wrap" id="examCountdownWidget">
+  <div class="ecw-no-date"><span class="ecw-icon">📅</span><div><p class="ecw-label">Set your exam date to see a countdown</p><input type="date" class="ecw-date-input" id="ecwDateInput" onchange="ExamCountdown.setExamDate(this.value)"></div></div>
+</div>
+<div class="stats-row">
     <div class="stat-card"><div class="val" id="stat-words">0</div><div class="lbl">Words Learned</div></div>
     <div class="stat-card"><div class="val" id="stat-due">0</div><div class="lbl">Due Today</div></div>
     <div class="stat-card"><div class="val" id="stat-passages">0</div><div class="lbl">Passages Done</div></div>
@@ -846,7 +996,11 @@ body.density-compact .ds-value{font-size:26px;}
     </div>
   </div>
 
-  <div class="dash-card next-up-card">
+  <div class="dash-card sg-wrap" id="skillGapWidget">
+  <div class="dc-head"><h3>Skill gap analysis</h3><span class="dc-tag" id="sgTargetTag">vs Band 7.0</span></div>
+  <div class="sg-empty">Complete some exercises to see your skill gap analysis.</div>
+</div>
+<div class="dash-card next-up-card">
     <div class="dc-head"><h3>What to study next</h3></div>
     <div class="next-up-grid" id="nextUpGrid"></div>
   </div>
@@ -1055,6 +1209,60 @@ const READING_PASSAGES = [
      {id:'r003q4',type:'tf',text:'All farmers in Scotland support the reintroduction of lynx to the Highlands.',options:['True','False','Not Given'],answer:1,explanation:'The passage states farmers "fear for the safety of livestock," indicating opposition.'},
    ]
   },
+,
+  {id:'r002',title:'The Psychology of Procrastination',type:'academic',difficulty:'Band 6–7',summary:'Why humans delay important tasks and what science reveals about overcoming the procrastination habit.',
+   passage:`Procrastination — the act of voluntarily delaying an intended course of action despite expecting to be worse off for the delay — is one of the most pervasive and least understood behavioural tendencies in modern life. While popular culture typically frames it as a problem of laziness or poor time management, research in psychology and neuroscience paints a significantly more nuanced picture.
+
+Psychologist Piers Steel, who has spent two decades studying the phenomenon, estimates that approximately 95 percent of people procrastinate to some degree. His research suggests that procrastination is not fundamentally about time — it is about emotion. When people avoid a task, they are generally not avoiding the work itself but the negative feelings associated with it: anxiety, self-doubt, boredom, or resentment.
+
+The neurological basis for this avoidance lies in the conflict between two key brain regions. The limbic system, which governs emotion and instinct, resists anything that triggers discomfort and seeks immediate reward. The prefrontal cortex, responsible for rational planning and long-term thinking, is the brain's voice of reason. When stress levels are high, the limbic system frequently overrides the prefrontal cortex — producing the characteristic procrastinator's paradox of knowing exactly what to do while being seemingly unable to do it.
+
+This emotional dimension explains why conventional advice — "just do it," "break tasks into small steps" — so often fails. Such strategies address the practical dimension without resolving the underlying emotional resistance. Psychologist Tim Pychyl argues that what procrastinators truly need is self-compassion: the ability to acknowledge the discomfort without self-judgement, which paradoxically frees the individual to act.
+
+One evidence-based strategy that does appear effective is temptation bundling — pairing an unpleasant task with an immediately enjoyable activity. Listening to a favourite podcast only while exercising, for example, creates a positive emotional association that can override the limbic system's resistance.
+
+Ultimately, understanding procrastination as a coping mechanism rather than a character flaw represents a fundamental shift in how researchers and practitioners approach one of humanity's oldest challenges.`,
+   questions:[
+     {q:'According to Piers Steel, procrastination is primarily a problem of poor time management.',type:'tfng',answer:'FALSE',explanation:'Steel argues procrastination is about emotion, not time management.'},
+     {q:'The limbic system is responsible for rational long-term planning.',type:'tfng',answer:'FALSE',explanation:'The prefrontal cortex handles rational planning. The limbic system governs emotion and instinct.'},
+     {q:'Temptation bundling involves pairing a difficult task with something enjoyable.',type:'tfng',answer:'TRUE',explanation:'The passage explicitly defines temptation bundling as pairing an unpleasant task with an immediately enjoyable activity.'},
+     {q:'Which of the following best describes the main argument of the passage?',type:'mc',options:['Procrastination is caused by poor discipline and can be solved with better planning','Procrastination is an emotional rather than a rational problem, requiring different solutions','Most people who procrastinate have undiagnosed anxiety disorders','Breaking tasks into small steps is the most effective way to overcome procrastination'],answer:1,explanation:'The passage consistently argues that procrastination is emotional in nature, which explains why rational strategies often fail.'},
+   ]
+  },
+  {id:'r003',title:'Artificial Intelligence in Healthcare',type:'academic',difficulty:'Band 7–8',summary:'How AI diagnostic tools are transforming medicine and raising new ethical questions about the future of the doctor-patient relationship.',
+   passage:`Artificial intelligence is fundamentally reshaping the landscape of medical diagnosis and treatment, offering both extraordinary promise and serious ethical complexity. In radiology, dermatology, and pathology in particular, machine learning algorithms have demonstrated diagnostic accuracy that rivals or, in some cases, surpasses that of experienced human specialists.
+
+A landmark 2019 study published in Nature Medicine demonstrated that a deep-learning algorithm trained on 100,000 chest X-rays could identify pneumonia with greater sensitivity and specificity than the average radiologist. Similarly, a dermatology algorithm developed at Stanford University showed superior performance to board-certified dermatologists in classifying skin cancer from photographic images. These results, which have since been replicated across multiple healthcare settings, suggest that AI has a meaningful and near-term role to play in improving diagnostic quality and consistency.
+
+Proponents argue that the potential benefits extend well beyond raw diagnostic accuracy. In low-resource healthcare settings — rural communities, developing nations, regions with severe physician shortages — AI-powered diagnostic tools could democratise access to specialist-level expertise that is currently unavailable. A patient in a remote village, assessed by a general practitioner using an AI system, might receive a differential diagnosis of comparable quality to that of a consultant physician in a well-equipped urban hospital.
+
+However, critics raise concerns that deserve serious consideration. First, AI systems trained on data from specific populations may perform poorly when applied to demographically different groups, potentially exacerbating existing health inequalities rather than resolving them. Second, the "black box" nature of many deep-learning models means that clinicians cannot always understand why an algorithm reached a particular conclusion, which creates significant problems for medical accountability and patient trust.
+
+Perhaps most fundamentally, there is a growing debate about the appropriate boundary between technological assistance and clinical autonomy. Most medical ethicists and clinicians argue that AI should function as a decision-support tool — augmenting rather than replacing the physician. The complex art of medicine, which involves not only diagnosis but communication, empathy, and contextual judgement, remains distinctly human territory.`,
+   questions:[
+     {q:'The 2019 Nature Medicine study showed AI outperformed all radiologists tested.',type:'tfng',answer:'NOT GIVEN',explanation:'The study showed AI rivalled "the average radiologist" — not all radiologists.'},
+     {q:'AI diagnostic tools could be particularly beneficial in areas with few doctors.',type:'tfng',answer:'TRUE',explanation:'The passage explicitly discusses AI democratising specialist expertise in low-resource settings.'},
+     {q:'Critics argue that AI diagnostic tools may worsen health inequalities in some cases.',type:'tfng',answer:'TRUE',explanation:'Critics note that AI systems may perform poorly on demographically different groups, potentially exacerbating inequalities.'},
+     {q:'What does the author suggest is the most appropriate role for AI in medicine?',type:'mc',options:['AI should fully replace radiologists, who are too expensive','AI should support clinical decisions without replacing the physician','AI should only be used in developing countries where doctors are scarce','AI should not be used until the black box problem is fully resolved'],answer:1,explanation:'The passage argues AI should augment rather than replace the physician, functioning as a decision-support tool.'},
+   ]
+  },
+  {id:'r004',title:'The Economics of Remote Work',type:'academic',difficulty:'Band 6–7',summary:'How the global shift to remote working is reshaping urban economies, commercial real estate, and the geography of talent.',
+   passage:`The mass adoption of remote working, accelerated dramatically by the global pandemic of 2020, has triggered what some economists are calling the most significant restructuring of labour geography since the industrial revolution. While early analyses focused primarily on individual productivity, the long-term consequences for urban economies, housing markets, and regional inequality are proving far more complex and consequential.
+
+For decades, the dominant economic logic of large cities rested on the concept of agglomeration — the productivity gains that arise when workers, firms, and institutions are concentrated in close proximity. Face-to-face interaction, spontaneous collaboration, and the dense flow of tacit knowledge were considered indispensable inputs to innovation. The sustained viability of remote working challenges this assumption, at least partially: knowledge workers have demonstrated that much of their output can be maintained at a distance, enabled by collaborative technology.
+
+The most visible economic consequence has been the dramatic decline in demand for commercial office space in major city centres. Vacancy rates in central business districts have risen sharply in cities from New York to Sydney, creating financial pressure on commercial landlords, local governments dependent on property tax revenues, and the service businesses — restaurants, cafes, transport providers — whose economic viability depended on the daily flow of commuters.
+
+Simultaneously, remote working has enabled a partial geographic redistribution of skilled labour. Workers freed from the requirement to live near their employers have moved to smaller cities, coastal towns, and rural areas, driving rapid house price appreciation in previously affordable locations and straining local services ill-equipped to absorb rapid population growth.
+
+Whether this redistribution ultimately reduces regional inequality — spreading economic dynamism from overheated capitals to neglected peripheries — or merely extends urban poverty to new locations while pushing housing costs beyond the reach of long-standing local residents, remains one of the most contested questions in contemporary economic geography.`,
+   questions:[
+     {q:'Agglomeration refers to the economic benefits of geographic concentration of workers and firms.',type:'tfng',answer:'TRUE',explanation:'The passage defines agglomeration as productivity gains arising from concentration in close proximity.'},
+     {q:'Remote working has caused office vacancy rates to fall in major cities.',type:'tfng',answer:'FALSE',explanation:'The passage states vacancy rates have "risen sharply" — not fallen.'},
+     {q:'The passage concludes that remote working will definitely reduce regional inequality.',type:'tfng',answer:'FALSE',explanation:'The passage explicitly states this remains "one of the most contested questions" — no conclusion is drawn.'},
+     {q:'Which of the following best summarises the economic effect of remote work on cities?',type:'mc',options:['Cities have uniformly benefited from increased productivity','City centres have declined while some peripheral areas have grown, with uncertain long-term effects','Remote work has had no measurable effect on housing markets','Commercial real estate has been unaffected because companies still pay for empty offices'],answer:1,explanation:'The passage describes declining city centres and growing peripheral areas, while noting the long-term consequences remain contested.'},
+   ]
+  }
 ];
 
 const WRITING_TASKS = [
@@ -1063,6 +1271,11 @@ const WRITING_TASKS = [
   {id:'wt003',type:'task2',label:'Task 2',title:'Urban vs. Rural Living',prompt:'As cities become increasingly overcrowded, many governments are encouraging people to move to rural areas. What are the advantages and disadvantages of this policy? Do you think the benefits outweigh the drawbacks?',minWords:250,timeLimit:40,tips:['Present both sides fairly','End with a clear verdict: benefits outweigh drawbacks or not','Cover: infrastructure, quality of life, economic opportunity, community','Use complex sentences to show grammatical range','Vary your vocabulary — avoid repeating the same adjectives']},
   {id:'wt004',type:'task1',label:'Task 1',title:'Describe a Graph: Renewable Energy',prompt:'The bar chart below shows the percentage of electricity generated from renewable sources in five countries in 2005 and 2020. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.\n\n(Data: Norway 67%→82%, Germany 10%→46%, UK 5%→43%, USA 8%→21%, China 16%→28%)',minWords:150,timeLimit:20,tips:['Begin with an overview — never copy the question','Describe the most significant trends and differences','Compare countries where possible','Use range of vocabulary: increased, rose sharply, declined, remained stable','Do NOT give opinions in Task 1 — only describe and compare']},
   {id:'wt005',type:'task2',label:'Task 2',title:'Education and Employment',prompt:'Many young people today struggle to find employment after graduating from university. Some argue that universities should focus more on practical skills and less on academic theory. To what extent do you agree with this view?',minWords:250,timeLimit:40,tips:['Consider what "practical skills" means in different fields','A nuanced answer often scores higher than a black-and-white one','Think about both employer and student perspectives','Use examples from specific industries if possible','Acknowledge counter-arguments before refuting them']},
+  {id:'wt006',type:'task1',label:'Task 1',title:'Line Graph: Internet Usage 2000–2020',prompt:'The line graph below shows the percentage of households with internet access in four countries — South Korea, Germany, Brazil, and Nigeria — between 2000 and 2020.\n\n(Data: South Korea 40%→99%, Germany 30%→92%, Brazil 5%→74%, Nigeria 0.1%→42%)',minWords:150,timeLimit:20,tips:['Start with an overview — note the overall upward trend across all countries','Highlight the biggest change (Nigeria: near zero to 42%)','Compare starting and ending points; note convergence or divergence','Use time expressions: over the period, by 2020, in the early 2000s','Do NOT give reasons or opinions — only describe what the data shows']},
+  {id:'wt007',type:'task1',label:'Task 1',title:'Process Diagram: How Paper is Made',prompt:'The diagram below illustrates the process by which paper is manufactured from raw timber to finished product.\n\n(Stages: 1.Timber felling → 2.Debarking → 3.Chipping → 4.Pulping (chemical/mechanical) → 5.Washing & screening → 6.Bleaching → 7.Sheet formation on wire mesh → 8.Pressing & drying → 9.Cutting & packaging)',minWords:150,timeLimit:20,tips:['Use the passive voice throughout (e.g., "the logs are debarked")','Sequence markers are essential: first, subsequently, once, finally','Describe ALL stages but be concise — 150 words is enough for 9 stages','Do NOT give opinions — only describe the process objectively','Group related stages if helpful: preparation → pulping → finishing']},
+  {id:'wt008',type:'task2',label:'Task 2',title:'Climate Change & Individual Responsibility',prompt:'Some people believe that individuals can do little to combat climate change and that governments and large corporations are responsible for solving the problem. Others argue that individuals have an important role to play. Discuss both views and give your own opinion.',minWords:250,timeLimit:40,tips:['Both views must be addressed before stating your opinion','Individual actions: diet, transport, energy use, consumption habits','Government/corporate actions: policy, regulation, green investment','A nuanced view (both matter, at different scales) often scores highest','End with a clear position, not a vague conclusion']},
+  {id:'wt009',type:'task2',label:'Task 2',title:'The Rise of Artificial Intelligence',prompt:'Artificial intelligence is increasingly being used to replace human workers in many industries. Some people believe this is a positive development, while others argue it will cause widespread unemployment and social inequality. To what extent do you agree or disagree that AI will have a negative impact on society?',minWords:250,timeLimit:40,tips:['Define your stance clearly in the introduction','Address both potential benefits and harms of AI','Use specific examples: manufacturing, healthcare, legal, creative industries','Consider who benefits and who is disadvantaged','Link your paragraphs clearly with cohesive devices']},
+  {id:'wt010',type:'task2',label:'Task 2',title:'Urbanisation and Quality of Life',prompt:'In many parts of the world, people are moving from rural areas to cities in large numbers. What are the advantages and disadvantages of this trend for both individuals and society? Do the advantages outweigh the disadvantages?',minWords:250,timeLimit:40,tips:['Discuss both individuals and society for full Task Achievement marks','Advantages: employment, services, cultural diversity, opportunity','Disadvantages: overcrowding, pollution, loss of community, high cost','Give a clear verdict: overall do advantages outweigh disadvantages?','Use topic sentences and support each point with a specific example']},
 ];
 
 // SPEAKING_TOPIC_SETS + SPEAKING_TOPICS → speaking-topics-data.js
@@ -3479,9 +3692,17 @@ async function bootApp() {
 bootApp();
 </script>
 <script src="ai-service.js"></script>
+<script src="features-upgrade.js"></script>
 <script src="essay-session.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 

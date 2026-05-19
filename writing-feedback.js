@@ -1,4 +1,4 @@
-/* Strict IELTS evaluator — lib/evaluation/essay-validator.mjs + ielts-evaluator.mjs (npm run build:evaluator) */
+﻿/* Strict IELTS evaluator — lib/evaluation/essay-validator.mjs + ielts-evaluator.mjs (npm run build:evaluator) */
 /**
  * Pre-scoring essay validation — detects invalid, fake, copied, or low-quality submissions
  * before band evaluation runs.
@@ -100,56 +100,58 @@ function issue(id, category, severity, explanation, suggestion) {
 function detectPromptCopy(text, prompt) {
   const issues = [];
   if (!prompt || prompt.length < 20) return issues;
-
-  const essayNorm = normalize(text);
+  const essayNorm  = normalize(text);
   const promptNorm = normalize(prompt);
-  const promptWords = promptNorm.split(/\s+/).filter(Boolean);
-
-  for (let len = Math.min(12, promptWords.length); len >= 5; len--) {
-    for (const phrase of ngrams(promptWords, len)) {
+  const essayToks  = essayNorm.split(/\s+/).filter(Boolean);
+  const promptToks = promptNorm.split(/\s+/).filter(Boolean);
+  // Tier 0: Jaccard similarity
+  const essaySet    = new Set(essayToks);
+  const promptSet   = new Set(promptToks);
+  const inter       = [...essaySet].filter(w => promptSet.has(w)).length;
+  const unionSize   = new Set([...essaySet, ...promptSet]).size;
+  const jaccard     = unionSize > 0 ? inter / unionSize : 0;
+  const essayCT     = contentTokens(essayToks);
+  const promptCTSet = new Set(contentTokens(promptToks));
+  const subsetRatio = essayCT.length > 0 ? essayCT.filter(w => promptCTSet.has(w)).length / essayCT.length : 0;
+  const lenRatio    = promptToks.length > 0 ? essayToks.length / promptToks.length : 99;
+  if (jaccard >= 0.55 || subsetRatio >= 0.80) {
+    const pct = Math.round(Math.max(jaccard, subsetRatio) * 100);
+    const msg = jaccard >= 0.80
+      ? 'Your submission is a direct copy of the exam question. No original writing detected.'
+      : lenRatio > 1.8
+        ? pct + '% of your content words come from the question prompt. No argument was developed.'
+        : pct + '% of your essay tokens match the question text. This is not a valid response.';
+    issues.push(issue('prompt_full_copy','prompt_copy','critical', msg,
+      'Write your own response in your own words. Briefly paraphrase the task in the introduction, then develop original ideas.'));
+    return issues;
+  }
+  for (let len = Math.min(12, promptToks.length); len >= 5; len--) {
+    for (const phrase of ngrams(promptToks, len)) {
       if (essayNorm.includes(phrase)) {
-        issues.push(issue(
-          'prompt_direct_copy',
-          'prompt_copy',
-          len >= 8 ? 'high' : 'medium',
-          `A ${len}-word phrase from the question appears verbatim in your essay.`,
-          'Paraphrase the task in your own words; do not copy the question wording.'
-        ));
+        issues.push(issue('prompt_direct_copy','prompt_copy', len >= 9 ? 'critical' : 'high',
+          'A ' + len + '-word phrase from the exam question appears verbatim in your essay.',
+          'Never copy the question wording. Paraphrase using different vocabulary and structure.'));
         return issues;
       }
     }
   }
-
   const promptKeys = extractPromptKeywords(prompt);
   if (promptKeys.length < 3) return issues;
-
-  const intro = normalize((text.split(/\n\s*\n/)[0] || text).slice(0, 500));
+  const intro      = normalize((text.split(/\n\s*\n/)[0] || text).slice(0, 500));
   const introWords = new Set(intro.split(/\s+/));
-  const introHits = promptKeys.filter(k => introWords.has(k)).length;
-  const introRatio = introHits / promptKeys.length;
-
+  const introRatio = promptKeys.filter(k => introWords.has(k)).length / promptKeys.length;
   if (introRatio >= 0.65 && intro.length > 80) {
-    issues.push(issue(
-      'prompt_paraphrase_copy',
-      'prompt_copy',
-      'medium',
-      'Your introduction closely mirrors the question wording instead of answering it.',
-      'Open with your position or main idea, not a restatement of the prompt.'
-    ));
+    issues.push(issue('prompt_paraphrase_copy','prompt_copy','medium',
+      'Your introduction closely mirrors the question wording.',
+      'Open with your position using different vocabulary and sentence structures.'));
   }
-
   const essayKeys = new Set(contentTokens(tokenize(text)));
-  const overlap = promptKeys.filter(k => essayKeys.has(k)).length / promptKeys.length;
-  if (overlap >= 0.85 && tokenize(text).length < 120) {
-    issues.push(issue(
-      'prompt_keyword_padding',
-      'prompt_copy',
-      'high',
-      'The response mostly repeats question vocabulary without developing an argument.',
-      'Add your own ideas, examples, and explanations beyond the question words.'
-    ));
+  const kwOverlap = promptKeys.filter(k => essayKeys.has(k)).length / promptKeys.length;
+  if (kwOverlap >= 0.85 && essayToks.length < 130) {
+    issues.push(issue('prompt_keyword_padding','prompt_copy','high',
+      'Short response mostly repeating question vocabulary — no argument developed.',
+      'Add original ideas, examples, and explanations beyond the question words.'));
   }
-
   return issues;
 }
 
@@ -480,60 +482,30 @@ function detectTemplateAbuse(text) {
 }
 
 function buildQualityGate(issues, wordCount, minWords) {
-  const maxSeverity = issues.reduce((max, i) => {
-    const rank = SEVERITY_RANK[i.severity] || 0;
-    return rank > max ? rank : max;
-  }, 0);
-
-  const severityLabel = ['none', 'low', 'medium', 'high', 'critical'][maxSeverity] || 'none';
-  const hasHigh = issues.some(i => i.severity === 'high');
-  const offTopic = issues.some(i => i.id === 'off_topic' || i.id === 'partially_off_topic');
-  const shallow = issues.some(i => i.id === 'shallow_task_response');
-  const lowEffortCritical = issues.some(i => i.category === 'low_effort' && i.severity === 'critical');
-  const promptCopyHigh = issues.some(i => i.category === 'prompt_copy' && SEVERITY_RANK[i.severity] >= 3);
-
-  let maxOverall = null;
-  let maxTA = null;
-  let blockBand7Plus = false;
-  let blocked = false;
-  let skipScoring = false;
-
-  if (lowEffortCritical) {
-    blocked = true;
-    skipScoring = true;
-    maxOverall = 4.0;
-    maxTA = 4.0;
-    blockBand7Plus = true;
-  } else if (offTopic) {
-    maxOverall = 5.0;
-    maxTA = 4.5;
-    blockBand7Plus = true;
-  } else if (hasHigh || shallow || promptCopyHigh) {
-    maxOverall = 6.0;
-    maxTA = 6.0;
-    blockBand7Plus = true;
-  } else if (maxSeverity >= 2) {
-    maxOverall = 6.5;
-    blockBand7Plus = true;
-  }
-
+  const maxSev         = issues.reduce((m, i) => Math.max(m, SEVERITY_RANK[i.severity]||0), 0);
+  const severityLabel  = ['none','low','medium','high','critical'][maxSev] || 'none';
+  const hasHigh        = issues.some(i => i.severity === 'high');
+  const offTopic       = issues.some(i => i.id === 'off_topic' || i.id === 'partially_off_topic');
+  const shallow        = issues.some(i => i.id === 'shallow_task_response');
+  const lowCrit        = issues.some(i => i.category === 'low_effort'  && i.severity === 'critical');
+  const copyCrit       = issues.some(i => i.category === 'prompt_copy' && i.severity === 'critical');
+  const copyHigh       = issues.some(i => i.category === 'prompt_copy' && SEVERITY_RANK[i.severity] >= 3);
+  const gibberish      = issues.some(i => i.id === 'gibberish_text' || i.id === 'keyboard_mash');
+  let maxOverall=null, maxTA=null, blockBand7Plus=false, blocked=false, skipScoring=false;
+  if (copyCrit || gibberish) {
+    blocked=true; skipScoring=true; blockBand7Plus=true;
+  } else if (lowCrit) {
+    blocked=true; skipScoring=true; maxOverall=4.0; maxTA=4.0; blockBand7Plus=true;
+  } else if (offTopic)  { maxOverall=5.0; maxTA=4.5; blockBand7Plus=true;
+  } else if (hasHigh || shallow || copyHigh) { maxOverall=6.0; maxTA=6.0; blockBand7Plus=true;
+  } else if (maxSev >= 2) { maxOverall=6.5; blockBand7Plus=true; }
   if (wordCount < minWords * 0.45) {
-    blockBand7Plus = true;
-    maxTA = maxTA === null ? 5.5 : Math.min(maxTA, 5.5);
+    blockBand7Plus=true;
+    maxTA      = maxTA      === null ? 5.5 : Math.min(maxTA, 5.5);
     maxOverall = maxOverall === null ? 6.0 : Math.min(maxOverall, 6.0);
   }
-
-  return {
-    severity: severityLabel,
-    blockBand7Plus,
-    blocked,
-    skipScoring,
-    maxOverall,
-    maxTA,
-    maxCC: blockBand7Plus ? 6.5 : null,
-    maxLR: blockBand7Plus ? 6.5 : null,
-    maxGRA: blockBand7Plus ? 6.5 : null,
-  };
+  return { severity:severityLabel, blockBand7Plus, blocked, skipScoring, maxOverall, maxTA,
+    maxCC:blockBand7Plus?6.5:null, maxLR:blockBand7Plus?6.5:null, maxGRA:blockBand7Plus?6.5:null };
 }
 
 /**
@@ -541,6 +513,46 @@ function buildQualityGate(issues, wordCount, minWords) {
  * @param {string} text
  * @param {{ taskType?: string, minWords?: number, prompt?: string }} opts
  */
+function detectGibberish(text, words) {
+  const issues = [];
+  if (!words || words.length < 20) return issues;
+  const lower   = text.toLowerCase();
+  const letters = (lower.match(/[a-z]/g)  || []).length;
+  const vowels  = (lower.match(/[aeiou]/g) || []).length;
+  if (letters < 30) return issues;
+  const vowelRatio = vowels / letters;
+  if (vowelRatio < 0.18) {
+    issues.push(issue('keyboard_mash','low_effort','critical',
+      'This text contains almost no vowels (' + Math.round(vowelRatio*100) + '%). It does not appear to be English prose.',
+      'Write a genuine essay in English.'));
+    return issues;
+  }
+  const CONS_RE   = /[bcdfghjklmnpqrstvwxyz]{4,}/i;
+  const NOVOW_RE  = /^[^aeiou]{4,}$/i;
+  const mashWords = words.filter(w => w.length >= 4 && (CONS_RE.test(w) || NOVOW_RE.test(w)));
+  if (mashWords.length / words.length > 0.18) {
+    issues.push(issue('keyboard_mash','low_effort','critical',
+      Math.round(mashWords.length/words.length*100) + '% of words appear to be keyboard mash or non-English strings.',
+      'Write a genuine essay response in correct English sentences.'));
+    return issues;
+  }
+  const unique = new Set(words.map(w => w.toLowerCase().replace(/[^a-z]/g,''))).size;
+  const ttr    = unique / words.length;
+  if (words.length > 80 && ttr < 0.18) {
+    issues.push(issue('gibberish_text','low_effort','critical',
+      'Extreme repetition: only ' + unique + ' unique words out of ' + words.length + '. This appears to be filler text.',
+      'Develop your response with varied vocabulary and original ideas.'));
+    return issues;
+  }
+  if (/(.)\1{5,}/.test(lower)) {
+    issues.push(issue('gibberish_text','low_effort','critical',
+      'Repeated character sequences detected. This is not valid essay text.',
+      'Write genuine sentences with correct English vocabulary.'));
+    return issues;
+  }
+  return issues;
+}
+
 function validateEssay(text, opts = {}) {
   const { taskType = 'task2', minWords = 250, prompt = '' } = opts;
   const trimmed = (text || '').trim();
@@ -549,6 +561,7 @@ function validateEssay(text, opts = {}) {
   const content = contentTokens(words);
 
   const issues = [
+    ...detectGibberish(trimmed, words),
     ...detectPromptCopy(trimmed, prompt),
     ...detectLowEffort(trimmed, wordCount, minWords),
     ...detectOffTopic(trimmed, prompt, wordCount),
@@ -1275,42 +1288,66 @@ function generateLocalFeedback(text, taskType, minWords, prompt) {
 
 function renderValidationSection(validation) {
   if (!validation || !validation.issues || !validation.issues.length) return '';
+
+  const isBlocked  = validation.skipScoring || validation.qualityGate?.blocked;
+  const isCopyBlocked  = validation.issues.some(i => i.category === 'prompt_copy'  && i.severity === 'critical');
+  const isGibberish    = validation.issues.some(i => i.id === 'gibberish_text' || i.id === 'keyboard_mash');
+
   const severityClass = {
-    critical: 'val-sev-critical',
-    high: 'val-sev-high',
-    medium: 'val-sev-medium',
-    low: 'val-sev-low',
-    none: 'val-sev-low',
+    critical: 'val-sev-critical', high: 'val-sev-high',
+    medium:   'val-sev-medium',   low:  'val-sev-low', none: 'val-sev-low',
   };
-  const items = validation.issues.map((i) => {
-    const cls = severityClass[i.severity] || 'val-sev-medium';
-    return [
-      '<li class="validation-issue ', cls, '">',
-      '<span class="validation-severity">', escapeHtml(i.severity), '</span>',
-      '<span class="validation-category">', escapeHtml(i.category.replace(/_/g, ' ')), '</span>',
-      '<p class="validation-explanation">', escapeHtml(i.explanation), '</p>',
-      '<p class="validation-suggestion"><strong>Suggestion:</strong> ', escapeHtml(i.suggestion), '</p>',
-      '</li>',
+
+  const items = validation.issues.map(i => [
+    '<li class="validation-issue ', severityClass[i.severity] || 'val-sev-medium', '">',
+    '<span class="validation-severity">', escapeHtml(i.severity), '</span>',
+    '<span class="validation-category">', escapeHtml(i.category.replace(/_/g, ' ')), '</span>',
+    '<p class="validation-explanation">', escapeHtml(i.explanation), '</p>',
+    '<p class="validation-suggestion"><strong>How to fix:</strong> ', escapeHtml(i.suggestion), '</p>',
+    '</li>',
+  ].join('')).join('');
+
+  // Hard block banner for copy-paste or gibberish
+  let blockBanner = '';
+  if (isCopyBlocked) {
+    blockBanner = [
+      '<div class="val-block-banner val-block-copy">',
+      '<div class="val-block-icon">🚫</div>',
+      '<div class="val-block-body">',
+      '<h4>Submission Rejected — Question Text Detected</h4>',
+      '<p>Your essay contains the exam question text. Copying the question is not an IELTS response and receives no score. Examiners identify this immediately.</p>',
+      '<p class="val-block-tip">✏️ <strong>What to do:</strong> Clear the text area, then write your own response from scratch. You may briefly paraphrase the question in your introduction — but in your own words.</p>',
+      '</div></div>',
     ].join('');
-  }).join('');
-  const gateNote = validation.qualityGate && validation.qualityGate.blockBand7Plus
-    ? '<p class="validation-gate-note">Quality gate: Band 7+ is not available until these issues are resolved.</p>'
+  } else if (isGibberish) {
+    blockBanner = [
+      '<div class="val-block-banner val-block-gibberish">',
+      '<div class="val-block-icon">⚠️</div>',
+      '<div class="val-block-body">',
+      '<h4>Submission Rejected — Invalid Text</h4>',
+      '<p>The submitted text does not appear to be a genuine English essay. Random characters, keyboard mash, or extreme repetition were detected.</p>',
+      '<p class="val-block-tip">✏️ <strong>What to do:</strong> Write a real essay response in proper English sentences with your own ideas and arguments.</p>',
+      '</div></div>',
+    ].join('');
+  }
+
+  const gateNote = validation.qualityGate?.blockBand7Plus && !isBlocked
+    ? '<p class="validation-gate-note">⚠ Quality gate: Band 7+ unavailable until these issues are resolved.</p>'
     : '';
-  const blockedNote = validation.skipScoring
+  const blockedNote = isBlocked && !isCopyBlocked && !isGibberish
     ? '<p class="validation-blocked-note">This submission did not pass pre-scoring validation. Full band scoring was not applied.</p>'
     : '';
+
   return [
-    '<div class="validation-panel">',
-    '<h4 class="validation-title">Pre-scoring validation</h4>',
-    '<p class="validation-summary">Severity: <strong>', escapeHtml(validation.severity), '</strong>',
-    ' · ', validation.issues.length, ' issue(s) detected</p>',
-    blockedNote,
-    gateNote,
+    '<div class="validation-panel', isBlocked ? ' validation-panel-blocked' : '', '">',
+    blockBanner,
+    isBlocked ? '' : '<h4 class="validation-title">Pre-scoring validation</h4>',
+    isBlocked ? '' : '<p class="validation-summary">Severity: <strong>' + escapeHtml(validation.severity) + '</strong> · ' + validation.issues.length + ' issue(s)</p>',
+    blockedNote, gateNote,
     '<ul class="validation-list">', items, '</ul>',
     '</div>',
   ].join('');
 }
-
 function renderCriterionBlock(label, c) {
   if (!c) return '';
   const lost = (c.pointsLost || []).map(p => '<li>' + escapeHtml(p) + '</li>').join('');
